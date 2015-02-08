@@ -12,8 +12,8 @@ namespace Beeautiful2
     class Bee : Sprite
     {
         const string BEE_ASSETNAME = "bee";
-        const int START_POSITION_X = 125;
-        const int START_POSITION_Y = 245;
+        const int START_POSITION_X = 525;
+        const int START_POSITION_Y = 145;
         const int BEE_SPEED = 160;
         const int MOVE_UP = -1;
         const int MOVE_DOWN = 1;

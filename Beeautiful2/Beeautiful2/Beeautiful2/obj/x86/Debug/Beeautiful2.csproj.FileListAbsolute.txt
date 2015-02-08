@@ -11,3 +11,4 @@ C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\
 C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Background04.xnb
 C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Background05.xnb
 C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Image1.xnb
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Audio\Music\28_-_Seinfeld_Theme_Dubstep_Remix_.xnb

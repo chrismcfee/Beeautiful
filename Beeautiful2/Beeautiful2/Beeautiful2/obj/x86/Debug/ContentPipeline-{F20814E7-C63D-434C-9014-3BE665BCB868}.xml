@@ -64,6 +64,15 @@
       <Output>C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\bee.xnb</Output>
       <Time>2015-02-08T16:54:08.6005491-05:00</Time>
     </Item>
+    <Item>
+      <Source>Audio\Music\28_-_Seinfeld_Theme_Dubstep_Remix_.wav</Source>
+      <Name>Audio\Music\28_-_Seinfeld_Theme_Dubstep_Remix_</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Audio\Music\28_-_Seinfeld_Theme_Dubstep_Remix_.xnb</Output>
+      <Time>2015-02-08T17:21:40.668042-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F20814E7-C63D-434C-9014-3BE665BCB868}</ContentProjectGUID>

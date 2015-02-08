@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+
 namespace Beeautiful2
 {
     /// <summary>
@@ -28,6 +29,14 @@ namespace Beeautiful2
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
+        SoundEffect soundEngine;
+        SoundEffectInstance soundEngineInstance;
+        SoundEffect soundHyperspaceActivation;
+
+        //AudioEngine audioEngine;
+        //WaveBank waveBank;
+        //SoundBank soundBank;
+
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -51,6 +60,9 @@ namespace Beeautiful2
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
+            soundEngine = Content.Load<SoundEffect>("Audio\\Music\\28_-_Seinfeld_Theme_Dubstep_Remix_");
+            soundEngineInstance = soundEngine.CreateInstance();
+            soundHyperspaceActivation = Content.Load<SoundEffect>("Audio\\Music\\28_-_Seinfeld_Theme_Dubstep_Remix_");
             spriteBatch = new SpriteBatch(GraphicsDevice);
             mScrollingBackground = new HorizontallyScrollingBackground(this.GraphicsDevice.Viewport);
             mScrollingBackground.AddBackground("Background01");
@@ -79,6 +91,14 @@ namespace Beeautiful2
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            if (soundEngineInstance.State == SoundState.Stopped)
+            {
+                soundEngineInstance.Volume = 0.75f;
+                soundEngineInstance.IsLooped = true;
+                soundEngineInstance.Play();
+            }
+            else
+                soundEngineInstance.Resume();
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
