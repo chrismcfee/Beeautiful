@@ -60,9 +60,9 @@ namespace Beeautiful2
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            soundEngine = Content.Load<SoundEffect>("Audio\\Music\\28_-_Seinfeld_Theme_Dubstep_Remix_");
+            soundEngine = Content.Load<SoundEffect>("Audio\\Music\\mymix");
             soundEngineInstance = soundEngine.CreateInstance();
-            soundHyperspaceActivation = Content.Load<SoundEffect>("Audio\\Music\\28_-_Seinfeld_Theme_Dubstep_Remix_");
+            soundHyperspaceActivation = Content.Load<SoundEffect>("Audio\\Music\\mymix");
             spriteBatch = new SpriteBatch(GraphicsDevice);
             mScrollingBackground = new HorizontallyScrollingBackground(this.GraphicsDevice.Viewport);
             mScrollingBackground.AddBackground("Background01");

@@ -82,6 +82,15 @@
       <Output>C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Audio\Music\04_-_The_Black_Eyed_Peas_-_Imma_Be-TSM.xnb</Output>
       <Time>2015-02-08T17:40:08.1043837-05:00</Time>
     </Item>
+    <Item>
+      <Source>Audio\Music\mymix.wav</Source>
+      <Name>Audio\Music\mymix</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Audio\Music\mymix.xnb</Output>
+      <Time>2015-02-08T18:02:11.9581038-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F20814E7-C63D-434C-9014-3BE665BCB868}</ContentProjectGUID>
