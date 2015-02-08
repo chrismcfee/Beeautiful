@@ -1,0 +1,13 @@
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Beeautiful2.exe
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Beeautiful2.pdb
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\obj\x86\Debug\Beeautiful2.csprojResolveAssemblyReference.cache
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\obj\x86\Debug\Beeautiful2.exe
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\obj\x86\Debug\Beeautiful2.pdb
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\bee.xnb
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Background01.xnb
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Background02.xnb
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Background03.xnb
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Background04.xnb
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Background05.xnb
+C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Image1.xnb
