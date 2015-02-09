@@ -12,8 +12,8 @@ namespace Beeautiful2
     class Enemy : Sprite
     {
         const string ENEMY_ASSETNAME = "enemy";
-        const int START_POSITION_X = 125;
-        const int START_POSITION_Y = 45;
+        const int START_POSITION_X = -100;
+        const int START_POSITION_Y = -100;
         const int ENEMY_SPEED = 160;
         const int MOVE_UP = -1;
         const int MOVE_DOWN = 1;
@@ -59,7 +59,7 @@ namespace Beeautiful2
             {
                 mSpeed = Vector2.Zero;
                 mDirection = Vector2.Zero;
-                if (aCurrentKeyboardState.IsKeyDown(Keys.Left) == true)
+                /*if (aCurrentKeyboardState.IsKeyDown(Keys.Left) == true)
                 {
                     mSpeed.X = ENEMY_SPEED;
                     mDirection.X = MOVE_LEFT;
@@ -83,7 +83,7 @@ namespace Beeautiful2
                 {
                     mSpeed.Y = ENEMY_SPEED;
                     mDirection.Y = MOVE_DOWN;
-                }
+                }*/
 
             }
 

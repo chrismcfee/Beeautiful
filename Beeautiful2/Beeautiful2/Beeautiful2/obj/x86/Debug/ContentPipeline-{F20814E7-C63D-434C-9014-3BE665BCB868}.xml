@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\bee.xnb</Output>
-      <Time>2015-02-08T16:54:08.6005491-05:00</Time>
+      <Time>2015-02-09T02:38:57.8146817-05:00</Time>
     </Item>
     <Item>
       <Source>Audio\Music\28_-_Seinfeld_Theme_Dubstep_Remix_.wav</Source>
@@ -89,7 +89,16 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Audio\Music\mymix.xnb</Output>
-      <Time>2015-02-08T18:02:11.9581038-05:00</Time>
+      <Time>2015-02-08T18:04:46.4839422-05:00</Time>
+    </Item>
+    <Item>
+      <Source>enemy.png</Source>
+      <Name>enemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\enemy.xnb</Output>
+      <Time>2015-02-09T02:37:58.1742704-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

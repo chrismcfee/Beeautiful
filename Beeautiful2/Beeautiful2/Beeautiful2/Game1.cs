@@ -17,10 +17,16 @@ namespace Beeautiful2
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        // Time out limit in ms.
+        static private int TimeOutLimit = 1200000;
+
+        // Amount of time that has passed.
+        private double timeoutCount = 0;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
         Bee bSprite;
+        Enemy eSprite;
 
         HorizontallyScrollingBackground mScrollingBackground;
 
@@ -28,10 +34,44 @@ namespace Beeautiful2
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+            this.graphics.PreferredBackBufferWidth = 1080;
+            this.graphics.PreferredBackBufferHeight = 1900;
+
+            this.graphics.IsFullScreen = true;
         }
         SoundEffect soundEngine;
         SoundEffectInstance soundEngineInstance;
         SoundEffect soundHyperspaceActivation;
+
+        bool checkActivity(KeyboardState keyboardState, GamePadState gamePadState)
+        {
+            // Check to see if the input states are different from last frame
+            GamePadState nonpacketGamePadState = new GamePadState(
+                gamePadState.ThumbSticks, gamePadState.Triggers,
+                gamePadState.Buttons, gamePadState.DPad);
+            bool keybidle = keyboardState.GetPressedKeys().Length == 0;
+            //bool gamepidle = blankGamePadState == nonpacketGamePadState;
+            if (keybidle)
+            {
+                //no activity;
+                return false;
+            }
+            return true;
+        }
+
+        bool checkExitKey(KeyboardState keyboardState, GamePadState gamePadState)
+        {
+            // Check to see whether ESC was pressed on the keyboard 
+            // or BACK was pressed on the controller.
+            if (keyboardState.IsKeyDown(Keys.Escape) ||
+                gamePadState.Buttons.Back == ButtonState.Pressed)
+            {
+                Exit();
+                return true;
+            }
+            return false;
+        }
 
         //AudioEngine audioEngine;
         //WaveBank waveBank;
@@ -50,6 +90,7 @@ namespace Beeautiful2
         {
             // TODO: Add your initialization logic here
             bSprite = new Bee();
+            eSprite = new Enemy();
             base.Initialize();
         }
         
@@ -60,9 +101,9 @@ namespace Beeautiful2
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            soundEngine = Content.Load<SoundEffect>("Audio\\Music\\mymix");
+            soundEngine = Content.Load<SoundEffect>("Audio\\Music\\04_-_The_Black_Eyed_Peas_-_Imma_Be-TSM");
             soundEngineInstance = soundEngine.CreateInstance();
-            soundHyperspaceActivation = Content.Load<SoundEffect>("Audio\\Music\\mymix");
+            soundHyperspaceActivation = Content.Load<SoundEffect>("Audio\\Music\\04_-_The_Black_Eyed_Peas_-_Imma_Be-TSM");
             spriteBatch = new SpriteBatch(GraphicsDevice);
             mScrollingBackground = new HorizontallyScrollingBackground(this.GraphicsDevice.Viewport);
             mScrollingBackground.AddBackground("Background01");
@@ -73,6 +114,7 @@ namespace Beeautiful2
             mScrollingBackground.LoadContent(this.Content);
             // TODO: use this.Content to load your game content here
             bSprite.LoadContent(this.Content);
+            eSprite.LoadContent(this.Content);
         }
 
         /// <summary>
@@ -99,11 +141,40 @@ namespace Beeautiful2
             }
             else
                 soundEngineInstance.Resume();
+            GamePadState gamePadState = GamePad.GetState(PlayerIndex.One);
+            KeyboardState keyboardState = Keyboard.GetState();
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+              // Check to see if the user has exited
+            if (checkExitKey(keyboardState, gamePadState))
+            {
+                base.Update(gameTime);
+                return;
+            }
+
+            // Check to see if there has been any activity
+            if (checkActivity(keyboardState, gamePadState) == false)
+            {
+                timeoutCount += gameTime.ElapsedGameTime.Milliseconds;
+            }
+            else
+                timeoutCount = 0;
+
+
+            // Timeout if idle long enough
+            if (timeoutCount > TimeOutLimit)
+            {
+                Exit();
+                base.Update(gameTime);
+                return;
+            }
+
+            base.Update(gameTime);
+        
 
             bSprite.Update(gameTime);
+            eSprite.Update(gameTime);
 
             // TODO: Add your update logic here
 
@@ -123,6 +194,7 @@ namespace Beeautiful2
             spriteBatch.Begin();
             mScrollingBackground.Draw(spriteBatch);
             bSprite.Draw(this.spriteBatch);
+            eSprite.Draw(this.spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);
