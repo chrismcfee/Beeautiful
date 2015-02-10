@@ -15,10 +15,10 @@ namespace Beeautiful2
         const int START_POSITION_X = 1125;
         const int START_POSITION_Y = 145;
         const int BEE_SPEED = 160;
-        const int MOVE_UP = -1;
-        const int MOVE_DOWN = 1;
-        const int MOVE_LEFT = -1;
-        const int MOVE_RIGHT = 1;
+        const int MOVE_UP = -3;
+        const int MOVE_DOWN = 3;
+        const int MOVE_LEFT = -3;
+        const int MOVE_RIGHT = 3;
 
         enum State
         {

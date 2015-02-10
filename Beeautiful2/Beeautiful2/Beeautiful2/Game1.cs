@@ -35,8 +35,8 @@ namespace Beeautiful2
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            this.graphics.PreferredBackBufferWidth = 1080;
-            this.graphics.PreferredBackBufferHeight = 1900;
+            this.graphics.PreferredBackBufferWidth =GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
 
             this.graphics.IsFullScreen = true;
         }
