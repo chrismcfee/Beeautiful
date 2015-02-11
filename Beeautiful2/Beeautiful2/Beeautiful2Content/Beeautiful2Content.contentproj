@@ -71,22 +71,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Audio\Music\28_-_Seinfeld_Theme_Dubstep_Remix_.wav">
-      <Name>28_-_Seinfeld_Theme_Dubstep_Remix_</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Audio\Music\04_-_The_Black_Eyed_Peas_-_Imma_Be-TSM.wav">
       <Name>04_-_The_Black_Eyed_Peas_-_Imma_Be-TSM</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Audio\Music\mymix.wav">
-      <Name>mymix</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>

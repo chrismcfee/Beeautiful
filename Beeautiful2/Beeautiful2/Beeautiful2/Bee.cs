@@ -12,8 +12,8 @@ namespace Beeautiful2
     class Bee : Sprite
     {
         const string BEE_ASSETNAME = "bee";
-        const int START_POSITION_X = 1125;
-        const int START_POSITION_Y = 145;
+        int START_POSITION_X = ((GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width / 2) - 100);
+        int START_POSITION_Y = ((GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height / 2) - 100);
         const int BEE_SPEED = 160;
         const int MOVE_UP = -3;
         const int MOVE_DOWN = 3;
@@ -22,11 +22,11 @@ namespace Beeautiful2
 
         enum State
         {
-            Flying,
+            Alive,
             Dead
         }
 
-        State mCurrentState = State.Flying;
+        State mCurrentState = State.Alive;
         Vector2 mDirection = Vector2.Zero;
         Vector2 mSpeed = Vector2.Zero;
         KeyboardState mPreviousKeyboardState;
@@ -55,7 +55,7 @@ namespace Beeautiful2
 
         private void UpdateMovement(KeyboardState aCurrentKeyboardState)
         {
-            if (mCurrentState == State.Flying)
+            if (mCurrentState == State.Alive)
             {
                 mSpeed = Vector2.Zero;
                 mDirection = Vector2.Zero;

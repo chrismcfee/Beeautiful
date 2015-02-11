@@ -22,11 +22,11 @@ namespace Beeautiful2
 
         enum State
         {
-            Flying,
+            Alive,
             Dead
         }
 
-        State mCurrentState = State.Flying;
+        State mCurrentState = State.Alive;
         Vector2 mDirection = Vector2.Zero;
         Vector2 mSpeed = Vector2.Zero;
         KeyboardState mPreviousKeyboardState;
@@ -55,7 +55,7 @@ namespace Beeautiful2
 
         private void UpdateMovement(KeyboardState aCurrentKeyboardState)
         {
-            if (mCurrentState == State.Flying)
+            if (mCurrentState == State.Alive)
             {
                 mSpeed = Vector2.Zero;
                 mDirection = Vector2.Zero;
