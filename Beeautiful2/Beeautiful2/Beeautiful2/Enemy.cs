@@ -12,8 +12,8 @@ namespace Beeautiful2
     class Enemy : Sprite
     {
         const string ENEMY_ASSETNAME = "enemy";
-        const int START_POSITION_X = -100;
-        const int START_POSITION_Y = -100;
+        int START_POSITION_X = -100;
+        int START_POSITION_Y = -100;
         const int ENEMY_SPEED = 160;
         const int MOVE_UP = -1;
         const int MOVE_DOWN = 1;

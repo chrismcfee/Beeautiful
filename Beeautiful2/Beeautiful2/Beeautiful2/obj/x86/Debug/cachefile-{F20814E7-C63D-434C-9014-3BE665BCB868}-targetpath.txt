@@ -4,6 +4,6 @@ Content\Background03.xnb
 Content\Background04.xnb
 Content\Background05.xnb
 Content\Image1.xnb
-Content\bee.xnb
 Content\enemy.xnb
 Content\Audio\Music\04_-_The_Black_Eyed_Peas_-_Imma_Be-TSM.xnb
+Content\Sprites\Player\bee.xnb

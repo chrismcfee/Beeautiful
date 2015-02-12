@@ -19,7 +19,6 @@ namespace Beeautiful2
         const int MOVE_DOWN = 3;
         const int MOVE_LEFT = -3;
         const int MOVE_RIGHT = 3;
-
         enum State
         {
             Alive,
@@ -28,6 +27,7 @@ namespace Beeautiful2
 
         State mCurrentState = State.Alive;
         Vector2 mDirection = Vector2.Zero;
+        Vector2 mRotation = Vector2.Zero;
         Vector2 mSpeed = Vector2.Zero;
         KeyboardState mPreviousKeyboardState;
 

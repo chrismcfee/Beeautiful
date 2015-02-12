@@ -56,15 +56,6 @@
       <Time>2015-02-10T22:43:52.3954925-05:00</Time>
     </Item>
     <Item>
-      <Source>bee.png</Source>
-      <Name>bee</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\bee.xnb</Output>
-      <Time>2015-02-10T22:43:52.3964926-05:00</Time>
-    </Item>
-    <Item>
       <Source>enemy.png</Source>
       <Name>enemy</Name>
       <Importer>TextureImporter</Importer>
@@ -81,6 +72,15 @@
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Audio\Music\04_-_The_Black_Eyed_Peas_-_Imma_Be-TSM.xnb</Output>
       <Time>2015-02-10T22:43:51.1094189-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Player\bee.png</Source>
+      <Name>Sprites\Player\bee</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2\bin\x86\Debug\Content\Sprites\Player\bee.xnb</Output>
+      <Time>2015-02-10T22:43:52.3964926-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
