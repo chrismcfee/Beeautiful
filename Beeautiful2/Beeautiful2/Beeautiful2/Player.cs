@@ -105,9 +105,9 @@ namespace Beeautiful2
             if (!Hidden)
             {
                 if (ObjectDirection == Direction.Right)
-                    spriteBatch.Draw(Texture, position, null, Color.White, Rotation, Origin, Scale, SpriteEffects.None, 0);
-                else if (ObjectDirection == Direction.Left)
                     spriteBatch.Draw(Texture, position, null, Color.White, Rotation, Origin, Scale, SpriteEffects.FlipHorizontally, 0);
+                else if (ObjectDirection == Direction.Left)
+                    spriteBatch.Draw(Texture, position, null, Color.White, Rotation, Origin, Scale, SpriteEffects.None, 0);
             }
         }
         #endregion
