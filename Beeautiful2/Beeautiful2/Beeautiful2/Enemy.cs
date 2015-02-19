@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +8,17 @@ using System.Text;
 
 namespace Beeautiful2
 {
-    class Enemy : Sprite
+    class Enemy : GameObject
     {
-        const string ENEMY_ASSETNAME = "enemy";
-        int START_POSITION_X = -100;
-        int START_POSITION_Y = -100;
-        const int ENEMY_SPEED = 160;
-        const int MOVE_UP = -1;
-        const int MOVE_DOWN = 1;
-        const int MOVE_LEFT = -1;
-        const int MOVE_RIGHT = 1;
+
+        const string BEE_ASSETNAME = "enemybee";
+        private int START_POSITION_X;
+        private int START_POSITION_Y;
+        private const int BEE_SPEED = 160;
+        private const int MOVE_UP = -3;
+        private const int MOVE_DOWN = 3;
+        private const int MOVE_LEFT = -3;
+        private const int MOVE_RIGHT = 3;
 
         enum State
         {
@@ -32,63 +32,84 @@ namespace Beeautiful2
         KeyboardState mPreviousKeyboardState;
 
 
-
-        public void LoadContent(ContentManager theContentManager)
+        #region ClassConstructor
+        GameObject Enemy(Texture2D _texture, Vector2 _position, float _speed = 0.0
+        , float _scale = 0.0f, float _angle = 0.0f, float _rotationSpeed = 0.0f)
+        : base(_texture)
         {
-            Position = new Vector2(START_POSITION_X, START_POSITION_Y);
-            base.LoadContent(theContentManager, ENEMY_ASSETNAME);
-
+            position = _position;
+            Speed = _speed;
+            Scale = _scale;
+            Origin = new Vector2(Texture.Width / 2, Texture.Height / 2);
+            RotationSpeed = _rotationSpeed;
+            Rotation = _angle;
         }
-
-
-
-        public void Update(GameTime theGameTime)
+        #endregion
+        #region OverrideRectangles
+        public override Rectangle SourceRectangle
         {
-            KeyboardState aCurrentKeyboardState = Keyboard.GetState();
-            UpdateMovement(aCurrentKeyboardState);
-            mPreviousKeyboardState = aCurrentKeyboardState;
-            base.Update(theGameTime, mSpeed, mDirection);
-        }
-
-
-
-
-        private void UpdateMovement(KeyboardState aCurrentKeyboardState)
-        {
-            if (mCurrentState == State.Alive)
+            get
             {
-                mSpeed = Vector2.Zero;
-                mDirection = Vector2.Zero;
-                /*if (aCurrentKeyboardState.IsKeyDown(Keys.Left) == true)
-                {
-                    mSpeed.X = ENEMY_SPEED;
-                    mDirection.X = MOVE_LEFT;
-                }
-
-                else if (aCurrentKeyboardState.IsKeyDown(Keys.Right) == true)
-                {
-                    mSpeed.X = ENEMY_SPEED;
-                    mDirection.X = MOVE_RIGHT;
-                }
-
-
-
-                if (aCurrentKeyboardState.IsKeyDown(Keys.Up) == true)
-                {
-                    mSpeed.Y = ENEMY_SPEED;
-                    mDirection.Y = MOVE_UP;
-                }
-
-                else if (aCurrentKeyboardState.IsKeyDown(Keys.Down) == true)
-                {
-                    mSpeed.Y = ENEMY_SPEED;
-                    mDirection.Y = MOVE_DOWN;
-                }*/
-
+                sourceRectangle.X = (int)position.X;
+                sourceRectangle.Y = (int)position.Y;
+                return base.SourceRectangle;
             }
-
+            set
+            {
+                base.SourceRectangle = value;
+            }
         }
-
-
+        public override Rectangle CollisionRectangle
+        {
+            get
+            {
+                collisionRectangle.X = (int)position.X;
+                collisionRectangle.Y = (int)position.Y;
+                return base.CollisionRectangle;
+            }
+            set
+            {
+                base.CollisionRectangle = value;
+            }
+        }
+        #endregion
+        #region OverrideUpdate
+        public override void Update(GameTime gameTime)
+        {
+            if (Alive)
+            {
+                if (Keyboard.GetState().IsKeyDown(Keys.Right))
+                {
+                    position.X += Speed;
+                    ObjectDirection = Direction.Right;
+                }
+                if (Keyboard.GetState().IsKeyDown(Keys.Left))
+                {
+                    position.X -= Speed;
+                    ObjectDirection = Direction.Left;
+                }
+                if (Keyboard.GetState().IsKeyDown(Keys.Down))
+                    position.Y += Speed;
+                if (Keyboard.GetState().IsKeyDown(Keys.Up))
+                    position.Y -= Speed;
+                if (Keyboard.GetState().IsKeyDown(Keys.E))
+                    Rotation += RotationSpeed;
+                if (Keyboard.GetState().IsKeyDown(Keys.Q))
+                    Rotation -= RotationSpeed;
+            }
+        }
+        #endregion
+        #region OverrideDraw
+        public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
+        {
+            if (!Hidden)
+            {
+                if (ObjectDirection == Direction.Right)
+                    spriteBatch.Draw(Texture, position, null, Color.White, Rotation, Origin, Scale, SpriteEffects.FlipHorizontally, 0);
+                else if (ObjectDirection == Direction.Left)
+                    spriteBatch.Draw(Texture, position, null, Color.White, Rotation, Origin, Scale, SpriteEffects.None, 0);
+            }
+        }
+        #endregion
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Beeautiful2
 {
-    class enemy : GameObject
+    class enemyBee : Enemy
     {
 
         private const string ENEMY_ASSETNAME;
@@ -27,14 +27,16 @@ namespace Beeautiful2
         }
 
         State mCurrentState = State.Alive;
-        Vector2 mDirection = Vector2.Zero;
-        Vector2 mSpeed = Vector2.Zero;
+        //Vector2 mDirection = Vector2.Zero;
+        //Vector2 mSpeed = Vector2.Zero;
         KeyboardState mPreviousKeyboardState;
 
 
         #region ClassConstructor
-        GameObject Enemy(Texture2D _texture, Vector2 _position, float _speed = 0.0f, float _scale = 0.0f, float _angle = 0.0f, float _rotationSpeed = 0.0f): base(_texture)
-        {
+        GameObject Enemy;
+        public enemyBee(GameObject Enemy(Texture2D _texture, Vector2 _position, float _speed = 0.0f, float _scale = 0.0f, float _angle = 0.0f, float _rotationSpeed = 0.0f)
+            : base(_texture)
+    {
             position = _position;
             Speed = _speed;
             Scale = _scale;
@@ -72,7 +74,7 @@ namespace Beeautiful2
         }
         #endregion
         #region OverrideUpdate
-        public override void Update(GameTime gameTime)
+        public override Update(GameTime gameTime)
         {
             if (Alive)
             {
@@ -110,4 +112,5 @@ namespace Beeautiful2
         }
         #endregion
     }
+}
 }
