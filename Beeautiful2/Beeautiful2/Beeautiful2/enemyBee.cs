@@ -11,14 +11,14 @@ namespace Beeautiful2
     class enemyBee : Enemy
     {
 
-        private const string ENEMY_ASSETNAME;
+        private const string ENEMY_ASSETNAME = "eBee";
         private int START_POSITION_X;
         private int START_POSITION_Y;
         private const int ENEMY_SPEED = 160;
-        private const int MOVE_UP;
-        private const int MOVE_DOWN;
-        private const int MOVE_LEFT;
-        private const int MOVE_RIGHT;
+        private const int MOVE_UP = -3;
+        private const int MOVE_DOWN = 3;
+        private const int MOVE_LEFT = -3;
+        private const int MOVE_RIGHT = 3;
 
         enum State
         {
@@ -33,8 +33,8 @@ namespace Beeautiful2
 
 
         #region ClassConstructor
-        GameObject Enemy;
-        public enemyBee(GameObject Enemy(Texture2D _texture, Vector2 _position, float _speed = 0.0f, float _scale = 0.0f, float _angle = 0.0f, float _rotationSpeed = 0.0f)
+        //GameObject Enemy;
+        public enemyBee(Texture2D _texture, Vector2 _position, float _speed = 0.0f, float _scale = 0.0f, float _angle = 0.0f, float _rotationSpeed = 0.0f)
             : base(_texture)
     {
             position = _position;
@@ -46,7 +46,7 @@ namespace Beeautiful2
         }
         #endregion
         #region OverrideRectangles
-        public override Rectangle SourceRectangle
+        public override SourceRectangle ebsRectangle
         {
             get
             {
@@ -59,7 +59,7 @@ namespace Beeautiful2
                 base.SourceRectangle = value;
             }
         }
-        public override Rectangle CollisionRectangle
+        public override CollisionRectangle ebcRectangle
         {
             get
             {
@@ -74,7 +74,7 @@ namespace Beeautiful2
         }
         #endregion
         #region OverrideUpdate
-        public override Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             if (Alive)
             {
