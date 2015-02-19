@@ -8,10 +8,10 @@ using System.Text;
 
 namespace Beeautiful2
 {
-    class enemyBee : Enemy
+    class enemyFly : Enemy
     {
 
-        private const string ENEMY_ASSETNAME = "eBee";
+        private const string ENEMY_ASSETNAME = "eFly";
         private int START_POSITION_X;
         private int START_POSITION_Y;
         private const int ENEMY_SPEED = 160;
