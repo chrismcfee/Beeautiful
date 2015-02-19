@@ -10,6 +10,22 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 
+//you can use the built in function in xna to do every single animation
+//or you can use timespan
+
+//use speed for all vectors
+//base speed = TBD
+
+// ^ IMPORTANT:
+
+//_______________
+
+//TO DO:
+
+//IN ISSUES ON GITHUB
+
+
+
 namespace Beeautiful2
 {
     /// <summary>
