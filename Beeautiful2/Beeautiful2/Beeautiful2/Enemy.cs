@@ -33,12 +33,12 @@ namespace Beeautiful2
 
 
         #region ClassConstructor
-        GameObject Enemy(Texture2D _texture, Vector2 _position, float _speed = 0.0
+        public Enemy(Texture2D _texture, Vector2 _position, double _speed = 0.0
         , float _scale = 0.0f, float _angle = 0.0f, float _rotationSpeed = 0.0f)
-        : base(_texture)
+        : base(_texture)        
         {
             position = _position;
-            Speed = _speed;
+            Speed = BEE_SPEED;
             Scale = _scale;
             Origin = new Vector2(Texture.Width / 2, Texture.Height / 2);
             RotationSpeed = _rotationSpeed;

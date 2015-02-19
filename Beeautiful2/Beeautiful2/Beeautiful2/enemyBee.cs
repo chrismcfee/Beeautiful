@@ -34,18 +34,17 @@ namespace Beeautiful2
 
         #region ClassConstructor
         //GameObject Enemy;
-        public enemyBee(Texture2D _texture, Vector2 _position, float _speed = 0.0f, float _scale = 0.0f, float _angle = 0.0f, float _rotationSpeed = 0.0f)
-            : base(_texture)
-    {
+        public enemyBee(Texture2D _texture, position _position)
+        {
             position = _position;
-            Speed = _speed;
-            Scale = _scale;
+            //Speed = ENEMY_SPEED;
+            //Scale = _scale;
             Origin = new Vector2(Texture.Width / 2, Texture.Height / 2);
-            RotationSpeed = _rotationSpeed;
-            Rotation = _angle;
+            //RotationSpeed = _rotationSpeed;
+            //Rotation = _angle;
         }
         #endregion
-        #region OverrideRectangles
+        /*#region OverrideRectangles
         public override SourceRectangle ebsRectangle
         {
             get
@@ -98,8 +97,8 @@ namespace Beeautiful2
                     Rotation -= RotationSpeed;
             }
         }
-        #endregion
-        #region OverrideDraw
+        #endregion*/
+        #region EnemyBeeDraw
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
             if (!Hidden)
@@ -112,5 +111,4 @@ namespace Beeautiful2
         }
         #endregion
     }
-}
 }
