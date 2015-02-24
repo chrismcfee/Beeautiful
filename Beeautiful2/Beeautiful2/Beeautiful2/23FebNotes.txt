@@ -1,0 +1,43 @@
+tilemap
+
+you can create maps with tiled map editor and xml
+
+we need hp bar
+
+we need intro main screen that desctribes controls (USE BITMAP FONT)
+
+isWin();
+isLose();
+
+In game option to run in full screen (can be done by pressing a keyboard button to toggle full screen).
+
+SETTINGS
+_________
+
+boss1 = blimpish fat guy from seinfeld who explodes
+boss2 = chris rock drone beatle
+boss3 = satan fire ant
+
+boss1 = flies around in a random pattern and melees you, explodes upon death, dealing massive damage; level will end 5 seconds after explosion
+
+boss2 = fires rapid horn shots in a pattern like so:
+(down)
+----
+(down)
+(down)
+-----------
+(down)
+------------------
+(down)
+(then flies back to top without firing)
+
+boss3 = satan just shoots fireballs touhou-style while moving around in a calculated dangerous pattern
+
+1 - earth
+2 - bug planet
+3 - hell
+
+
+_________
+
+
