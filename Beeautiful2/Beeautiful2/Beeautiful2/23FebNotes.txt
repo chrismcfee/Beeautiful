@@ -1,4 +1,20 @@
+touhou style
+
+sprite sheets
+
 sprite font
+
+stage 1 start
+
+stage 2 start
+
+stage 3 start
+
+stage 1 map
+
+stage 2 map
+
+stage 3 map
 
 tilemap
 
