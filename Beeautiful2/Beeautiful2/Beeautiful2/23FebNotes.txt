@@ -1,3 +1,5 @@
+sprite font
+
 tilemap
 
 you can create maps with tiled map editor and xml
