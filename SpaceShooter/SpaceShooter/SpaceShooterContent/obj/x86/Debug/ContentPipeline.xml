@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>backgroundColor.png</Source>
+      <Name>backgroundColor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\backgroundColor.xnb</Output>
+      <Time>2012-11-02T18:14:16.558496-04:00</Time>
+    </Item>
+    <Item>
+      <Source>player.png</Source>
+      <Name>player</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\player.xnb</Output>
+      <Time>2012-11-02T18:41:52.758507-04:00</Time>
+    </Item>
+    <Item>
+      <Source>playerLeft.png</Source>
+      <Name>playerLeft</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\playerLeft.xnb</Output>
+      <Time>2012-11-02T18:41:52.758507-04:00</Time>
+    </Item>
+    <Item>
+      <Source>playerRight.png</Source>
+      <Name>playerRight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\playerRight.xnb</Output>
+      <Time>2012-11-02T18:41:52.758507-04:00</Time>
+    </Item>
+    <Item>
+      <Source>laserRed.png</Source>
+      <Name>laserRed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserRed.xnb</Output>
+      <Time>2012-11-02T19:35:46.1635813-04:00</Time>
+    </Item>
+    <Item>
+      <Source>meteorBig.png</Source>
+      <Name>meteorBig</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\meteorBig.xnb</Output>
+      <Time>2012-11-02T20:17:23.6956491-04:00</Time>
+    </Item>
+    <Item>
+      <Source>meteorSmall.png</Source>
+      <Name>meteorSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\meteorSmall.xnb</Output>
+      <Time>2012-11-02T20:17:23.6956491-04:00</Time>
+    </Item>
+    <Item>
+      <Source>laserRedShot.png</Source>
+      <Name>laserRedShot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserRedShot.xnb</Output>
+      <Time>2012-11-02T21:04:15.8885016-04:00</Time>
+    </Item>
+    <Item>
+      <Source>life.png</Source>
+      <Name>life</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\life.xnb</Output>
+      <Time>2012-11-02T21:28:57.4918882-04:00</Time>
+    </Item>
+    <Item>
+      <Source>laserGreen.png</Source>
+      <Name>laserGreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserGreen.xnb</Output>
+      <Time>2012-11-03T19:31:23.389932-04:00</Time>
+    </Item>
+    <Item>
+      <Source>score.spritefont</Source>
+      <Name>score</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\score.xnb</Output>
+      <Time>2012-11-03T19:38:51.4233575-04:00</Time>
+    </Item>
+    <Item>
+      <Source>laserGreenShot.png</Source>
+      <Name>laserGreenShot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserGreenShot.xnb</Output>
+      <Time>2012-11-03T19:48:05.1165232-04:00</Time>
+    </Item>
+    <Item>
+      <Source>shield.png</Source>
+      <Name>shield</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\shield.xnb</Output>
+      <Time>2012-11-03T20:44:18.4242608-04:00</Time>
+    </Item>
+    <Item>
+      <Source>blank.png</Source>
+      <Name>blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\blank.xnb</Output>
+      <Time>2012-11-04T17:46:04.3830826-05:00</Time>
+    </Item>
+    <Item>
+      <Source>speedLine.png</Source>
+      <Name>speedLine</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\speedLine.xnb</Output>
+      <Time>2012-11-04T18:42:58.687402-05:00</Time>
+    </Item>
+    <Item>
+      <Source>starBackground.png</Source>
+      <Name>starBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\starBackground.xnb</Output>
+      <Time>2012-11-04T18:42:58.687402-05:00</Time>
+    </Item>
+    <Item>
+      <Source>starBig.png</Source>
+      <Name>starBig</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\starBig.xnb</Output>
+      <Time>2012-11-04T18:42:58.687402-05:00</Time>
+    </Item>
+    <Item>
+      <Source>starSmall.png</Source>
+      <Name>starSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\starSmall.xnb</Output>
+      <Time>2012-11-04T18:42:58.687402-05:00</Time>
+    </Item>
+    <Item>
+      <Source>loop-transit.mp3</Source>
+      <Name>loop-transit</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\loop-transit.xnb</Output>
+      <Extra>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\loop-transit.wma</Extra>
+      <Time>2012-11-04T19:31:14.5615517-05:00</Time>
+    </Item>
+    <Item>
+      <Source>enemyShip.png</Source>
+      <Name>enemyShip</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\enemyShip.xnb</Output>
+      <Time>2012-11-04T20:14:17.9755563-05:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooterContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooterContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-09-10T21:11:30.1354788-04:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

@@ -1,0 +1,62 @@
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\backgroundColor.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\SpaceShooter.exe
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\SpaceShooter.pdb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\obj\x86\Debug\SpaceShooter.exe
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\obj\x86\Debug\SpaceShooter.pdb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\player.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\playerLeft.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\playerRight.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserRed.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\meteorBig.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\meteorSmall.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserRedShot.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\life.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserGreen.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\score.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserGreenShot.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\shield.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\blank.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\speedLine.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\starBackground.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\starBig.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\starSmall.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\loop-transit.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\loop-transit.wma
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\enemyShip.xnb
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\SpaceShooter.exe.manifest
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\bin\x86\Debug\SpaceShooter.application
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\obj\x86\Debug\SpaceShooter.exe.manifest
+C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooter\obj\x86\Debug\SpaceShooter.application
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\backgroundColor.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\player.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\playerLeft.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\playerRight.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserRed.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\meteorBig.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\meteorSmall.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserRedShot.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\life.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserGreen.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\laserGreenShot.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\shield.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\blank.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\speedLine.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\starBackground.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\starBig.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\starSmall.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\enemyShip.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\score.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\loop-transit.xnb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\Content\loop-transit.wma
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\SpaceShooter.exe.manifest
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\SpaceShooter.application
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\SpaceShooter.exe
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\bin\x86\Debug\SpaceShooter.pdb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\obj\x86\Debug\SpaceShooter.exe.manifest
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\obj\x86\Debug\SpaceShooter.application
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\obj\x86\Debug\SpaceShooter.exe
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\obj\x86\Debug\SpaceShooter.pdb
+C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooter\obj\x86\Debug\SpaceShooter.csprojResolveAssemblyReference.cache
