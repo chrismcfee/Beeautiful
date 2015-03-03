@@ -1,2 +1,0 @@
-C:\home\csc427\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2Content\obj\x86\Debug\Beeautiful2Content.contentprojResolveAssemblyReference.cache
-C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful2\Beeautiful2\Beeautiful2Content\obj\x86\Debug\Beeautiful2Content.contentprojResolveAssemblyReference.cache
