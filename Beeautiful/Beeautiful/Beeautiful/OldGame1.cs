@@ -9,6 +9,23 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+The game should include:
+
+    [ ]Intro screen briefly describing the game and explaining the controls (also include who created this game; group name or individual names and give your game a name).
+    [ ]Two screens at the end of the game one for losing and the other for wining (if your game has infinite level then you do not need this), you want to include your names at the end or in game if you did not do it in number 1.
+    [ ]Moving background or animated background or add a moving layer above your background.
+    [ ]Using sprite font (score or lives or etc.) but you need to use it somewhere.
+    [ ]Animation
+    [ ]Sound Effects
+    [ ]Songs
+    [ ]Bosses (make sure you have more than one, if your game idea does not need boss then speak to me and I could allow your game not to have bosses)
+    [ ]At least three levels (some of your games might not need this, speak to me).
+    [ ]A wining (can be survival) and a losing states.
+    [ ]Pause the game
+    [ ]Written in object oriented way
+    [ ]Game states
+    [ ]A button to exit the game
+    [ ]In game option to run in full screen (can be done by pressing a keyboard button to toggle full screen).
 
 //you can use the built in function in xna to do every single animation
 //or you can use timespan
