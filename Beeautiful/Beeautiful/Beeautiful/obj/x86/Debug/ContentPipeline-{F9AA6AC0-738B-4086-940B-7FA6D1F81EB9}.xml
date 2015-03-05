@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryCenter\Jerry_Center.xnb</Output>
-      <Time>2015-03-04T21:56:35.4325845-05:00</Time>
+      <Time>2015-03-05T15:19:17.7817075-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\JerryLeft\Jerry_left.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryLeft\Jerry_left.xnb</Output>
-      <Time>2015-03-04T21:56:35.4345846-05:00</Time>
+      <Time>2015-03-05T15:19:17.7827075-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\JerryRight\Jerry_right.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryRight\Jerry_right.xnb</Output>
-      <Time>2015-03-04T21:56:35.4365847-05:00</Time>
+      <Time>2015-03-05T15:19:17.7827075-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\bg\backgroundClouds.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bg\backgroundColor.xnb</Output>
-      <Time>2015-03-04T23:48:12.8514162-05:00</Time>
+      <Time>2015-03-05T15:19:17.7857077-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\bg\background_level_1.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bigcloud.xnb</Output>
-      <Time>2015-03-04T23:48:43.250155-05:00</Time>
+      <Time>2015-03-05T15:19:17.7867078-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\blank.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\enemy_bee_stinger.xnb</Output>
-      <Time>2015-03-04T23:48:43.2561553-05:00</Time>
+      <Time>2015-03-05T15:19:17.7867078-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Jerry_Bee.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_bee_stinger.xnb</Output>
-      <Time>2015-03-04T23:48:43.2591555-05:00</Time>
+      <Time>2015-03-05T15:19:17.7837076-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Jerry_lives_death.png</Source>
@@ -233,7 +233,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\smallcloud.xnb</Output>
-      <Time>2015-03-04T23:48:43.2731563-05:00</Time>
+      <Time>2015-03-05T15:19:17.7887079-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\speedLine.png</Source>
@@ -305,7 +305,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\beatleBig.xnb</Output>
-      <Time>2015-03-04T23:48:43.2661559-05:00</Time>
+      <Time>2015-03-05T15:19:17.7847077-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\beatleSmall.png</Source>
@@ -314,7 +314,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\beatleSmall.xnb</Output>
-      <Time>2015-03-04T23:48:43.2671559-05:00</Time>
+      <Time>2015-03-05T15:19:17.7847077-05:00</Time>
     </Item>
     <Item>
       <Source>Audio\Map1.mp3</Source>

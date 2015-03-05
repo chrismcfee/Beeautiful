@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="BackgroundElement.cs" />
     <Compile Include="Beatle.cs" />
+    <Compile Include="Boss1.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemySting.cs" />
     <Compile Include="Explosion.cs" />
