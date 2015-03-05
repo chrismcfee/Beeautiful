@@ -5,8 +5,7 @@ namespace Beeautiful
 {
     public class EnemySting : Sting
     {
-        public EnemySting(Texture2D texture, Vector2 position)
-            : base(texture, position, 0)
+        public EnemySting(Texture2D texture, Vector2 position) : base(texture, position, 0)
         {
             this.texture = texture;
             this.position = position;

@@ -13,7 +13,7 @@ namespace Beeautiful
         bool isLarge;
         float speed;
         Texture2D texture;
-        float BeatleHealth;
+        float beatleHealth;
         public float baseHealth;
         bool visible;
         bool credited = false;
@@ -24,8 +24,8 @@ namespace Beeautiful
 
         public float Health
         {
-            get { return BeatleHealth; }
-            set { BeatleHealth = value; }
+            get { return beatleHealth; }
+            set { beatleHealth = value; }
         }
 
         public bool Visible
@@ -49,12 +49,12 @@ namespace Beeautiful
 
         public void Damage(float amount)
         {
-            BeatleHealth -= amount;
-            if (BeatleHealth <= 0 && isLarge)
+            beatleHealth -= amount;
+            if (beatleHealth <= 0 && isLarge)
             {
                 SpawnSmallBeatles();
             }
-            if (!credited && BeatleHealth <= 0)
+            if (!credited && beatleHealth <= 0)
             {
                 int credit = !isLarge ? 1 : 2;
                 Game1.instance.kills += credit;
@@ -79,10 +79,10 @@ namespace Beeautiful
         public Beatle(bool isLarge, float speed, Vector2 position)
         {
             this.isLarge = isLarge;
-            this.texture = !isLarge ? Game1.instance.BeatleSmall : Game1.instance.BeatleBig;
+            this.texture = !isLarge ? Game1.instance.beatleSmall : Game1.instance.beatleBig;
             Random rand = new Random();
             this.speed = speed;
-            BeatleHealth = !isLarge ? 20 : 50;
+            beatleHealth = !isLarge ? 20 : 50;
             baseHealth = !isLarge ? 20 : 50;
             this.position = position;
             visible = true;
@@ -91,7 +91,7 @@ namespace Beeautiful
 
         public void Update()
         {
-            if (BeatleHealth <= 0)
+            if (beatleHealth <= 0)
                 visible = false;
             motion.Normalize();
             position += motion * this.speed;

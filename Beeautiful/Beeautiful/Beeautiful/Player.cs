@@ -33,7 +33,7 @@ namespace Beeautiful
 
         Rectangle screenBounds;
 
-        int stingerLevel = 0;
+        int stingLevel = 0;
 
         double lastFireTime = 0;
 
@@ -53,7 +53,7 @@ namespace Beeautiful
             get { return maxShieldPower; }
         }
 
-        public double ShieldPower
+        public double ShieldPower 
         {
             get { return shieldPower; }
         }
@@ -63,9 +63,9 @@ namespace Beeautiful
             get { return shielded; }
         }
 
-        public int StingerLevel
+        public int StingLevel
         {
-            get { return stingerLevel; }
+            get { return stingLevel; }
         }
 
         public bool Invincible
@@ -123,24 +123,24 @@ namespace Beeautiful
                 shieldPower = maxShieldPower;
                 shieldCooldown = false;
             }
-            if (shielded && !(timeSinceRespawn < timeInvincibleAfterRespawn))
+            if(shielded && !(timeSinceRespawn < timeInvincibleAfterRespawn))
                 shieldPower -= shieldDepleteRate * gameTime.ElapsedGameTime.Milliseconds;
+            
 
-
-            if (Game1.instance.kills > 20 && stingerLevel == 0)
+            if (Game1.instance.kills > 20 && stingLevel == 0)
             {
-                stingerLevel = 1;
-                Game1.instance.Notifications.Add(new Notification("Stingers Improved", 2000, screenBounds));
+                stingLevel = 1;
+                Game1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
             }
-            if (Game1.instance.kills > 50 && stingerLevel == 1)
+            if (Game1.instance.kills > 50 && stingLevel == 1)
             {
-                stingerLevel = 2;
-                Game1.instance.Notifications.Add(new Notification("Stingers Improved", 2000, screenBounds));
+                stingLevel = 2;
+                Game1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
             }
-            if (Game1.instance.kills > 100 && stingerLevel == 2)
+            if (Game1.instance.kills > 100 && stingLevel == 2)
             {
-                stingerLevel = 3;
-                Game1.instance.Notifications.Add(new Notification("Stingers Improved", 2000, screenBounds));
+                stingLevel = 3;
+                Game1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
             }
 
             timeSinceRespawn += gameTime.ElapsedGameTime.Milliseconds;
@@ -238,23 +238,23 @@ namespace Beeautiful
                 Texture2D sting = Game1.instance.stingRed;
                 if (stingLevel >= 1)
                 {
-                    stinger = Game1.instance.stingerGreen;
+                    sting = Game1.instance.stingGreen;
                 }
                 if (stingLevel < 2)
                 {
-                    Game1.instance.Stings.Addnew Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 2 - Sting.Width / 2, position.Y - 30), stingLevel);
+                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 2 - sting.Width / 2, position.Y - 30), stingLevel));
                 }
                 if (stingLevel == 2)
                 {
-                    Game1.instance.Stingers.Add(new Stinger(stinger, new Vector2(position.X + textures[currentTexture].Width / 3 - sting.Width / 2, position.Y - 30), stingerLevel));
-                    Game1.instance.Stingers.Add(new Stinger(stinger, new Vector2(position.X + textures[currentTexture].Width / 3 * 2 - sting.Width / 2, position.Y - 30), stingerLevel));
+                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 - sting.Width / 2, position.Y - 30), stingLevel));
+                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 * 2 - sting.Width / 2, position.Y - 30), stingLevel));
                 }
                 if (stingLevel == 3)
                 {
-                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 - sting.Width / 2, position.Y - 30), stingerLevel));
-                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 * 2 - sting.Width / 2, position.Y - 30), stingerLevel));
-                    Sting right = new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 - sting.Width / 2, position.Y - 30), stingerLevel);
-                    Sting left = new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 * 2 - sting.Width / 2, position.Y - 30), stingerLevel);
+                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 - sting.Width / 2, position.Y - 30), stingLevel));
+                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 * 2 - sting.Width / 2, position.Y - 30), stingLevel));
+                    Sting right = new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 - sting.Width / 2, position.Y - 30), stingLevel);
+                    Sting left = new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 * 2 - sting.Width / 2, position.Y - 30), stingLevel);
                     right.motion.X = 1;
                     right.motion.Y = -1;
                     left.motion.X = -1;
@@ -283,7 +283,7 @@ namespace Beeautiful
         {
             this.lives = maxLives;
             setInStartPosition();
-            stingerLevel = 0;
+            stingLevel = 0;
             shieldPower = maxShieldPower;
             shieldCooldown = false;
         }
@@ -294,7 +294,7 @@ namespace Beeautiful
             setInStartPosition();
             isInvincible = true;
             Game1.instance.kills = 0;
-            stingerLevel = 0;
+            stingLevel = 0;
             shieldCooldown = false;
             shieldPower = maxShieldPower;
             foreach (Enemy enemy in Game1.instance.Enemies)

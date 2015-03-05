@@ -9,36 +9,53 @@ namespace Beeautiful
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+
         enum gameState { Loading, StartMenu, Running, Paused, GameOver, Editor };
+
         #region Variables
+
         gameState state;
+
         public static Game1 instance;
+
         GraphicsDeviceManager graphics;
         Rectangle screenBounds;
+
         SpriteBatch spriteBatch;
         SpriteFont scoreFont;
+
         Player player;
+
         //To prevent holding down a button from changing state rapidly
         double stateChangeDelay = 100;
         double timeSinceStateChange = 0;
+
         bool flashing = false;
         double timeSinceLastFlash = 0;
         double flashInterval = 500;
+
         public int kills = 0;
         public int playerScore = 0;
+
         #region Textures
+
         public Texture2D playerShield;
         Texture2D playerLivesGraphic;
+
         Texture2D background;
         List<Texture2D> backgroundElements;
+
         Texture2D blank;
+
         public Texture2D enemyShip;
-        public Texture2D stingerRed;
-        public Texture2D stingerGreen;
+
+        public Texture2D stingRed;
+        public Texture2D stingGreen;
+
         public Texture2D beatleBig;
         public Texture2D beatleSmall;
 
-        //Explosions for stinger-beatle collisions
+        //Explosions for sting-beatle collisions
         Texture2D explosionTexture;
         Texture2D explosionTextureGreen;
 
@@ -137,9 +154,9 @@ namespace Beeautiful
             backgroundElements.Add(Content.Load<Texture2D>("starSmall"));
             blank = Content.Load<Texture2D>("blank");
 
-            enemyBee = Content.Load<Texture2D>("enemyBee");
+            enemyShip = Content.Load<Texture2D>("enemyShip");
 
-            backgroundMusic = Content.Load<Song>("");
+            backgroundMusic = Content.Load<Song>("loop-transit");
 
             //Ship textures
             List<Texture2D> shipTextures = new List<Texture2D>();
@@ -149,17 +166,17 @@ namespace Beeautiful
             playerLivesGraphic = Content.Load<Texture2D>("life");
             playerShield = Content.Load<Texture2D>("shield");
 
-            //Stingers
-            stingerRed = Content.Load<Texture2D>("stingerRed");
-            stingerGreen = Content.Load<Texture2D>("stingerGreen");
+            //Stings
+            stingRed = Content.Load<Texture2D>("stingRed");
+            stingGreen = Content.Load<Texture2D>("stingGreen");
 
             //Beatles
             beatleBig = Content.Load<Texture2D>("beatleBig");
             beatleSmall = Content.Load<Texture2D>("beatleSmall");
 
             //Explosions
-            explosionTexture = Content.Load<Texture2D>("stingerRedShot");
-            explosionTextureGreen = Content.Load<Texture2D>("stingerGreenShot");
+            explosionTexture = Content.Load<Texture2D>("stingRedShot");
+            explosionTextureGreen = Content.Load<Texture2D>("stingGreenShot");
 
             player = new Player(shipTextures, screenBounds);
 
@@ -321,18 +338,18 @@ namespace Beeautiful
                         //Update player position, check keypresses
                         player.Update(gameTime);
 
-                        //Modify enemy and beatle health at higher stinger levels
-                        if (player.StingerLevel != 0)
+                        //Modify enemy and beatle health at higher sting levels
+                        if (player.StingLevel != 0)
                         {
                             foreach (Enemy enemy in enemies)
                             {
                                 if (enemy.Bounds.Y < 0)
-                                    enemy.Health = enemy.baseHealth * 1.2f * player.StingerLevel;
+                                    enemy.Health = enemy.baseHealth * 1.2f * player.StingLevel;
                             }
                             foreach (Beatle beatle in beatles)
                             {
                                 if (beatle.Bounds.Y < 0)
-                                    beatle.Health = beatle.baseHealth * 1.2f * player.StingerLevel;
+                                    beatle.Health = beatle.baseHealth * 1.2f * player.StingLevel;
                             }
                         }
 
@@ -344,7 +361,7 @@ namespace Beeautiful
                                 notifications.RemoveAt(i);
                         }
 
-                        //Update stingers and all things stingers can collide with
+                        //Update stings and all things stings can collide with
                         for (int i = stings.Count - 1; i > -1; i--)
                         {
                             stings[i].Update();
@@ -368,12 +385,12 @@ namespace Beeautiful
                                     }
                                 }
 
-                                //Stinger-enemy collision
-                                if (stings[i].Visible && enemies[j].Visible && !(stings[i] is EnemyStings) && stings[i].Bounds.Intersects(enemies[j].Bounds))
+                                //Sting-enemy collision
+                                if (stings[i].Visible && enemies[j].Visible && !(stings[i] is EnemySting) && stings[i].Bounds.Intersects(enemies[j].Bounds))
                                 {
                                     stings[i].Visible = false;
                                     enemies[j].Damage((int)stings[i].Damage);
-                                    Texture2D expTexToUse = player.StingerLevel == 0 ? explosionTexture : explosionTextureGreen;
+                                    Texture2D expTexToUse = player.StingLevel == 0 ? explosionTexture : explosionTextureGreen;
                                     explosions.Add(new Explosion(expTexToUse, stings[i].Position));
                                 }
 
@@ -381,7 +398,7 @@ namespace Beeautiful
                                     enemies.RemoveAt(j);
                             }
 
-                            //Stinger-Beatle collisions
+                            //Sting-Beatle collisions
                             for (int q = beatles.Count - 1; q > -1; q--)
                             {
                                 if (i == 0)
@@ -405,14 +422,14 @@ namespace Beeautiful
                                 {
                                     stings[i].Visible = false;
                                     beatles[q].Damage(stings[i].Damage);
-                                    Texture2D expTexToUse = player.StingerLevel == 0 ? explosionTexture : explosionTextureGreen;
+                                    Texture2D expTexToUse = player.StingLevel == 0 ? explosionTexture : explosionTextureGreen;
                                     explosions.Add(new Explosion(expTexToUse, stings[i].Position));
                                 }
                                 if (!beatles[q].Visible)
                                     beatles.RemoveAt(q);
                             }
 
-                            //Stinger-Player collisions
+                            //Sting-Player collisions
                             if (stings[i].Visible && stings[i] is EnemySting && stings[i].Bounds.Intersects(player.Bounds))
                             {
                                 if (player.Shielded)
@@ -475,9 +492,8 @@ namespace Beeautiful
                     }
                 case gameState.StartMenu:
                     {
-                        spriteBatch.DrawString(scoreFont, "Beeautiful", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Simple Space Shooter").X / 2, (int)screenBounds.Height / 4), Color.White);
-                        spriteBatch.DrawString(scoreFont, "By Christopher McFee, Daniel Mallon, and Stan", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("By Christopher McFee, Daniel Mallon, and Stan").X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("By Christopher McFee, Daniel Mallon, and Stan").Y), Color.White);
-                        spriteBatch.DrawString(scoreFont, "Controls: Arrows to move; Space to shoot", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Controls: Arrows to move; Space to shoot").X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("Controls: Arrows to move; Space to shoot").Y), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Simple Space Shooter", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Simple Space Shooter").X / 2, (int)screenBounds.Height / 4), Color.White);
+                        spriteBatch.DrawString(scoreFont, "By Ddl2829", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("By Ddl2829").X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("By Ddl2829").Y), Color.White);
                         Color flashColor = flashing ? Color.White : Color.Yellow;
                         spriteBatch.DrawString(scoreFont, "Press Enter to Play", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
                         spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
@@ -500,8 +516,8 @@ namespace Beeautiful
                         foreach (Enemy enemy in enemies)
                             enemy.Draw(spriteBatch);
 
-                        foreach (Stinger stinger in stings)
-                            stinger.Draw(spriteBatch);
+                        foreach (Sting sting in stings)
+                            sting.Draw(spriteBatch);
 
                         foreach (Explosion explosion in explosions)
                             explosion.Draw(spriteBatch);

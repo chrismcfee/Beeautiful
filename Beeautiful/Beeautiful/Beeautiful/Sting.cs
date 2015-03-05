@@ -11,7 +11,7 @@ namespace Beeautiful
         public Vector2 position;
         public float speed = 20.0f;
         public bool visible = true;
-        public int laserLevel;
+        public int stingLevel;
         public Texture2D texture;
         public Rectangle bounds;
 
@@ -21,7 +21,7 @@ namespace Beeautiful
 
         public float Damage
         {
-            get { return (laserLevel + 1) * 10; }
+            get { return (stingLevel + 1) * 10; }
         }
 
         public bool Visible
@@ -44,14 +44,14 @@ namespace Beeautiful
         #endregion
 
 
-        public Sting(Texture2D texture, Vector2 position, int laserLevel)
+        public Sting(Texture2D texture, Vector2 position, int stingLevel)
         {
             motion = Vector2.Zero;
             this.position = position;
             this.texture = texture;
             this.bounds = texture.Bounds;
             this.visible = true;
-            this.laserLevel = laserLevel;
+            this.stingLevel = stingLevel;
             motion.Y = -1;
         }
         public virtual void Update()
@@ -62,7 +62,7 @@ namespace Beeautiful
         }
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            if (visible)
+            if(visible)
                 spriteBatch.Draw(texture, position, Color.White);
         }
     }

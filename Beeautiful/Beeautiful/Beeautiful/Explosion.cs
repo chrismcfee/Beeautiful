@@ -21,8 +21,7 @@ namespace Beeautiful
             get { return visible; }
         }
 
-        public Explosion(Texture2D texture, Vector2 position)
-        {
+        public Explosion(Texture2D texture, Vector2 position) {
             this.texture = texture;
             this.position = position;
             visible = true;
@@ -37,7 +36,7 @@ namespace Beeautiful
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if (visible)
+            if(visible)
                 spriteBatch.Draw(texture, position, Color.White);
         }
     }

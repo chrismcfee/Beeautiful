@@ -2,3 +2,11 @@ c:\users\methos\documents\visual studio 2013\Projects\Beeautiful\Beeautiful\Beea
 c:\users\methos\documents\visual studio 2013\Projects\Beeautiful\Beeautiful\Beeautiful\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\obj\x86\Debug\Beeautiful.csprojResolveAssemblyReference.cache
 C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Beeautiful.exe
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Beeautiful.pdb
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\obj\x86\Debug\Beeautiful.exe
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\obj\x86\Debug\Beeautiful.pdb
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\score.xnb
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\backgroundColor.xnb
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\backgroundClouds.xnb
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\speedLine.xnb

@@ -40,7 +40,7 @@ namespace Beeautiful
         {
             KeyboardState keyboardState = Keyboard.GetState();
 
-            position += motion * gameTime.ElapsedGameTime.Milliseconds / 10;
+            position += motion * gameTime.ElapsedGameTime.Milliseconds/10;
             if (position.Y > screenBounds.Height)
                 belowScreen = true;
         }
