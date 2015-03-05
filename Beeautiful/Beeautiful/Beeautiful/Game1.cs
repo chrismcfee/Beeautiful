@@ -212,15 +212,15 @@ namespace Beeautiful
 
             //Initialize random beatles
             Random rand = new Random();
-            int randomAmt = rand.Next(100, 300);
+            int randomAmt = rand.Next(200, 400);
             for (int i = 0; i < randomAmt; i++)
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
-                float speed = !bigBeatle ? rand.Next(2, 8) : rand.Next(1, 4);
+                float speed = !bigBeatle ? rand.Next(1, 4) : rand.Next(2, 8);
                 beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
             }
 
-            int randomEnemies = rand.Next(30, 100);
+            int randomEnemies = rand.Next(10, 30);
             for (int i = 0; i < randomEnemies; i++)
             {
                 enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(2, 4) * 1000, rand.Next(1, 10) / 3 * 100));
@@ -553,7 +553,7 @@ namespace Beeautiful
                         Color flashColor = flashing ? Color.White : Color.Yellow;
                         spriteBatch.DrawString(scoreFont, "Press Enter to Play", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
                         spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
-                        spriteBatch.DrawString(scoreFont, "Press F for Full Screen", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press F for Full Screen").X / 2, (int)screenBounds.Height / 5 * 4), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press F for Full Screen (Coming Soon)", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press F for Full Screen (Coming Soon)").X / 2, (int)screenBounds.Height / 5 * 4), Color.White);
 
                         break;
                     }
