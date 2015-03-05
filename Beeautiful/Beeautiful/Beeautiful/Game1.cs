@@ -122,9 +122,14 @@ namespace Beeautiful
 
         public Game1()
         {
-            instance = this;
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            this.graphics.IsFullScreen = true;
+            instance = this;
+            //graphics = new GraphicsDeviceManager(this);
+            //Content.RootDirectory = "Content";
             screenBounds = new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
             beatles = new List<Beatle>();
             explosions = new List<Explosion>();
@@ -148,35 +153,35 @@ namespace Beeautiful
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             //Purple background
-            background = Content.Load<Texture2D>("backgroundColor");
-            backgroundElements.Add(Content.Load<Texture2D>("speedLine"));
-            backgroundElements.Add(Content.Load<Texture2D>("starBig"));
-            backgroundElements.Add(Content.Load<Texture2D>("starSmall"));
-            blank = Content.Load<Texture2D>("blank");
+            background = Content.Load<Texture2D>("Sprites/bg/background_level_1");
+            backgroundElements.Add(Content.Load<Texture2D>("Sprites/speedLine"));
+            backgroundElements.Add(Content.Load<Texture2D>("Sprites/bigcloud"));
+            backgroundElements.Add(Content.Load<Texture2D>("Sprites/smallcloud"));
+            blank = Content.Load<Texture2D>("Sprites/blank");
 
-            enemyShip = Content.Load<Texture2D>("enemyShip");
+            enemyShip = Content.Load<Texture2D>("Sprites/enemy_bee");
 
-            backgroundMusic = Content.Load<Song>("loop-transit");
+            backgroundMusic = Content.Load<Song>("Audio/Map1");
 
             //Ship textures
             List<Texture2D> shipTextures = new List<Texture2D>();
-            shipTextures.Add(Content.Load<Texture2D>("player"));
-            shipTextures.Add(Content.Load<Texture2D>("playerleft"));
-            shipTextures.Add(Content.Load<Texture2D>("playerright"));
-            playerLivesGraphic = Content.Load<Texture2D>("life");
-            playerShield = Content.Load<Texture2D>("shield");
+            shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryCenter/Jerry_Center"));
+            shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryLeft/Jerry_left"));
+            shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryRight/Jerry_right"));
+            playerLivesGraphic = Content.Load<Texture2D>("Sprites/Jerry_lives_levelcomplete");
+            playerShield = Content.Load<Texture2D>("Sprites/shield");
 
             //Stings
-            stingRed = Content.Load<Texture2D>("stingRed");
-            stingGreen = Content.Load<Texture2D>("stingGreen");
+            stingRed = Content.Load<Texture2D>("Sprites/enemy_bee_stinger");
+            stingGreen = Content.Load<Texture2D>("Sprites/Jerry_bee_stinger");
 
             //Beatles
-            beatleBig = Content.Load<Texture2D>("beatleBig");
-            beatleSmall = Content.Load<Texture2D>("beatleSmall");
+            beatleBig = Content.Load<Texture2D>("Sprites/beatleBig");
+            beatleSmall = Content.Load<Texture2D>("Sprites/beatleSmall");
 
             //Explosions
-            explosionTexture = Content.Load<Texture2D>("stingRedShot");
-            explosionTextureGreen = Content.Load<Texture2D>("stingGreenShot");
+            explosionTexture = Content.Load<Texture2D>("Sprites/stingRedShot");
+            explosionTextureGreen = Content.Load<Texture2D>("Sprites/stingGreenShot");
 
             player = new Player(shipTextures, screenBounds);
 
@@ -221,9 +226,54 @@ namespace Beeautiful
                 enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(2, 4) * 1000, rand.Next(1, 10) / 3 * 100));
             }
         }
+        /*public Game1()
+        {
+            graphics = new GraphicsDeviceManager(this);
+            Content.RootDirectory = "Content";
+            this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            this.graphics.IsFullScreen = true;
+        }
+        SoundEffect soundEngine;
+        SoundEffectInstance soundEngineInstance;
+        SoundEffect soundHyperspaceActivation;
+        bool checkActivity(KeyboardState keyboardState, GamePadState gamePadState)
+        {
+            // Check to see if the input states are different from last frame
+            GamePadState nonpacketGamePadState = new GamePadState(
+            gamePadState.ThumbSticks, gamePadState.Triggers,
+            gamePadState.Buttons, gamePadState.DPad);
+            bool keybidle = keyboardState.GetPressedKeys().Length == 0;
+            //bool gamepidle = blankGamePadState == nonpacketGamePadState;
+            if (keybidle)
+            {
+                //no activity;
+                return false;
+            }
+            return true;
+        }
+        bool checkExitKey(KeyboardState keyboardState, GamePadState gamePadState)
+        {
+            // Check to see whether ESC was pressed on the keyboard
+            // or BACK was pressed on the controller.
+            if (keyboardState.IsKeyDown(Keys.Escape) ||
+            gamePadState.Buttons.Back == ButtonState.Pressed)
+            {
+                Exit();
+                return true;
+            }
+            return false;
+        }*/
+
 
         protected override void Update(GameTime gameTime)
         {
+            //if (keyboardState.IsKeyDown(Keys.F))
+            //{
+            //    this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            //    this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            //    this.graphics.IsFullScreen = true;
+            //}
             timeSinceStateChange += gameTime.ElapsedGameTime.Milliseconds;
             //Game level keybindings
             KeyboardState keyboardState = Keyboard.GetState();
@@ -264,6 +314,12 @@ namespace Beeautiful
                                 MediaPlayer.Resume();
                                 return;
                             }
+                        }
+                        if (keyboardState.IsKeyDown(Keys.F))
+                        {
+                            this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+                            this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+                            this.graphics.IsFullScreen = true;
                         }
                         break;
                     }
@@ -492,11 +548,12 @@ namespace Beeautiful
                     }
                 case gameState.StartMenu:
                     {
-                        spriteBatch.DrawString(scoreFont, "Simple Space Shooter", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Simple Space Shooter").X / 2, (int)screenBounds.Height / 4), Color.White);
-                        spriteBatch.DrawString(scoreFont, "By Ddl2829", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("By Ddl2829").X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("By Ddl2829").Y), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Beeautiful", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Beeautiful").X / 2, (int)screenBounds.Height / 4), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Developed by the Java Tigers", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Developed by the Java Tigers").X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("Developed by the Java Tigers").Y), Color.White);
                         Color flashColor = flashing ? Color.White : Color.Yellow;
                         spriteBatch.DrawString(scoreFont, "Press Enter to Play", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
                         spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press F for Full Screen", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press F for Full Screen").X / 2, (int)screenBounds.Height / 5 * 4), Color.White);
 
                         break;
                     }
