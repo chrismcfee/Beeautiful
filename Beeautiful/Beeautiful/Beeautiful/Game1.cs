@@ -153,13 +153,13 @@ namespace Beeautiful
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             //Purple background
-            background = Content.Load<Texture2D>("Sprites/bg/background_level_1");
+            background = Content.Load<Texture2D>("background_level_1");
             backgroundElements.Add(Content.Load<Texture2D>("Sprites/speedLine"));
             backgroundElements.Add(Content.Load<Texture2D>("Sprites/bigcloud"));
             backgroundElements.Add(Content.Load<Texture2D>("Sprites/smallcloud"));
             blank = Content.Load<Texture2D>("Sprites/blank");
 
-            enemyShip = Content.Load<Texture2D>("Sprites/enemy_bee");
+            enemyShip = Content.Load<Texture2D>("Sprites/yellow_bee_enemy");
 
             backgroundMusic = Content.Load<Song>("Audio/Map1");
 
@@ -168,7 +168,7 @@ namespace Beeautiful
             shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryCenter/Jerry_Center"));
             shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryLeft/Jerry_left"));
             shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryRight/Jerry_right"));
-            playerLivesGraphic = Content.Load<Texture2D>("Sprites/Jerry_lives_levelcomplete");
+            playerLivesGraphic = Content.Load<Texture2D>("Sprites/lifeicon");
             playerShield = Content.Load<Texture2D>("Sprites/shield");
 
             //Stings
@@ -197,6 +197,16 @@ namespace Beeautiful
         {
         }
 
+        public void InitiateBossSequence(int playerScore)
+        {
+            if (playerScore > 50000)
+            {
+
+                //spawn boss
+            }
+
+        }
+
         private void PrepareLevel()
         {
             player.Reset();
@@ -223,7 +233,7 @@ namespace Beeautiful
             int randomEnemies = rand.Next(10, 30);
             for (int i = 0; i < randomEnemies; i++)
             {
-                enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(2, 4) * 1000, rand.Next(1, 10) / 3 * 100));
+                enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
             }
         }
         /*public Game1()

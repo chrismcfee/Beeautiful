@@ -326,6 +326,42 @@
       <Extra>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\Map1.wma</Extra>
       <Time>2015-03-04T23:51:30.2077044-05:00</Time>
     </Item>
+    <Item>
+      <Source>background_level_1.png</Source>
+      <Name>background_level_1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\background_level_1.xnb</Output>
+      <Time>2015-03-05T15:19:17.7897079-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Jerry_lives_death.png</Source>
+      <Name>Jerry_lives_death</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Jerry_lives_death.xnb</Output>
+      <Time>2015-03-04T23:30:29.2475816-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\lifeicon.png</Source>
+      <Name>Sprites\lifeicon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\lifeicon.xnb</Output>
+      <Time>2015-03-05T15:19:17.7857077-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\yellow_bee_enemy.png</Source>
+      <Name>Sprites\yellow_bee_enemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\yellow_bee_enemy.xnb</Output>
+      <Time>2015-03-05T15:19:17.7887079-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F9AA6AC0-738B-4086-940B-7FA6D1F81EB9}</ContentProjectGUID>

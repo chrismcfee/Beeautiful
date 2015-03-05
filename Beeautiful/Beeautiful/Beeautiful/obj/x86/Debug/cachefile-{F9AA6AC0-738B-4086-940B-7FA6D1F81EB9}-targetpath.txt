@@ -35,3 +35,7 @@ Content\Sprites\beatleBig.xnb
 Content\Sprites\beatleSmall.xnb
 Content\Audio\Map1.xnb
 Content\Audio\Map1.wma
+Content\background_level_1.xnb
+Content\Jerry_lives_death.xnb
+Content\Sprites\lifeicon.xnb
+Content\Sprites\yellow_bee_enemy.xnb
