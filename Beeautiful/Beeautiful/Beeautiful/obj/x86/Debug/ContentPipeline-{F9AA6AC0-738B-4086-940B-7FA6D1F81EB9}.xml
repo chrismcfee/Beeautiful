@@ -119,15 +119,6 @@
       <Time>2015-03-04T23:48:43.2541552-05:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\enemyShip.png</Source>
-      <Name>Sprites\enemyShip</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\enemyShip.xnb</Output>
-      <Time>2015-03-04T23:48:43.2571554-05:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\enemy_bee.png</Source>
       <Name>Sprites\enemy_bee</Name>
       <Importer>TextureImporter</Importer>
@@ -191,33 +182,6 @@
       <Time>2015-03-04T23:48:43.2661559-05:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\player.png</Source>
-      <Name>Sprites\player</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\player.xnb</Output>
-      <Time>2015-03-04T23:48:43.2701561-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\playerLeft.png</Source>
-      <Name>Sprites\playerLeft</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\playerLeft.xnb</Output>
-      <Time>2015-03-04T23:48:43.2711562-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\playerRight.png</Source>
-      <Name>Sprites\playerRight</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\playerRight.xnb</Output>
-      <Time>2015-03-04T23:48:43.2711562-05:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\shield.png</Source>
       <Name>Sprites\shield</Name>
       <Importer>TextureImporter</Importer>
@@ -263,15 +227,6 @@
       <Time>2015-03-04T23:48:43.2761564-05:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\stingGreen.png</Source>
-      <Name>Sprites\stingGreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingGreen.xnb</Output>
-      <Time>2015-03-04T23:48:43.2621556-05:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\stingGreenShot.png</Source>
       <Name>Sprites\stingGreenShot</Name>
       <Importer>TextureImporter</Importer>
@@ -279,15 +234,6 @@
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingGreenShot.xnb</Output>
       <Time>2015-03-04T23:48:43.2631557-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\stingRed.png</Source>
-      <Name>Sprites\stingRed</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingRed.xnb</Output>
-      <Time>2015-03-04T23:48:43.2641558-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\stingRedShot.png</Source>
@@ -361,6 +307,15 @@
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\yellow_bee_enemy.xnb</Output>
       <Time>2015-03-05T15:19:17.7887079-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\attacking_red_bee_enemy.png</Source>
+      <Name>Sprites\attacking_red_bee_enemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\attacking_red_bee_enemy.xnb</Output>
+      <Time>2015-03-05T15:19:17.7837076-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

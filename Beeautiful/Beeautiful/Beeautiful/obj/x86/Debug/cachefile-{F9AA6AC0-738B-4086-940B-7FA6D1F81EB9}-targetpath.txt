@@ -11,7 +11,6 @@ Content\Sprites\bg\backgroundColor.xnb
 Content\Sprites\bg\background_level_1.xnb
 Content\Sprites\bigcloud.xnb
 Content\Sprites\blank.xnb
-Content\Sprites\enemyShip.xnb
 Content\Sprites\enemy_bee.xnb
 Content\Sprites\enemy_bee_stinger.xnb
 Content\Sprites\Jerry_Bee.xnb
@@ -19,17 +18,12 @@ Content\Sprites\Jerry_bee_stinger.xnb
 Content\Sprites\Jerry_lives_death.xnb
 Content\Sprites\Jerry_lives_levelcomplete.xnb
 Content\Sprites\life.xnb
-Content\Sprites\player.xnb
-Content\Sprites\playerLeft.xnb
-Content\Sprites\playerRight.xnb
 Content\Sprites\shield.xnb
 Content\Sprites\smallcloud.xnb
 Content\Sprites\speedLine.xnb
 Content\Sprites\starBig.xnb
 Content\Sprites\starSmall.xnb
-Content\Sprites\stingGreen.xnb
 Content\Sprites\stingGreenShot.xnb
-Content\Sprites\stingRed.xnb
 Content\Sprites\stingRedShot.xnb
 Content\Sprites\beatleBig.xnb
 Content\Sprites\beatleSmall.xnb
@@ -39,3 +33,4 @@ Content\background_level_1.xnb
 Content\Jerry_lives_death.xnb
 Content\Sprites\lifeicon.xnb
 Content\Sprites\yellow_bee_enemy.xnb
+Content\Sprites\attacking_red_bee_enemy.xnb

@@ -111,11 +111,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Sprites\enemyShip.png">
-      <Name>enemyShip</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Sprites\enemy_bee.png">
       <Name>enemy_bee</Name>
       <Importer>TextureImporter</Importer>
@@ -146,18 +141,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Sprites\stingGreen.png">
-      <Name>stingGreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Sprites\stingGreenShot.png">
       <Name>stingGreenShot</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Sprites\stingRed.png">
-      <Name>stingRed</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -178,21 +163,6 @@
     </Compile>
     <Compile Include="Sprites\beatleSmall.png">
       <Name>beatleSmall</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Sprites\player.png">
-      <Name>player</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Sprites\playerLeft.png">
-      <Name>playerLeft</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Sprites\playerRight.png">
-      <Name>playerRight</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -253,6 +223,13 @@
   <ItemGroup>
     <Compile Include="Sprites\yellow_bee_enemy.png">
       <Name>yellow_bee_enemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sprites\attacking_red_bee_enemy.png">
+      <Name>attacking_red_bee_enemy</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

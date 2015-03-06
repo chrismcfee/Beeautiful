@@ -25,17 +25,21 @@ namespace Beeautiful
         SpriteFont scoreFont;
 
         Player player;
+        bool DoesSpawnBoss = false;
 
         //To prevent holding down a button from changing state rapidly
         double stateChangeDelay = 100;
         double timeSinceStateChange = 0;
 
         bool flashing = false;
+        
         double timeSinceLastFlash = 0;
         double flashInterval = 500;
 
         public int kills = 0;
         public int playerScore = 0;
+
+        public bool isBoss1Dead = false;
 
         #region Textures
 
@@ -67,6 +71,7 @@ namespace Beeautiful
         List<Beatle> beatles;
         List<Notification> notifications;
         List<BackgroundElement> backgroundObjects;
+        List<Boss1> boss1s;
         List<Enemy> enemies;
         List<Sting> stings;
 
@@ -131,6 +136,7 @@ namespace Beeautiful
             //graphics = new GraphicsDeviceManager(this);
             //Content.RootDirectory = "Content";
             screenBounds = new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
+            boss1s = new List<Boss1>();
             beatles = new List<Beatle>();
             explosions = new List<Explosion>();
             notifications = new List<Notification>();
@@ -152,18 +158,18 @@ namespace Beeautiful
             scoreFont = Content.Load<SpriteFont>("score");
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //Purple background
+            //level1 background
             background = Content.Load<Texture2D>("background_level_1");
             backgroundElements.Add(Content.Load<Texture2D>("Sprites/speedLine"));
             backgroundElements.Add(Content.Load<Texture2D>("Sprites/bigcloud"));
             backgroundElements.Add(Content.Load<Texture2D>("Sprites/smallcloud"));
             blank = Content.Load<Texture2D>("Sprites/blank");
 
-            enemyShip = Content.Load<Texture2D>("Sprites/yellow_bee_enemy");
+            enemyShip = Content.Load<Texture2D>("Sprites/attacking_red_bee_enemy");
 
             backgroundMusic = Content.Load<Song>("Audio/Map1");
 
-            //Ship textures
+            //player textures
             List<Texture2D> shipTextures = new List<Texture2D>();
             shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryCenter/Jerry_Center"));
             shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryLeft/Jerry_left"));
@@ -199,9 +205,14 @@ namespace Beeautiful
 
         public void InitiateBossSequence(int playerScore)
         {
-            if (playerScore > 50000)
+            if ((playerScore > 100) && (DoesSpawnBoss = false))
             {
-
+                spriteBatch.DrawString(scoreFont, "BOSS INCOMING", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("BOSS INCOMING").X / 2, (int)screenBounds.Height / 4), Color.White);
+                //spriteBatch.DrawString(scoreFont, "Score: " + playerScore * 100, new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Score: " + playerScore * 100).X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("Score: " + playerScore * 100).Y), Color.White);
+                //Color flashColor = flashing ? Color.White : Color.Yellow;
+                //spriteBatch.DrawString(scoreFont, "Press Enter to Play Again", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play Again").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
+                //spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
+                //break;
                 //spawn boss
             }
 
@@ -222,7 +233,7 @@ namespace Beeautiful
 
             //Initialize random beatles
             Random rand = new Random();
-            int randomAmt = rand.Next(200, 400);
+            int randomAmt = rand.Next(400,400);
             for (int i = 0; i < randomAmt; i++)
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
@@ -230,11 +241,18 @@ namespace Beeautiful
                 beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
             }
 
-            int randomEnemies = rand.Next(10, 30);
+            int randomEnemies = rand.Next(120, 120);
             for (int i = 0; i < randomEnemies; i++)
             {
                 enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
             }
+
+            int randomBoss1s = rand.Next(1, 1);
+            /*for (int i = 0; i < randomEnemies; i++)
+            {
+                boss1s.Add(new Boss1(boss1Texture, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+            }*/
+
         }
         /*public Game1()
         {
@@ -278,6 +296,14 @@ namespace Beeautiful
 
         protected override void Update(GameTime gameTime)
         {
+
+            if (playerScore > 65000)
+            {
+                
+                InitiateBossSequence(playerScore);
+                DoesSpawnBoss = true;
+            }
+
             //if (keyboardState.IsKeyDown(Keys.F))
             //{
             //    this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
