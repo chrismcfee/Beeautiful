@@ -173,15 +173,6 @@
       <Time>2015-03-04T23:48:43.2611556-05:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\life.png</Source>
-      <Name>Sprites\life</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\life.xnb</Output>
-      <Time>2015-03-04T23:48:43.2661559-05:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\shield.png</Source>
       <Name>Sprites\shield</Name>
       <Importer>TextureImporter</Importer>

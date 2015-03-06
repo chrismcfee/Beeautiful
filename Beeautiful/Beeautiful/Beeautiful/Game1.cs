@@ -237,7 +237,7 @@ namespace Beeautiful
             for (int i = 0; i < randomAmt; i++)
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
-                float speed = !bigBeatle ? rand.Next(1, 4) : rand.Next(2, 8);
+                float speed = !bigBeatle ? rand.Next(2, 8) : rand.Next(4, 16);
                 beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
             }
 
@@ -436,12 +436,12 @@ namespace Beeautiful
                             foreach (Enemy enemy in enemies)
                             {
                                 if (enemy.Bounds.Y < 0)
-                                    enemy.Health = enemy.baseHealth * 1.2f * player.StingLevel;
+                                    enemy.Health = enemy.baseHealth * 1.1f * player.StingLevel;
                             }
                             foreach (Beatle beatle in beatles)
                             {
                                 if (beatle.Bounds.Y < 0)
-                                    beatle.Health = beatle.baseHealth * 1.2f * player.StingLevel;
+                                    beatle.Health = beatle.baseHealth * 1.1f * player.StingLevel;
                             }
                         }
 

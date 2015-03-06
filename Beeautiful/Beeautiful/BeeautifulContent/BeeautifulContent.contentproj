@@ -151,11 +151,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Sprites\life.png">
-      <Name>life</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Sprites\beatleBig.png">
       <Name>beatleBig</Name>
       <Importer>TextureImporter</Importer>

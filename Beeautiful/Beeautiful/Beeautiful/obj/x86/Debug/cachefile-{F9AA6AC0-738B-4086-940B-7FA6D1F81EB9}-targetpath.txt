@@ -17,7 +17,6 @@ Content\Sprites\Jerry_Bee.xnb
 Content\Sprites\Jerry_bee_stinger.xnb
 Content\Sprites\Jerry_lives_death.xnb
 Content\Sprites\Jerry_lives_levelcomplete.xnb
-Content\Sprites\life.xnb
 Content\Sprites\shield.xnb
 Content\Sprites\smallcloud.xnb
 Content\Sprites\speedLine.xnb
