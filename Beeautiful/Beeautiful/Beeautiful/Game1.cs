@@ -52,6 +52,7 @@ namespace Beeautiful
         Texture2D blank;
 
         public Texture2D enemyShip;
+        public Texture2D enemyBoss1;
 
         public Texture2D stingRed;
         public Texture2D stingGreen;
@@ -166,6 +167,7 @@ namespace Beeautiful
             blank = Content.Load<Texture2D>("Sprites/blank");
 
             enemyShip = Content.Load<Texture2D>("Sprites/attacking_red_bee_enemy");
+            enemyBoss1 = Content.Load<Texture2D>("Sprites/boss_placeholder");
 
             backgroundMusic = Content.Load<Song>("Audio/Map1");
 
@@ -205,9 +207,12 @@ namespace Beeautiful
 
         public void InitiateBossSequence(int playerScore)
         {
-            if ((playerScore > 100) && (DoesSpawnBoss = false)) //playerScore must be greater than 45000 in actuality
+            Random rand = new Random(); 
+            
+            if ((playerScore > 100)) //playerScore must be greater than 45000 in actuality
             {
                 spriteBatch.DrawString(scoreFont, "BOSS INCOMING", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("BOSS INCOMING").X / 2, (int)screenBounds.Height / 4), Color.White);
+                
                 //spriteBatch.DrawString(scoreFont, "Score: " + playerScore * 100, new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Score: " + playerScore * 100).X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("Score: " + playerScore * 100).Y), Color.White);
                 //Color flashColor = flashing ? Color.White : Color.Yellow;
                 //spriteBatch.DrawString(scoreFont, "Press Enter to Play Again", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play Again").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
@@ -224,7 +229,7 @@ namespace Beeautiful
 
             kills = 0;
             playerScore = 0;
-
+            boss1s.Clear();
             beatles.Clear();
             enemies.Clear();
             stings.Clear();
@@ -232,7 +237,7 @@ namespace Beeautiful
             explosions.Clear();
 
             //Initialize random beatles
-            Random rand = new Random();
+            Random rand = new Random(); 
             int randomAmt = rand.Next(400,400);
             for (int i = 0; i < randomAmt; i++)
             {
@@ -248,6 +253,11 @@ namespace Beeautiful
             }
 
             int randomBoss1s = rand.Next(1, 1);
+            for (int i = 0; i < randomBoss1s; i++)
+            {
+                boss1s.Add(new Boss1(enemyBoss1, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+            }               
+            //
             /*for (int i = 0; i < randomEnemies; i++)
             {
                 boss1s.Add(new Boss1(boss1Texture, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
@@ -296,13 +306,13 @@ namespace Beeautiful
 
         protected override void Update(GameTime gameTime)
         {
-
-            if (playerScore > 65000)
-            {
-                
-                InitiateBossSequence(playerScore);
-                DoesSpawnBoss = true;
-            }
+            //Random rand = new Random();
+            //if (playerScore > 100)
+            //{
+                 
+                //InitiateBossSequence(playerScore);
+                //DoesSpawnBoss = true;
+            //}
 
             //if (keyboardState.IsKeyDown(Keys.F))
             //{
@@ -563,7 +573,7 @@ namespace Beeautiful
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            //GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
 
             spriteBatch.Draw(background, new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), Color.White);
@@ -609,6 +619,9 @@ namespace Beeautiful
 
                         foreach (Enemy enemy in enemies)
                             enemy.Draw(spriteBatch);
+
+                        foreach (Boss1 enemyBoss1 in boss1s)
+                            enemyBoss1.Draw(spriteBatch);
 
                         foreach (Sting sting in stings)
                             sting.Draw(spriteBatch);

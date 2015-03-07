@@ -317,6 +317,15 @@
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\neoshielf.xnb</Output>
       <Time>2015-03-07T13:57:27.4711599-05:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\boss_placeholder.png</Source>
+      <Name>Sprites\boss_placeholder</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\boss_placeholder.xnb</Output>
+      <Time>2015-03-07T13:08:42.9342002-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F9AA6AC0-738B-4086-940B-7FA6D1F81EB9}</ContentProjectGUID>
