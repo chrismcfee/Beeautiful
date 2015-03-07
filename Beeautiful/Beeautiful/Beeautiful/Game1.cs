@@ -175,7 +175,7 @@ namespace Beeautiful
             shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryLeft/Jerry_left"));
             shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryRight/Jerry_right"));
             playerLivesGraphic = Content.Load<Texture2D>("Sprites/lifeicon");
-            playerShield = Content.Load<Texture2D>("Sprites/shield");
+            playerShield = Content.Load<Texture2D>("Sprites/neoshielf");
 
             //Stings
             stingRed = Content.Load<Texture2D>("Sprites/enemy_bee_stinger");
@@ -205,7 +205,7 @@ namespace Beeautiful
 
         public void InitiateBossSequence(int playerScore)
         {
-            if ((playerScore > 100) && (DoesSpawnBoss = false))
+            if ((playerScore > 100) && (DoesSpawnBoss = false)) //playerScore must be greater than 45000 in actuality
             {
                 spriteBatch.DrawString(scoreFont, "BOSS INCOMING", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("BOSS INCOMING").X / 2, (int)screenBounds.Height / 4), Color.White);
                 //spriteBatch.DrawString(scoreFont, "Score: " + playerScore * 100, new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Score: " + playerScore * 100).X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("Score: " + playerScore * 100).Y), Color.White);
@@ -590,6 +590,7 @@ namespace Beeautiful
                         spriteBatch.DrawString(scoreFont, "Press Enter to Play", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
                         spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
                         spriteBatch.DrawString(scoreFont, "Press F for Full Screen (Coming Soon)", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press F for Full Screen (Coming Soon)").X / 2, (int)screenBounds.Height / 5 * 4), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press LEFT CTRL FOR HIDDEN POWAH!", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press LEFT CTRL FOR HIDDEN POWAH").X / 2, (int)screenBounds.Height / 6 * 5), Color.White);
 
                         break;
                     }

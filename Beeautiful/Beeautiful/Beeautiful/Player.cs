@@ -111,7 +111,7 @@ namespace Beeautiful
         public void Update(GameTime gameTime)
         {
             if (!shielded && shieldPower < maxShieldPower)
-                shieldPower += shieldRegenRate * gameTime.ElapsedGameTime.Milliseconds;
+                shieldPower += shieldRegenRate * gameTime.ElapsedGameTime.Seconds;
             if (shieldPower <= 0)
             {
                 shielded = false;
