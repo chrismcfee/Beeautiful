@@ -70,7 +70,7 @@ namespace Beeautiful
             int randAmt = rand.Next(2, 6);
             for (int i = 0; i < randAmt; i++)
             {
-                Beatle newBeatle = new Beatle(false, rand.Next(2, 8), this.position);
+                Beatle newBeatle = new Beatle(false, rand.Next(2, 16), this.position);
                 newBeatle.Motion = new Vector2(rand.Next(-3, 3), rand.Next(0, 2));
                 Game1.instance.Beatles.Add(newBeatle);
             }

@@ -166,7 +166,7 @@ namespace Beeautiful
             backgroundElements.Add(Content.Load<Texture2D>("Sprites/smallcloud"));
             blank = Content.Load<Texture2D>("Sprites/blank");
 
-            enemyShip = Content.Load<Texture2D>("Sprites/attacking_red_bee_enemy");
+            enemyShip = Content.Load<Texture2D>("Sprites/attacking_yellow_bee_enemy");
             enemyBoss1 = Content.Load<Texture2D>("Sprites/boss_placeholder");
 
             backgroundMusic = Content.Load<Song>("Audio/Map1");
@@ -242,7 +242,7 @@ namespace Beeautiful
             for (int i = 0; i < randomAmt; i++)
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
-                float speed = !bigBeatle ? rand.Next(2, 8) : rand.Next(4, 16);
+                float speed = !bigBeatle ? rand.Next(2, 16) : rand.Next(2, 16);
                 beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
             }
 
