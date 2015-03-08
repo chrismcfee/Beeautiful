@@ -1,22 +1,19 @@
-# a bee is born into this cruel world
+# Beeautiful
 
-###Jerry Seinfeld, once a proud actor, has been captured by the cruel insect goddess and transformed into a bee.
+### Jerry Seinfeld, once a proud actor, has been captured by the cruel insect goddess and transformed into a bee.
 
-###His new goal in life is to survive by collecting pollen and honey and avoid being killed by the other bugs that dont like him or his show.
+### His new goal in life is to survive and avoid being killed by the other bugs that dont like him or his show.
 
-###Explore over 1 level of this beautiful Bee'Shoot'EM'Up Game
+### Four action packed levels and two epic boss fights!
 
-###Fight for the love of your dreams on Earth...
+### Fight for the love of your dreams on Earth.
 
-###Master the unknown against the depths of Bug Planet...
+### Combat the Dark Lord Himself, Lucifer.
 
-####bugplanet.com
+### Will Jerry make it alive?
 
-###Will Jerry Seinfeld make it alive?
+##### His fate is in your hands.
 
-#####His fate is in your hands.
-
+![alt text](https://a.pomf.se/humeiu.png "Level 1 Screenshot")
 
 ![alt text](http://cdn.collider.com/uploads/imageGallery/Bee_Movie/bee_movie_image_chris_rock_jerry_seinfeld.jpg "IMMA BEE IMMA BEE IMMA BEE IMMA BEE")
-
-![alt text](https://a.pomf.se/bzczge.png "Actual Gameplay screenshot")
