@@ -177,7 +177,7 @@ namespace Beeautiful
             shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryLeft/Jerry_left"));
             shipTextures.Add(Content.Load<Texture2D>("Sprites/JerryRight/Jerry_right"));
             playerLivesGraphic = Content.Load<Texture2D>("Sprites/lifeicon");
-            playerShield = Content.Load<Texture2D>("Sprites/neoshielf");
+            playerShield = Content.Load<Texture2D>("Sprites/shield");
 
             //Stings
             stingRed = Content.Load<Texture2D>("Sprites/enemy_bee_stinger");
@@ -599,8 +599,8 @@ namespace Beeautiful
                         Color flashColor = flashing ? Color.White : Color.Yellow;
                         spriteBatch.DrawString(scoreFont, "Press Enter to Play", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
                         spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
-                        spriteBatch.DrawString(scoreFont, "Press F for Full Screen (Coming Soon)", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press F for Full Screen (Coming Soon)").X / 2, (int)screenBounds.Height / 5 * 4), Color.White);
-                        spriteBatch.DrawString(scoreFont, "Press LEFT CTRL FOR HIDDEN POWAH!", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press LEFT CTRL FOR HIDDEN POWAH").X / 2, (int)screenBounds.Height / 6 * 5), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press F for Full Screen", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press F for Full Screen").X / 2, (int)screenBounds.Height / 5 * 4), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press LEFT CTRL for Shield", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press LEFT CTRL for Shield").X / 2, (int)screenBounds.Height / 6 * 5), Color.White);
 
                         break;
                     }

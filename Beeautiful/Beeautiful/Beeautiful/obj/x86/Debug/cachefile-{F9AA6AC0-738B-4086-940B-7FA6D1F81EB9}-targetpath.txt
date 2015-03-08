@@ -31,7 +31,10 @@ Content\Jerry_lives_death.xnb
 Content\Sprites\lifeicon.xnb
 Content\Sprites\yellow_bee_enemy.xnb
 Content\Sprites\attacking_red_bee_enemy.xnb
-Content\Audio\Map1.xnb
-Content\Audio\Map1.wma
 Content\Sprites\neoshielf.xnb
 Content\Sprites\boss_placeholder.xnb
+Content\Sprites\backgroundColor_hell.xnb
+Content\Sprites\laserGreenShot.xnb
+Content\Sprites\laserRedShot.xnb
+Content\Audio\Map1.xnb
+Content\Audio\Map1.wma
