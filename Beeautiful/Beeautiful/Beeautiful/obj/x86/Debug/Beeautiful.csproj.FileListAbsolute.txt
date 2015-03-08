@@ -30,8 +30,6 @@ C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Con
 C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\speedLine.xnb
 C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\starBig.xnb
 C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\starSmall.xnb
-C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingGreenShot.xnb
-C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingRedShot.xnb
 C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\beatleBig.xnb
 C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\beatleSmall.xnb
 C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\Map1.xnb
@@ -44,5 +42,5 @@ C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Con
 C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\neoshielf.xnb
 C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\boss_placeholder.xnb
 C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\backgroundColor_hell.xnb
-C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\laserGreenShot.xnb
-C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\laserRedShot.xnb
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingStrongShot.xnb
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingWeakShot.xnb

@@ -159,7 +159,7 @@ namespace Beeautiful
             scoreFont = Content.Load<SpriteFont>("score");
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //level1 background
+            //level1 background (each level will be it's own class?)
             background = Content.Load<Texture2D>("background_level_1");
             backgroundElements.Add(Content.Load<Texture2D>("Sprites/speedLine"));
             backgroundElements.Add(Content.Load<Texture2D>("Sprites/bigcloud"));
@@ -188,8 +188,8 @@ namespace Beeautiful
             beatleSmall = Content.Load<Texture2D>("Sprites/beatleSmall");
 
             //Explosions
-            explosionTexture = Content.Load<Texture2D>("Sprites/stingRedShot");
-            explosionTextureGreen = Content.Load<Texture2D>("Sprites/stingGreenShot");
+            explosionTexture = Content.Load<Texture2D>("Sprites/stingWeakShot");
+            explosionTextureGreen = Content.Load<Texture2D>("Sprites/stingStrongShot");
 
             player = new Player(shipTextures, screenBounds);
 
@@ -209,7 +209,7 @@ namespace Beeautiful
         {
             Random rand = new Random(); 
             
-            if ((playerScore > 100)) //playerScore must be greater than 45000 in actuality
+            if ((playerScore > 100)) //playerScore must be greater than 40000 in actuality
             {
                 spriteBatch.DrawString(scoreFont, "BOSS INCOMING", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("BOSS INCOMING").X / 2, (int)screenBounds.Height / 4), Color.White);
                 

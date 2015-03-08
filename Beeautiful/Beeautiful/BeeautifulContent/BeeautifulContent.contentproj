@@ -141,16 +141,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Sprites\stingGreenShot.png">
-      <Name>stingGreenShot</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Sprites\stingRedShot.png">
-      <Name>stingRedShot</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Sprites\beatleBig.png">
       <Name>beatleBig</Name>
       <Importer>TextureImporter</Importer>
@@ -251,13 +241,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sprites\laserGreenShot.png">
-      <Name>laserGreenShot</Name>
+    <Compile Include="Sprites\stingStrongShot.png">
+      <Name>stingStrongShot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Sprites\laserRedShot.png">
-      <Name>laserRedShot</Name>
+    <Compile Include="Sprites\stingWeakShot.png">
+      <Name>stingWeakShot</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

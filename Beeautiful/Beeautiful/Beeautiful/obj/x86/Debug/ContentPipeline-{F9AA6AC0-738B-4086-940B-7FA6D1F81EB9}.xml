@@ -182,24 +182,6 @@
       <Time>2015-03-04T23:48:43.2611556-05:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\stingGreenShot.png</Source>
-      <Name>Sprites\stingGreenShot</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingGreenShot.xnb</Output>
-      <Time>2015-03-04T23:48:43.2631557-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\stingRedShot.png</Source>
-      <Name>Sprites\stingRedShot</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingRedShot.xnb</Output>
-      <Time>2015-03-04T23:48:43.2651558-05:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\beatleBig.png</Source>
       <Name>Sprites\beatleBig</Name>
       <Importer>TextureImporter</Importer>
@@ -326,24 +308,6 @@
       <Time>2015-03-08T01:32:06.0173249-05:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\laserGreenShot.png</Source>
-      <Name>Sprites\laserGreenShot</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\laserGreenShot.xnb</Output>
-      <Time>2015-03-08T01:32:06.0423264-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\laserRedShot.png</Source>
-      <Name>Sprites\laserRedShot</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\laserRedShot.xnb</Output>
-      <Time>2015-03-08T01:32:06.0433264-05:00</Time>
-    </Item>
-    <Item>
       <Source>Audio\Map1.mp3</Source>
       <Name>Audio\Map1</Name>
       <Importer>Mp3Importer</Importer>
@@ -352,6 +316,24 @@
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\Map1.xnb</Output>
       <Extra>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\Map1.wma</Extra>
       <Time>2015-03-04T23:51:30.2077044-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\stingStrongShot.png</Source>
+      <Name>Sprites\stingStrongShot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingStrongShot.xnb</Output>
+      <Time>2015-03-08T01:32:06.0423264-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\stingWeakShot.png</Source>
+      <Name>Sprites\stingWeakShot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingWeakShot.xnb</Output>
+      <Time>2015-03-08T01:32:06.0433264-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

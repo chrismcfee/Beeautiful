@@ -18,8 +18,6 @@ Content\Sprites\Jerry_Bee.xnb
 Content\Sprites\Jerry_bee_stinger.xnb
 Content\Sprites\Jerry_lives_death.xnb
 Content\Sprites\Jerry_lives_levelcomplete.xnb
-Content\Sprites\stingGreenShot.xnb
-Content\Sprites\stingRedShot.xnb
 Content\Sprites\beatleBig.xnb
 Content\Sprites\beatleSmall.xnb
 Content\Sprites\shield.xnb
@@ -34,7 +32,7 @@ Content\Sprites\attacking_red_bee_enemy.xnb
 Content\Sprites\neoshielf.xnb
 Content\Sprites\boss_placeholder.xnb
 Content\Sprites\backgroundColor_hell.xnb
-Content\Sprites\laserGreenShot.xnb
-Content\Sprites\laserRedShot.xnb
 Content\Audio\Map1.xnb
+Content\Sprites\stingStrongShot.xnb
+Content\Sprites\stingWeakShot.xnb
 Content\Audio\Map1.wma
