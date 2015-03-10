@@ -127,20 +127,20 @@ namespace Beeautiful
                 shieldPower -= shieldDepleteRate * gameTime.ElapsedGameTime.Milliseconds;
             
 
-            if (Game1.instance.kills > 20 && stingLevel == 0)
+            if (Level1.instance.kills > 20 && stingLevel == 0)
             {
                 stingLevel = 1;
-                Game1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
+                Level1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
             }
-            if (Game1.instance.kills > 50 && stingLevel == 1)
+            if (Level1.instance.kills > 50 && stingLevel == 1)
             {
                 stingLevel = 2;
-                Game1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
+                Level1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
             }
-            if (Game1.instance.kills > 100 && stingLevel == 2)
+            if (Level1.instance.kills > 100 && stingLevel == 2)
             {
                 stingLevel = 3;
-                Game1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
+                Level1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
             }
 
             timeSinceRespawn += gameTime.ElapsedGameTime.Milliseconds;
@@ -235,32 +235,32 @@ namespace Beeautiful
         {
             if (lastFireTime > 50)
             {
-                Texture2D sting = Game1.instance.stingRed;
+                Texture2D sting = Level1.instance.stingRed;
                 if (stingLevel >= 1)
                 {
-                    sting = Game1.instance.stingGreen;
+                    sting = Level1.instance.stingGreen;
                 }
                 if (stingLevel < 2)
                 {
-                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 2 - sting.Width / 2, position.Y - 30), stingLevel));
+                    Level1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 2 - sting.Width / 2, position.Y - 30), stingLevel));
                 }
                 if (stingLevel == 2)
                 {
-                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 - sting.Width / 2, position.Y - 30), stingLevel));
-                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 * 2 - sting.Width / 2, position.Y - 30), stingLevel));
+                    Level1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 - sting.Width / 2, position.Y - 30), stingLevel));
+                    Level1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 * 2 - sting.Width / 2, position.Y - 30), stingLevel));
                 }
                 if (stingLevel == 3)
                 {
-                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 - sting.Width / 2, position.Y - 30), stingLevel));
-                    Game1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 * 2 - sting.Width / 2, position.Y - 30), stingLevel));
+                    Level1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 - sting.Width / 2, position.Y - 30), stingLevel));
+                    Level1.instance.Stings.Add(new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 * 2 - sting.Width / 2, position.Y - 30), stingLevel));
                     Sting right = new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 - sting.Width / 2, position.Y - 30), stingLevel);
                     Sting left = new Sting(sting, new Vector2(position.X + textures[currentTexture].Width / 3 * 2 - sting.Width / 2, position.Y - 30), stingLevel);
                     right.motion.X = 1;
                     right.motion.Y = -1;
                     left.motion.X = -1;
                     left.motion.Y = -1;
-                    Game1.instance.Stings.Add(right);
-                    Game1.instance.Stings.Add(left);
+                    Level1.instance.Stings.Add(right);
+                    Level1.instance.Stings.Add(left);
                 }
                 lastFireTime = 0;
             }
@@ -272,7 +272,7 @@ namespace Beeautiful
             {
                 if (shielded)
                 {
-                    Texture2D shield = Game1.instance.playerShield;
+                    Texture2D shield = Level1.instance.playerShield;
                     spriteBatch.Draw(shield, new Rectangle((int)position.X - 25, (int)position.Y - 30, shield.Width, shield.Height), Color.White);
                 }
                 spriteBatch.Draw(textures[currentTexture], new Rectangle((int)position.X, (int)position.Y, textures[currentTexture].Width, textures[currentTexture].Height), Color.White);
@@ -293,16 +293,16 @@ namespace Beeautiful
             timeSinceRespawn = 0;
             setInStartPosition();
             isInvincible = true;
-            Game1.instance.kills = 0;
+            Level1.instance.kills = 0;
             stingLevel = 0;
             shieldCooldown = false;
             shieldPower = maxShieldPower;
-            foreach (Enemy enemy in Game1.instance.Enemies)
+            foreach (Enemy enemy in Level1.instance.Enemies)
             {
                 if (enemy.Bounds.Y < 0)
                     enemy.Health = enemy.baseHealth;
             }
-            foreach (Beatle beatle in Game1.instance.Beatles)
+            foreach (Beatle beatle in Level1.instance.Beatles)
             {
                 if (beatle.Bounds.Y < 0)
                     beatle.Health = beatle.baseHealth;

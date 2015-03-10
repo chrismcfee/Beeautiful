@@ -57,10 +57,10 @@ namespace Beeautiful
             if (!credited && beatleHealth <= 0)
             {
                 int credit = !isLarge ? 1 : 2;
-                Game1.instance.kills += credit;
-                Game1.instance.playerScore += credit;
+                Level1.instance.kills += credit;
+                Level1.instance.playerScore += credit;
                 credited = true;
-                Game1.instance.Notifications.Add(new Notification("+" + credit * 100, 200, position));
+                Level1.instance.Notifications.Add(new Notification("+" + credit * 100, 200, position));
             }
         }
 
@@ -72,14 +72,14 @@ namespace Beeautiful
             {
                 Beatle newBeatle = new Beatle(false, rand.Next(2, 8), this.position);
                 newBeatle.Motion = new Vector2(rand.Next(-3, 3), rand.Next(0, 2));
-                Game1.instance.Beatles.Add(newBeatle);
+                Level1.instance.Beatles.Add(newBeatle);
             }
         }
 
         public Beatle(bool isLarge, float speed, Vector2 position)
         {
             this.isLarge = isLarge;
-            this.texture = !isLarge ? Game1.instance.beatleSmall : Game1.instance.beatleBig;
+            this.texture = !isLarge ? Level1.instance.beatleSmall : Level1.instance.beatleBig;
             Random rand = new Random();
             this.speed = speed;
             beatleHealth = !isLarge ? 20 : 50;

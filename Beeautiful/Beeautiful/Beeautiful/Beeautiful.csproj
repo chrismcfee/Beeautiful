@@ -78,6 +78,9 @@
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemySting.cs" />
     <Compile Include="Explosion.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="Level1.cs" />
+    <Compile Include="LvlMngr.cs" />
     <Compile Include="Notification.cs" />
     <Compile Include="OldGame1.cs" />
     <Compile Include="Player.cs" />

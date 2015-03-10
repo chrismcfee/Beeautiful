@@ -7,35 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\score.xnb</Output>
-      <Time>2015-03-03T15:09:14.3165163-05:00</Time>
-    </Item>
-    <Item>
-      <Source>backgroundColor.png</Source>
-      <Name>backgroundColor</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\backgroundColor.xnb</Output>
-      <Time>2015-03-03T15:09:14.310516-05:00</Time>
-    </Item>
-    <Item>
-      <Source>backgroundClouds.png</Source>
-      <Name>backgroundClouds</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\backgroundClouds.xnb</Output>
-      <Time>2015-03-04T23:30:29.2485816-05:00</Time>
-    </Item>
-    <Item>
-      <Source>speedLine.png</Source>
-      <Name>speedLine</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\speedLine.xnb</Output>
-      <Time>2015-03-03T15:09:14.3165163-05:00</Time>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\score.xnb</Output>
+      <Time>2015-03-04T20:35:58.0719854-05:00</Time>
     </Item>
     <Item>
       <Source>spritefonts\score.spritefont</Source>
@@ -43,8 +16,35 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\spritefonts\score.xnb</Output>
-      <Time>2015-03-04T23:49:06.835504-05:00</Time>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\spritefonts\score.xnb</Output>
+      <Time>2015-03-06T20:33:56.1300512-05:00</Time>
+    </Item>
+    <Item>
+      <Source>backgroundColor.png</Source>
+      <Name>backgroundColor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\backgroundColor.xnb</Output>
+      <Time>2015-03-04T20:35:57.7809688-05:00</Time>
+    </Item>
+    <Item>
+      <Source>backgroundClouds.png</Source>
+      <Name>backgroundClouds</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\backgroundClouds.xnb</Output>
+      <Time>2015-03-04T21:54:06.8571686-05:00</Time>
+    </Item>
+    <Item>
+      <Source>speedLine.png</Source>
+      <Name>speedLine</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\speedLine.xnb</Output>
+      <Time>2015-03-04T20:35:58.0739856-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\JerryCenter\Jerry_Center.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryCenter\Jerry_Center.xnb</Output>
-      <Time>2015-03-05T15:19:17.7817075-05:00</Time>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryCenter\Jerry_Center.xnb</Output>
+      <Time>2015-03-06T20:33:56.0790483-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\JerryLeft\Jerry_left.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryLeft\Jerry_left.xnb</Output>
-      <Time>2015-03-05T15:19:17.7827075-05:00</Time>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryLeft\Jerry_left.xnb</Output>
+      <Time>2015-03-06T20:33:56.0840486-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\JerryRight\Jerry_right.png</Source>
@@ -70,198 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryRight\Jerry_right.xnb</Output>
-      <Time>2015-03-05T15:19:17.7827075-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\bg\backgroundClouds.png</Source>
-      <Name>Sprites\bg\backgroundClouds</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bg\backgroundClouds.xnb</Output>
-      <Time>2015-03-04T23:48:12.8504162-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\bg\backgroundColor.png</Source>
-      <Name>Sprites\bg\backgroundColor</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bg\backgroundColor.xnb</Output>
-      <Time>2015-03-05T15:19:17.7857077-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\bg\background_level_1.png</Source>
-      <Name>Sprites\bg\background_level_1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bg\background_level_1.xnb</Output>
-      <Time>2015-03-04T23:48:12.8484161-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\bigcloud.png</Source>
-      <Name>Sprites\bigcloud</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bigcloud.xnb</Output>
-      <Time>2015-03-05T15:19:17.7867078-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\blank.png</Source>
-      <Name>Sprites\blank</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\blank.xnb</Output>
-      <Time>2015-03-04T23:48:43.2541552-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\enemy_bee.png</Source>
-      <Name>Sprites\enemy_bee</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\enemy_bee.xnb</Output>
-      <Time>2015-03-04T23:48:43.2551552-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\enemy_bee_stinger.png</Source>
-      <Name>Sprites\enemy_bee_stinger</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\enemy_bee_stinger.xnb</Output>
-      <Time>2015-03-05T15:19:17.7867078-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Jerry_Bee.png</Source>
-      <Name>Sprites\Jerry_Bee</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_Bee.xnb</Output>
-      <Time>2015-03-04T23:48:43.2581554-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Jerry_bee_stinger.png</Source>
-      <Name>Sprites\Jerry_bee_stinger</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_bee_stinger.xnb</Output>
-      <Time>2015-03-05T15:19:17.7837076-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Jerry_lives_death.png</Source>
-      <Name>Sprites\Jerry_lives_death</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_lives_death.xnb</Output>
-      <Time>2015-03-04T23:48:43.2601555-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\Jerry_lives_levelcomplete.png</Source>
-      <Name>Sprites\Jerry_lives_levelcomplete</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_lives_levelcomplete.xnb</Output>
-      <Time>2015-03-04T23:48:43.2611556-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\shield.png</Source>
-      <Name>Sprites\shield</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\shield.xnb</Output>
-      <Time>2015-03-04T23:48:43.2721562-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\smallcloud.png</Source>
-      <Name>Sprites\smallcloud</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\smallcloud.xnb</Output>
-      <Time>2015-03-05T15:19:17.7887079-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\speedLine.png</Source>
-      <Name>Sprites\speedLine</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\speedLine.xnb</Output>
-      <Time>2015-03-04T23:48:43.2741563-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\starBig.png</Source>
-      <Name>Sprites\starBig</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\starBig.xnb</Output>
-      <Time>2015-03-04T23:48:43.2751564-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\starSmall.png</Source>
-      <Name>Sprites\starSmall</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\starSmall.xnb</Output>
-      <Time>2015-03-04T23:48:43.2761564-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\stingGreenShot.png</Source>
-      <Name>Sprites\stingGreenShot</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingGreenShot.xnb</Output>
-      <Time>2015-03-04T23:48:43.2631557-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\stingRedShot.png</Source>
-      <Name>Sprites\stingRedShot</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingRedShot.xnb</Output>
-      <Time>2015-03-04T23:48:43.2651558-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\beatleBig.png</Source>
-      <Name>Sprites\beatleBig</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\beatleBig.xnb</Output>
-      <Time>2015-03-05T15:19:17.7847077-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Sprites\beatleSmall.png</Source>
-      <Name>Sprites\beatleSmall</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\beatleSmall.xnb</Output>
-      <Time>2015-03-05T15:19:17.7847077-05:00</Time>
-    </Item>
-    <Item>
-      <Source>Audio\Map1.mp3</Source>
-      <Name>Audio\Map1</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\Map1.xnb</Output>
-      <Extra>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\Map1.wma</Extra>
-      <Time>2015-03-04T23:51:30.2077044-05:00</Time>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryRight\Jerry_right.xnb</Output>
+      <Time>2015-03-06T20:33:56.0860487-05:00</Time>
     </Item>
     <Item>
       <Source>background_level_1.png</Source>
@@ -269,8 +79,188 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\background_level_1.xnb</Output>
-      <Time>2015-03-05T15:19:17.7897079-05:00</Time>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\background_level_1.xnb</Output>
+      <Time>2015-03-06T20:33:56.127051-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\bg\backgroundClouds.png</Source>
+      <Name>Sprites\bg\backgroundClouds</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bg\backgroundClouds.xnb</Output>
+      <Time>2015-03-06T20:33:56.0990494-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\bg\backgroundColor.png</Source>
+      <Name>Sprites\bg\backgroundColor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bg\backgroundColor.xnb</Output>
+      <Time>2015-03-06T20:33:56.1000495-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\bg\background_level_1.png</Source>
+      <Name>Sprites\bg\background_level_1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bg\background_level_1.xnb</Output>
+      <Time>2015-03-06T20:33:56.1020496-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\bigcloud.png</Source>
+      <Name>Sprites\bigcloud</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bigcloud.xnb</Output>
+      <Time>2015-03-06T20:33:56.1030496-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\blank.png</Source>
+      <Name>Sprites\blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\blank.xnb</Output>
+      <Time>2015-03-06T20:33:56.1030496-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\enemy_bee.png</Source>
+      <Name>Sprites\enemy_bee</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\enemy_bee.xnb</Output>
+      <Time>2015-03-06T20:33:56.1060498-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\enemy_bee_stinger.png</Source>
+      <Name>Sprites\enemy_bee_stinger</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\enemy_bee_stinger.xnb</Output>
+      <Time>2015-03-06T20:33:56.1070499-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Jerry_Bee.png</Source>
+      <Name>Sprites\Jerry_Bee</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_Bee.xnb</Output>
+      <Time>2015-03-06T20:33:56.0890488-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Jerry_bee_stinger.png</Source>
+      <Name>Sprites\Jerry_bee_stinger</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_bee_stinger.xnb</Output>
+      <Time>2015-03-06T20:33:56.0900489-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Jerry_lives_death.png</Source>
+      <Name>Sprites\Jerry_lives_death</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_lives_death.xnb</Output>
+      <Time>2015-03-06T20:33:56.091049-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\Jerry_lives_levelcomplete.png</Source>
+      <Name>Sprites\Jerry_lives_levelcomplete</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_lives_levelcomplete.xnb</Output>
+      <Time>2015-03-06T20:33:56.0930491-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\stingGreenShot.png</Source>
+      <Name>Sprites\stingGreenShot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingGreenShot.xnb</Output>
+      <Time>2015-03-06T20:33:56.1240508-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\stingRedShot.png</Source>
+      <Name>Sprites\stingRedShot</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingRedShot.xnb</Output>
+      <Time>2015-03-06T20:33:56.1250509-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\beatleBig.png</Source>
+      <Name>Sprites\beatleBig</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\beatleBig.xnb</Output>
+      <Time>2015-03-06T20:33:56.0960492-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\beatleSmall.png</Source>
+      <Name>Sprites\beatleSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\beatleSmall.xnb</Output>
+      <Time>2015-03-06T20:33:56.0980494-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\shield.png</Source>
+      <Name>Sprites\shield</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\shield.xnb</Output>
+      <Time>2015-03-06T20:33:56.1160504-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\smallcloud.png</Source>
+      <Name>Sprites\smallcloud</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\smallcloud.xnb</Output>
+      <Time>2015-03-06T20:33:56.1170504-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\speedLine.png</Source>
+      <Name>Sprites\speedLine</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\speedLine.xnb</Output>
+      <Time>2015-03-06T20:33:56.1180505-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\starBig.png</Source>
+      <Name>Sprites\starBig</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\starBig.xnb</Output>
+      <Time>2015-03-06T20:33:56.1190506-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\starSmall.png</Source>
+      <Name>Sprites\starSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\starSmall.xnb</Output>
+      <Time>2015-03-06T20:33:56.1230508-05:00</Time>
     </Item>
     <Item>
       <Source>Jerry_lives_death.png</Source>
@@ -278,8 +268,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Jerry_lives_death.xnb</Output>
-      <Time>2015-03-04T23:30:29.2475816-05:00</Time>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Jerry_lives_death.xnb</Output>
+      <Time>2015-03-04T21:54:06.8431678-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\lifeicon.png</Source>
@@ -287,8 +277,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\lifeicon.xnb</Output>
-      <Time>2015-03-05T15:19:17.7857077-05:00</Time>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\lifeicon.xnb</Output>
+      <Time>2015-03-06T20:33:56.1110501-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\yellow_bee_enemy.png</Source>
@@ -296,8 +286,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\yellow_bee_enemy.xnb</Output>
-      <Time>2015-03-05T15:19:17.7887079-05:00</Time>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\yellow_bee_enemy.xnb</Output>
+      <Time>2015-03-06T20:33:56.126051-05:00</Time>
     </Item>
     <Item>
       <Source>Sprites\attacking_red_bee_enemy.png</Source>
@@ -305,8 +295,27 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\attacking_red_bee_enemy.xnb</Output>
-      <Time>2015-03-05T15:19:17.7837076-05:00</Time>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\attacking_red_bee_enemy.xnb</Output>
+      <Time>2015-03-06T20:33:56.0940491-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\Map1.mp3</Source>
+      <Name>Audio\Map1</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\Map1.xnb</Output>
+      <Extra>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\Map1.wma</Extra>
+      <Time>2015-03-06T20:33:55.9320399-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\boss_placeholder.png</Source>
+      <Name>Sprites\boss_placeholder</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\boss_placeholder.xnb</Output>
+      <Time>2015-03-06T20:33:56.1040497-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -315,10 +324,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\BeeautifulContent\</RootDirectory>
-      <LoggerRootDirectory>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\BeeautifulContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -347,7 +356,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-03-04T23:41:02.1437812-05:00</Value>
+        <Value>2015-02-04T18:15:06.8328226-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

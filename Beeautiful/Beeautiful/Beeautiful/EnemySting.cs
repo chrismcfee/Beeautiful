@@ -23,7 +23,7 @@ namespace Beeautiful
         public override void Draw(SpriteBatch spriteBatch)
         {
             if (visible)
-                spriteBatch.Draw(texture, new Vector2(position.X + Game1.instance.enemyShip.Width / 2 - Game1.instance.stingGreen.Width / 2, position.Y + 30), Color.White);
+                spriteBatch.Draw(texture, new Vector2(position.X + Level1.instance.enemyShip.Width / 2 - Level1.instance.stingGreen.Width / 2, position.Y + 30), Color.White);
         }
     }
 }

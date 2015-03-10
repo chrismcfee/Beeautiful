@@ -49,9 +49,9 @@ namespace Beeautiful
             {
                 visible = false;
                 int credit = 3;
-                Game1.instance.kills += credit;
-                Game1.instance.playerScore += credit;
-                Game1.instance.Notifications.Add(new Notification("+" + credit * 100, 300, position));
+                Level1.instance.kills += credit;
+                Level1.instance.playerScore += credit;
+                Level1.instance.Notifications.Add(new Notification("+" + credit * 100, 300, position));
             }
         }
 
@@ -64,13 +64,13 @@ namespace Beeautiful
         internal void Update(GameTime gameTime)
         {
             timeSinceLastShot += gameTime.ElapsedGameTime.Milliseconds;
-            if (timeSinceLastShot >= shotInterval && position.Y < Game1.instance.User.Position.Y)
+            if (timeSinceLastShot >= shotInterval && position.Y < Level1.instance.User.Position.Y)
                 Shoot();
 
             motion.X = 0;
             motion.Y = 1;
-            float movement = position.X - Game1.instance.User.Position.X;
-            if (position.Y > 0 && position.Y < Game1.instance.User.Position.Y)
+            float movement = position.X - Level1.instance.User.Position.X;
+            if (position.Y > 0 && position.Y < Level1.instance.User.Position.Y)
             {
                 if (movement > 0)
                     motion.X = -.5f;
@@ -83,7 +83,7 @@ namespace Beeautiful
         public void Shoot()
         {
             timeSinceLastShot = 0;
-            Game1.instance.Stings.Add(new EnemySting(Game1.instance.stingGreen, position));
+            Level1.instance.Stings.Add(new EnemySting(Level1.instance.stingGreen, position));
         }
     }
 }
