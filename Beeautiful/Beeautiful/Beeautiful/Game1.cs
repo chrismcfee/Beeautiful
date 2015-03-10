@@ -238,7 +238,7 @@ namespace Beeautiful
 
             //Initialize random beatles
             Random rand = new Random(); 
-            int randomAmt = rand.Next(400,400);
+            int randomAmt = rand.Next(500,500);
             for (int i = 0; i < randomAmt; i++)
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
