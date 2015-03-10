@@ -20,7 +20,7 @@ namespace Beeautiful
         public static Level1 instance;
 
         GraphicsDeviceManager graphics;
-        Rectangle screenBounds;
+        
 
         SpriteBatch spriteBatch;
         SpriteFont scoreFont;
@@ -128,7 +128,6 @@ namespace Beeautiful
         {
            
            //Level1.instance = this;
-            screenBounds = new Rectangle(0, 0, this.graphics.PreferredBackBufferWidth, this.graphics.PreferredBackBufferHeight);
            //boss = new List<Boss1>();
             beatles = new List<Beatle>();
             explosions = new List<Explosion>();
@@ -177,7 +176,7 @@ namespace Beeautiful
             //Boses
             boss1Texture = g.Content.Load<Texture2D>("Sprites/boss_placeholder");
 
-            player = new Player(shipTextures, screenBounds);
+            player = new Player(shipTextures,Game1.instance.screenBounds);
 
             PrepareLevel();
 
@@ -207,13 +206,13 @@ namespace Beeautiful
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
                 float speed = !bigBeatle ? rand.Next(1, 4) : rand.Next(2, 8);
-                beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
+                beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, Game1.instance.screenBounds.Width), rand.Next(-10000, 0))));
             }
 
             int randomEnemies = rand.Next(120, 120);
             for (int i = 0; i < randomEnemies; i++)
             {
-                enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+                enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, Game1.instance.screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
             }
 
 
@@ -229,7 +228,7 @@ namespace Beeautiful
             {
                 //Update background elements
                 if (backgroundObjects.Count < 15)
-                    backgroundObjects.Add(new BackgroundElement(backgroundElements, screenBounds));
+                    backgroundObjects.Add(new BackgroundElement(backgroundElements,Game1.instance.screenBounds));
 
                 //Update background objects
                 for (int i = backgroundObjects.Count - 1; i >= 0; i--)
@@ -329,7 +328,7 @@ namespace Beeautiful
 
                         //Update background elements
                         if (backgroundObjects.Count < 15)
-                            backgroundObjects.Add(new BackgroundElement(backgroundElements, screenBounds));
+                            backgroundObjects.Add(new BackgroundElement(backgroundElements, Game1.instance.screenBounds));
 
                         //Update background objects
                         for (int i = backgroundObjects.Count - 1; i >= 0; i--)
@@ -476,7 +475,7 @@ namespace Beeautiful
                     break;
             
             }
-
+            
         }            
 
         
@@ -496,28 +495,28 @@ namespace Beeautiful
             {
                 case LEVELSTATE.GameOver:
                     {
-                        spriteBatch.DrawString(scoreFont, "Game Over", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Game Over").X / 2, (int)screenBounds.Height / 4), Color.White);
-                        spriteBatch.DrawString(scoreFont, "Score: " + playerScore * 100, new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Score: " + playerScore * 100).X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("Score: " + playerScore * 100).Y), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Game Over", new Vector2((int)Game1.instance.screenBounds.Width / 2 - scoreFont.MeasureString("Game Over").X / 2, (int)Game1.instance.screenBounds.Height / 4), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Score: " + playerScore * 100, new Vector2((int)Game1.instance.screenBounds.Width / 2 - scoreFont.MeasureString("Score: " + playerScore * 100).X / 2, (int)Game1.instance.screenBounds.Height / 4 + scoreFont.MeasureString("Score: " + playerScore * 100).Y), Color.White);
                         Color flashColor = flashing ? Color.White : Color.Yellow;
-                        spriteBatch.DrawString(scoreFont, "Press Enter to Play Again", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play Again").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
-                        spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press Enter to Play Again", new Vector2((int)Game1.instance.screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play Again").X / 2, (int)Game1.instance.screenBounds.Height / 3 * 2), flashColor);
+                        spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)Game1.instance.screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)Game1.instance.screenBounds.Height / 4 * 3), Color.White);
                         break;
                     }
                 case LEVELSTATE.StartMenu:
                     {
-                        spriteBatch.DrawString(scoreFont, "Beeautiful", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Beeautiful").X / 2, (int)screenBounds.Height / 4), Color.White);
-                        spriteBatch.DrawString(scoreFont, "Developed by the Java Tigers", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Developed by the Java Tigers").X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("Developed by the Java Tigers").Y), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Beeautiful", new Vector2((int)Game1.instance.screenBounds.Width / 2 - scoreFont.MeasureString("Beeautiful").X / 2, (int)Game1.instance.screenBounds.Height / 4), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Developed by the Java Tigers", new Vector2((int)Game1.instance.screenBounds.Width / 2 - scoreFont.MeasureString("Developed by the Java Tigers").X / 2, (int)Game1.instance.screenBounds.Height / 4 + scoreFont.MeasureString("Developed by the Java Tigers").Y), Color.White);
                         Color flashColor = flashing ? Color.White : Color.Yellow;
-                        spriteBatch.DrawString(scoreFont, "Press Enter to Play", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
-                        spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
-                        spriteBatch.DrawString(scoreFont, "Press F for Full Screen (Coming Soon)", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press F for Full Screen (Coming Soon)").X / 2, (int)screenBounds.Height / 5 * 4), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press Enter to Play", new Vector2((int)Game1.instance.screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play").X / 2, (int)Game1.instance.screenBounds.Height / 3 * 2), flashColor);
+                        spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)Game1.instance.screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)Game1.instance.screenBounds.Height / 4 * 3), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press F for Full Screen (Coming Soon)", new Vector2((int)Game1.instance.screenBounds.Width / 2 - scoreFont.MeasureString("Press F for Full Screen (Coming Soon)").X / 2, (int)Game1.instance.screenBounds.Height / 5 * 4), Color.White);
 
                         break;
                     }
                 case LEVELSTATE.Paused:
                     {
-                        spriteBatch.DrawString(scoreFont, "Paused", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Paused").X / 2, (int)screenBounds.Height / 3), Color.White);
-                        spriteBatch.DrawString(scoreFont, "Press Enter to End Game", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to End Game").X / 2, (int)screenBounds.Height / 2), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Paused", new Vector2((int)Game1.instance.screenBounds.Width / 2 - scoreFont.MeasureString("Paused").X / 2, (int)Game1.instance.screenBounds.Height / 3), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press Enter to End Game", new Vector2((int)Game1.instance.screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to End Game").X / 2, (int)Game1.instance.screenBounds.Height / 2), Color.White);
                         goto case LEVELSTATE.Running;
                     }
                 case LEVELSTATE.Running:
@@ -540,7 +539,7 @@ namespace Beeautiful
                             spriteBatch.Draw(playerLivesGraphic, new Rectangle(40 * i + 10, 10, playerLivesGraphic.Width, playerLivesGraphic.Height), Color.White);
 
                         string scoreText = "" + playerScore * 100;
-                        spriteBatch.DrawString(scoreFont, scoreText, new Vector2(screenBounds.Width - scoreFont.MeasureString(scoreText).X - 30, 5), Color.White);
+                        spriteBatch.DrawString(scoreFont, scoreText, new Vector2(Game1.instance.screenBounds.Width - scoreFont.MeasureString(scoreText).X - 30, 5), Color.White);
 
                         spriteBatch.Draw(blank, new Rectangle(8, 43, (int)player.MaxShieldPower / 30 + 4, 24), Color.Black);
                         spriteBatch.Draw(blank, new Rectangle(10, 45, (int)player.MaxShieldPower / 30, 20), Color.White);

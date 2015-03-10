@@ -19,7 +19,7 @@ namespace Beeautiful
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         LvlMngr lvlMngr;
-        
+       public Rectangle screenBounds;
 
         public Game1()
         {
@@ -29,6 +29,9 @@ namespace Beeautiful
             this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
             this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
             this.graphics.IsFullScreen = true;
+            screenBounds = new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
+
+
         }
 
         internal LvlMngr LvlMngr
