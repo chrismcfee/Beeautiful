@@ -72,6 +72,7 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AudioEngine.cs" />
     <Compile Include="BackgroundElement.cs" />
     <Compile Include="Beatle.cs" />
     <Compile Include="Boss1.cs" />

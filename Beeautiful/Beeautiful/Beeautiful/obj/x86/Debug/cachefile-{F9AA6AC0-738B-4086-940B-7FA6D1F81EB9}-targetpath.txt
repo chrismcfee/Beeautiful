@@ -37,3 +37,4 @@ Content\Sprites\stingWeakShot.xnb
 Content\Audio\Map1.xnb
 Content\Audio\Map1.wma
 Content\Sprites\attacking_yellow_bee_enemy.xnb
+Content\Audio\explosionshort.xnb

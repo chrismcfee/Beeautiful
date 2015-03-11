@@ -8,7 +8,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\score.xnb</Output>
-      <Time>2015-03-09T21:17:10.6368217-04:00</Time>
+      <Time>2015-03-11T19:25:09.4486846-04:00</Time>
     </Item>
     <Item>
       <Source>spritefonts\score.spritefont</Source>
@@ -17,7 +17,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\spritefonts\score.xnb</Output>
-      <Time>2015-03-09T21:17:10.6378218-04:00</Time>
+      <Time>2015-03-11T19:25:09.4496847-04:00</Time>
     </Item>
     <Item>
       <Source>backgroundColor.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\backgroundColor.xnb</Output>
-      <Time>2015-03-09T21:17:10.6258211-04:00</Time>
+      <Time>2015-03-11T19:25:09.437684-04:00</Time>
     </Item>
     <Item>
       <Source>backgroundClouds.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\backgroundClouds.xnb</Output>
-      <Time>2015-03-09T21:17:10.624821-04:00</Time>
+      <Time>2015-03-11T19:25:09.437684-04:00</Time>
     </Item>
     <Item>
       <Source>speedLine.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\speedLine.xnb</Output>
-      <Time>2015-03-09T21:17:10.6378218-04:00</Time>
+      <Time>2015-03-11T19:25:09.4496847-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\JerryCenter\Jerry_Center.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryCenter\Jerry_Center.xnb</Output>
-      <Time>2015-03-09T21:17:10.6108202-04:00</Time>
+      <Time>2015-03-11T19:25:09.4236832-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\JerryLeft\Jerry_left.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryLeft\Jerry_left.xnb</Output>
-      <Time>2015-03-09T21:17:10.6108202-04:00</Time>
+      <Time>2015-03-11T19:25:09.4246833-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\JerryRight\Jerry_right.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\JerryRight\Jerry_right.xnb</Output>
-      <Time>2015-03-09T21:17:10.6118203-04:00</Time>
+      <Time>2015-03-11T19:25:09.4246833-04:00</Time>
     </Item>
     <Item>
       <Source>background_level_1.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\background_level_1.xnb</Output>
-      <Time>2015-03-09T21:17:10.6258211-04:00</Time>
+      <Time>2015-03-11T19:25:09.4386841-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\bg\backgroundClouds.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bg\backgroundClouds.xnb</Output>
-      <Time>2015-03-09T21:17:10.6158205-04:00</Time>
+      <Time>2015-03-11T19:25:09.4286835-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\bg\backgroundColor.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bg\backgroundColor.xnb</Output>
-      <Time>2015-03-09T21:17:10.6158205-04:00</Time>
+      <Time>2015-03-11T19:25:09.4286835-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\bg\background_level_1.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bg\background_level_1.xnb</Output>
-      <Time>2015-03-09T21:17:10.6168206-04:00</Time>
+      <Time>2015-03-11T19:25:09.4296836-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\bigcloud.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\bigcloud.xnb</Output>
-      <Time>2015-03-09T21:17:10.6168206-04:00</Time>
+      <Time>2015-03-11T19:25:09.4296836-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\blank.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\blank.xnb</Output>
-      <Time>2015-03-09T21:17:10.6168206-04:00</Time>
+      <Time>2015-03-11T19:25:09.4296836-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\enemy_bee.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\enemy_bee.xnb</Output>
-      <Time>2015-03-09T21:17:10.6178206-04:00</Time>
+      <Time>2015-03-11T19:25:09.4306836-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\enemy_bee_stinger.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\enemy_bee_stinger.xnb</Output>
-      <Time>2015-03-09T21:49:25.2764768-04:00</Time>
+      <Time>2015-03-11T19:25:09.4306836-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Jerry_Bee.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_Bee.xnb</Output>
-      <Time>2015-03-09T21:17:10.6128204-04:00</Time>
+      <Time>2015-03-11T19:25:09.4256833-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Jerry_bee_stinger.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_bee_stinger.xnb</Output>
-      <Time>2015-03-09T21:49:25.2744767-04:00</Time>
+      <Time>2015-03-11T19:25:09.4266834-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Jerry_lives_death.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_lives_death.xnb</Output>
-      <Time>2015-03-09T21:17:10.6138204-04:00</Time>
+      <Time>2015-03-11T19:25:09.4266834-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\Jerry_lives_levelcomplete.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Jerry_lives_levelcomplete.xnb</Output>
-      <Time>2015-03-09T21:17:10.6138204-04:00</Time>
+      <Time>2015-03-11T19:25:09.4266834-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\beatleBig.png</Source>
@@ -188,7 +188,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\beatleBig.xnb</Output>
-      <Time>2015-03-09T21:17:10.6148205-04:00</Time>
+      <Time>2015-03-11T19:25:09.4276834-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\beatleSmall.png</Source>
@@ -197,7 +197,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\beatleSmall.xnb</Output>
-      <Time>2015-03-09T21:17:10.6158205-04:00</Time>
+      <Time>2015-03-11T19:25:09.4286835-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\shield.png</Source>
@@ -206,7 +206,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\shield.xnb</Output>
-      <Time>2015-03-09T21:49:25.279477-04:00</Time>
+      <Time>2015-03-11T19:25:09.4356839-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\smallcloud.png</Source>
@@ -215,7 +215,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\smallcloud.xnb</Output>
-      <Time>2015-03-09T21:17:10.623821-04:00</Time>
+      <Time>2015-03-11T19:25:09.4356839-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\speedLine.png</Source>
@@ -224,7 +224,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\speedLine.xnb</Output>
-      <Time>2015-03-09T21:17:10.623821-04:00</Time>
+      <Time>2015-03-11T19:25:09.436684-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\starBig.png</Source>
@@ -233,7 +233,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\starBig.xnb</Output>
-      <Time>2015-03-09T21:17:10.623821-04:00</Time>
+      <Time>2015-03-11T19:25:09.436684-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\starSmall.png</Source>
@@ -242,7 +242,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\starSmall.xnb</Output>
-      <Time>2015-03-09T21:17:10.623821-04:00</Time>
+      <Time>2015-03-11T19:25:09.436684-04:00</Time>
     </Item>
     <Item>
       <Source>Jerry_lives_death.png</Source>
@@ -251,7 +251,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Jerry_lives_death.xnb</Output>
-      <Time>2015-03-09T21:17:10.5278155-04:00</Time>
+      <Time>2015-03-11T19:25:09.3436786-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\lifeicon.png</Source>
@@ -260,7 +260,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\lifeicon.xnb</Output>
-      <Time>2015-03-09T21:17:10.6188207-04:00</Time>
+      <Time>2015-03-11T19:25:09.4316837-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\yellow_bee_enemy.png</Source>
@@ -269,7 +269,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\yellow_bee_enemy.xnb</Output>
-      <Time>2015-03-09T21:17:10.624821-04:00</Time>
+      <Time>2015-03-11T19:25:09.437684-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\attacking_red_bee_enemy.png</Source>
@@ -278,7 +278,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\attacking_red_bee_enemy.xnb</Output>
-      <Time>2015-03-09T21:17:10.6148205-04:00</Time>
+      <Time>2015-03-11T19:25:09.4276834-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\neoshielf.jpg</Source>
@@ -287,7 +287,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\neoshielf.xnb</Output>
-      <Time>2015-03-09T21:49:25.2784769-04:00</Time>
+      <Time>2015-03-11T19:25:09.4336838-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\boss_placeholder.png</Source>
@@ -296,7 +296,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\boss_placeholder.xnb</Output>
-      <Time>2015-03-09T21:17:10.6178206-04:00</Time>
+      <Time>2015-03-11T19:25:09.4306836-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\backgroundColor_hell.png</Source>
@@ -305,7 +305,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\backgroundColor_hell.xnb</Output>
-      <Time>2015-03-09T21:49:25.2754767-04:00</Time>
+      <Time>2015-03-11T19:25:09.4276834-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\stingStrongShot.png</Source>
@@ -314,7 +314,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingStrongShot.xnb</Output>
-      <Time>2015-03-09T21:49:25.279477-04:00</Time>
+      <Time>2015-03-11T19:25:09.436684-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\stingWeakShot.png</Source>
@@ -323,7 +323,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\stingWeakShot.xnb</Output>
-      <Time>2015-03-09T21:49:25.280477-04:00</Time>
+      <Time>2015-03-11T19:25:09.437684-04:00</Time>
     </Item>
     <Item>
       <Source>Audio\Map1.mp3</Source>
@@ -333,7 +333,7 @@
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\Map1.xnb</Output>
       <Extra>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\Map1.wma</Extra>
-      <Time>2015-03-09T21:17:10.5258154-04:00</Time>
+      <Time>2015-03-11T19:25:09.3376783-04:00</Time>
     </Item>
     <Item>
       <Source>Sprites\attacking_yellow_bee_enemy.png</Source>
@@ -342,7 +342,16 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\attacking_yellow_bee_enemy.xnb</Output>
-      <Time>2015-03-09T21:17:10.6148205-04:00</Time>
+      <Time>2015-03-11T19:25:09.4276834-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\explosionshort.wav</Source>
+      <Name>Audio\explosionshort</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\explosionshort.xnb</Output>
+      <Time>2015-03-11T18:48:08.4906531-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

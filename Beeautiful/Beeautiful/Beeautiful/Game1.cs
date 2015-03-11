@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 
 namespace Beeautiful
 {
@@ -65,9 +66,11 @@ namespace Beeautiful
         Texture2D explosionTextureGreen;
 
         Song backgroundMusic;
-
+        
+        
+        
         #endregion
-
+        List<AudioEngine> SoundEffects;
         List<Explosion> explosions;
         List<Beatle> beatles;
         List<Notification> notifications;
@@ -123,6 +126,11 @@ namespace Beeautiful
             get { return stings; }
         }
 
+        //public List<AudioEngine> ExplosionWavs
+        //{
+        //    get { return ExplosionWavs; }
+        //}
+
         #endregion
 
 
@@ -170,6 +178,7 @@ namespace Beeautiful
             enemyBoss1 = Content.Load<Texture2D>("Sprites/boss_placeholder");
 
             backgroundMusic = Content.Load<Song>("Audio/Map1");
+            //SoundEffects = Content.Load<SoundEffect>("Audio/explosionshort");
 
             //player textures
             List<Texture2D> shipTextures = new List<Texture2D>();
