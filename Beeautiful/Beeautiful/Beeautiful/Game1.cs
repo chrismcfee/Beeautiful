@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
+//using Microsoft.Xna.Framework.Song;
 
 namespace Beeautiful
 {
@@ -70,7 +71,7 @@ namespace Beeautiful
         
         
         #endregion
-        List<AudioEngine> SoundEffects;
+        SoundEffect blood_splat;
         List<Explosion> explosions;
         List<Beatle> beatles;
         List<Notification> notifications;
@@ -178,7 +179,7 @@ namespace Beeautiful
             enemyBoss1 = Content.Load<Texture2D>("Sprites/boss_placeholder");
 
             backgroundMusic = Content.Load<Song>("Audio/Map1");
-            //SoundEffects = Content.Load<SoundEffect>("Audio/explosionshort");
+            blood_splat = Content.Load<SoundEffect>("Audio/blood_splat");
 
             //player textures
             List<Texture2D> shipTextures = new List<Texture2D>();
@@ -490,6 +491,7 @@ namespace Beeautiful
                                         else
                                         {
                                             player.Lives = player.Lives - 1;
+                                            blood_splat.Play();
                                             enemies[j].Visible = false;
                                             player.Respawn();
                                         }
@@ -518,6 +520,7 @@ namespace Beeautiful
                                     if (beatles[q].Visible && beatles[q].Bounds.Intersects(player.Bounds) && !player.Invincible)
                                     {
                                         player.Lives = player.Lives - 1;
+                                        blood_splat.Play();
                                         beatles[q].Visible = false;
                                         player.Respawn();
                                     }
@@ -548,6 +551,7 @@ namespace Beeautiful
                                 else
                                 {
                                     player.Lives = player.Lives - 1;
+                                    blood_splat.Play();
                                     stings[i].Visible = false;
                                     player.Respawn();
                                 }

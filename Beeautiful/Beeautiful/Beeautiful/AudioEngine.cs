@@ -9,9 +9,14 @@ using Microsoft.Xna.Framework.Audio;
 
 namespace Beeautiful
 {
-    class AudioEngine
-    {
-        SoundEffect explosion;
-
-    }
+    //class AudioEngine
+    //{
+    //    SoundEffect explosion;
+    //    explosion = Content.Load<SoundEffect>("Audio/explosionshort");
+    //    public void PlayASound()
+    //    {
+    //        
+    //    }
+    //
+    //}
 }
