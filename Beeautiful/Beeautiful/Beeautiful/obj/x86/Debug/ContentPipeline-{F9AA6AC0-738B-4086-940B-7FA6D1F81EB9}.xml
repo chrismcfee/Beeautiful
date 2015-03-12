@@ -290,15 +290,6 @@
       <Time>2015-03-11T19:40:03.8688426-04:00</Time>
     </Item>
     <Item>
-      <Source>Sprites\boss_placeholder.png</Source>
-      <Name>Sprites\boss_placeholder</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\boss_placeholder.xnb</Output>
-      <Time>2015-03-11T19:25:09.4306836-04:00</Time>
-    </Item>
-    <Item>
       <Source>Sprites\backgroundColor_hell.png</Source>
       <Name>Sprites\backgroundColor_hell</Name>
       <Importer>TextureImporter</Importer>
@@ -361,6 +352,15 @@
       <Options>None</Options>
       <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\blood_splat.xnb</Output>
       <Time>2015-03-11T20:56:09.6295285-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\FINALGAMEOVER.wav</Source>
+      <Name>Audio\FINALGAMEOVER</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\FINALGAMEOVER.xnb</Output>
+      <Time>2015-03-11T21:22:33.5241221-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -227,13 +227,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sprites\boss_placeholder.png">
-      <Name>boss_placeholder</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Sprites\backgroundColor_hell.png">
       <Name>backgroundColor_hell</Name>
       <Importer>TextureImporter</Importer>
@@ -269,6 +262,13 @@
   <ItemGroup>
     <Compile Include="Audio\blood_splat.wav">
       <Name>blood_splat</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\FINALGAMEOVER.wav">
+      <Name>FINALGAMEOVER</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>

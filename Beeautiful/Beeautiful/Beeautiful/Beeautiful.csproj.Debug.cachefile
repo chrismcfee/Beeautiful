@@ -30,7 +30,6 @@ Content\Sprites\lifeicon.xnb
 Content\Sprites\yellow_bee_enemy.xnb
 Content\Sprites\attacking_red_bee_enemy.xnb
 Content\Sprites\neoshielf.xnb
-Content\Sprites\boss_placeholder.xnb
 Content\Sprites\backgroundColor_hell.xnb
 Content\Sprites\stingStrongShot.xnb
 Content\Sprites\stingWeakShot.xnb
@@ -38,4 +37,5 @@ Content\Audio\Map1.xnb
 Content\Sprites\attacking_yellow_bee_enemy.xnb
 Content\Audio\explosionshort.xnb
 Content\Audio\blood_splat.xnb
+Content\Audio\FINALGAMEOVER.xnb
 Content\Audio\Map1.wma
