@@ -33,9 +33,10 @@ Content\Sprites\neoshielf.xnb
 Content\Sprites\backgroundColor_hell.xnb
 Content\Sprites\stingStrongShot.xnb
 Content\Sprites\stingWeakShot.xnb
+Content\Sprites\attacking_yellow_bee_enemy.xnb
+Content\Sprites\Satan_bug_big.xnb
 Content\Audio\Map1.xnb
 Content\Audio\Map1.wma
-Content\Sprites\attacking_yellow_bee_enemy.xnb
 Content\Audio\explosionshort.xnb
 Content\Audio\blood_splat.xnb
 Content\Audio\FINALGAMEOVER.xnb
