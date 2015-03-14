@@ -95,3 +95,4 @@ C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\b
 C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Beeautiful.exe
 C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Beeautiful.pdb
 C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\obj\x86\Debug\Beeautiful.pdb
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\Satan_bug_big.xnb

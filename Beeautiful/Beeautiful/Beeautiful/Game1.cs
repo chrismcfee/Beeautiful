@@ -251,15 +251,15 @@ namespace Beeautiful
 
             //Initialize random beatles
             Random rand = new Random(); 
-            int randomAmt = rand.Next(500,500);
+            int randomAmt = rand.Next(500,550);
             for (int i = 0; i < randomAmt; i++)
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
-                float speed = !bigBeatle ? rand.Next(2, 16) : rand.Next(2, 16);
+                float speed = !bigBeatle ? rand.Next(4, 16) : rand.Next(4, 16);
                 beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
             }
 
-            int randomEnemies = rand.Next(120, 120);
+            int randomEnemies = rand.Next(140, 140);
             for (int i = 0; i < randomEnemies; i++)
             {
                 enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
@@ -636,8 +636,10 @@ namespace Beeautiful
                         Color flashColor = flashing ? Color.White : Color.Yellow;
                         spriteBatch.DrawString(scoreFont, "Press Enter to Play", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
                         spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
-                        spriteBatch.DrawString(scoreFont, "Press F for Full Screen", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press F for Full Screen").X / 2, (int)screenBounds.Height / 5 * 4), Color.White);
-                        spriteBatch.DrawString(scoreFont, "Press LEFT CTRL for Shield", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press LEFT CTRL for Shield").X / 2, (int)screenBounds.Height / 6 * 5), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Use arrow keys to move", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Use arrow keys to move").X / 2, (int)screenBounds.Height / 5 * 4), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press Space to Fire sting", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Space to Fire sting").X / 2, (int)screenBounds.Height / 6 * 5), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press F for Full Screen", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press F for Full Screen").X / 2, (int)screenBounds.Height / 7 * 6), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Press LEFT CTRL for Shield", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press LEFT CTRL for Shield").X / 2, (int)screenBounds.Height / 8 * 7), Color.White);
 
                         break;
                     }
