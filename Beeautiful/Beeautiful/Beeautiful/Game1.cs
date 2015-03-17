@@ -27,12 +27,13 @@ namespace Beeautiful
         SpriteFont scoreFont;
        float Timer=5000;
         Player player;
+        Boss Satan;
         //bool DoesSpawnBoss = false;
 
         //To prevent holding down a button from changing state rapidly
         double stateChangeDelay = 100;
         double timeSinceStateChange = 0;
-
+        bool bSpawn=false;
         bool flashing = false;
         
         double timeSinceLastFlash = 0;
@@ -55,6 +56,7 @@ namespace Beeautiful
 
         public Texture2D enemyShip;
         public Texture2D enemyBoss1;
+        public Texture2D bosstexture;
 
         public Texture2D stingRed;
         public Texture2D stingGreen;
@@ -102,6 +104,12 @@ namespace Beeautiful
         {
             get { return player; }
         }
+        public Boss sboss 
+        {
+
+            get { return Satan; }
+        }
+
 
         public List<Explosion> Explosions
         {
@@ -148,6 +156,7 @@ namespace Beeautiful
             //Content.RootDirectory = "Content";
             screenBounds = new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
             boss1 = new List<Boss1>();
+           // Satan= new Boss(_"Sprites/Satan_bug_big",)
             beatles = new List<Beatle>();
             explosions = new List<Explosion>();
             notifications = new List<Notification>();
@@ -202,9 +211,9 @@ namespace Beeautiful
             //Explosions
             explosionTexture = Content.Load<Texture2D>("Sprites/stingWeakShot");
             explosionTextureGreen = Content.Load<Texture2D>("Sprites/stingStrongShot");
-
+            bosstexture = Content.Load<Texture2D>("Sprites/Satan_bug_big");
             player = new Player(shipTextures, screenBounds);
-
+            //Satan = new Boss(bosstexture, screenBounds);
             PrepareLevel();
 
             MediaPlayer.IsRepeating = true;
@@ -440,22 +449,36 @@ namespace Beeautiful
                             state = gameState.GameOver;
                             return;
                         }
-                        //if (playerScore > 4000)
-                          //  Timer = 5000;
-                        if (Timer > 0)
-                            Timer -= gameTime.ElapsedGameTime.Milliseconds;
-
-                        else
+                        /*if (playerScore >= 4000 && bSpawn == false)
                         {
                             Random rand = new Random();
                             int randomBoss1s = rand.Next(1, 2);
 
                             for (int i = 0; i < randomBoss1s; i++)
-                            { 
-                                boss1.Add(new Boss1(enemyBoss1, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
-                               // Timer = 9000;
+                            {
+                                boss1.Add(new Boss1(enemyBoss1, new Vector2((screenBounds.Width / 2), ((screenBounds.Height / 2) - 400)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+                                //Timer = 500;
+                                bSpawn = true;
                             }
-                            
+                        }*/
+                       if (Timer > 0 && bSpawn==false)
+                            Timer -= gameTime.ElapsedGameTime.Milliseconds;
+
+                        else
+                        {
+
+                            if (bSpawn == false)
+                            {
+                                Random rand = new Random();
+                                int randomBoss1s = rand.Next(1, 2);
+
+                                for (int i = 0; i < randomBoss1s; i++)
+                                {
+                                    boss1.Add(new Boss1(enemyBoss1, new Vector2((screenBounds.Width/2),((screenBounds.Height/2)-400)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+                                     //Timer = 500;
+                                    bSpawn = true;
+                                }
+                            }
 
                         }
 
@@ -659,7 +682,7 @@ namespace Beeautiful
                         foreach (Enemy enemy in enemies)
                             enemy.Draw(spriteBatch);
 
-                        foreach (Boss1 enemyBoss1 in boss1)
+                       foreach (Boss1 enemyBoss1 in boss1)
                             enemyBoss1.Draw(spriteBatch);
 
                         foreach (Sting sting in stings)
