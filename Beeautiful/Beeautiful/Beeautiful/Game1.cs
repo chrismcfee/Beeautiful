@@ -474,7 +474,7 @@ namespace Beeautiful
 
                                 for (int i = 0; i < randomBoss1s; i++)
                                 {
-                                    boss1.Add(new Boss1(enemyBoss1, new Vector2((screenBounds.Width/2),((screenBounds.Height/2)-400)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+                                    boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width/2)-150),(((screenBounds.Height/2)-400))), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
                                      //Timer = 500;
                                     bSpawn = true;
                                 }
