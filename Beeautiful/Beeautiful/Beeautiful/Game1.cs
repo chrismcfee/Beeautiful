@@ -60,6 +60,7 @@ namespace Beeautiful
 
         public Texture2D stingRed;
         public Texture2D stingGreen;
+        public Texture2D SBEAM;
 
         public Texture2D beatleBig;
         public Texture2D beatleSmall;
@@ -203,6 +204,7 @@ namespace Beeautiful
             //Stings
             stingRed = Content.Load<Texture2D>("Sprites/enemy_bee_stinger");
             stingGreen = Content.Load<Texture2D>("Sprites/Jerry_bee_stinger");
+            SBEAM = Content.Load<Texture2D>("Sprites/special_beam_cannon");
 
             //Beatles
             beatleBig = Content.Load<Texture2D>("Sprites/beatleBig");
@@ -257,7 +259,8 @@ namespace Beeautiful
             stings.Clear();
             notifications.Clear();
             explosions.Clear();
-
+            bSpawn = false;
+            Timer = 5000;
             //Initialize random beatles
             Random rand = new Random(); 
             int randomAmt = rand.Next(500,550);
@@ -271,7 +274,7 @@ namespace Beeautiful
             int randomEnemies = rand.Next(140, 140);
             for (int i = 0; i < randomEnemies; i++)
             {
-                enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+                //enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
             }
 
             //int randomBoss1s = rand.Next(1, 1);
@@ -449,7 +452,7 @@ namespace Beeautiful
                             state = gameState.GameOver;
                             return;
                         }
-                        /*if (playerScore >= 4000 && bSpawn == false)
+                         /*if (playerScore >= 4000 && bSpawn == false)
                         {
                             Random rand = new Random();
                             int randomBoss1s = rand.Next(1, 2);
@@ -461,7 +464,7 @@ namespace Beeautiful
                                 bSpawn = true;
                             }
                         }*/
-                       if (Timer > 0 && bSpawn==false)
+                      if (Timer > 0 && bSpawn==false)
                             Timer -= gameTime.ElapsedGameTime.Milliseconds;
 
                         else
@@ -469,16 +472,22 @@ namespace Beeautiful
 
                             if (bSpawn == false)
                             {
-                                Random rand = new Random();
-                                int randomBoss1s = rand.Next(1, 2);
+                                //Random rand = new Random();
+                                int randomBoss1s = 1;
 
                                 for (int i = 0; i < randomBoss1s; i++)
                                 {
-                                    boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width/2)-150),(((screenBounds.Height/2)-400))), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+                                    boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width/2)-150),(((screenBounds.Height/2)-400))), 1, 2));
                                      //Timer = 500;
-                                    bSpawn = true;
+                                   bSpawn = true;
+                                }
+                                for (int i=0; i < Timer; i++)
+                                {
+                                    //ayylmao
                                 }
                             }
+
+                          
 
                         }
 
@@ -694,8 +703,8 @@ namespace Beeautiful
                         foreach (Beatle beatle in beatles)
                             beatle.Draw(spriteBatch);
 
-                        foreach (Enemy enemy in enemies)
-                            enemy.Draw(spriteBatch);
+                       // foreach (Enemy enemy in enemies)
+                         //   enemy.Draw(spriteBatch);
 
                        foreach (Boss1 enemyBoss1 in boss1)
                             enemyBoss1.Draw(spriteBatch);

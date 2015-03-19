@@ -9,8 +9,8 @@ namespace Beeautiful
         Vector2 position;
         Vector2 motion;
         bool visible = true;
-        float health = 800;
-        public float baseHealth = 800;
+        float health = 8000/2;
+        public float baseHealth = 8000/2;
         double shotInterval;
         double timeSinceLastShot;
 
@@ -64,13 +64,13 @@ namespace Beeautiful
         internal void Update(GameTime gameTime)
         {
             timeSinceLastShot += gameTime.ElapsedGameTime.Milliseconds;
-            if (timeSinceLastShot >= shotInterval && position.Y < Game1.instance.User.Position.Y)
+            if (timeSinceLastShot >= 5)
                 Shoot();
 
             motion.X = 0;
             motion.Y = 1;
             float movement = position.X - Game1.instance.User.Position.X;
-            if (position.Y > 0 && position.Y < Game1.instance.User.Position.Y)
+            if (position.X!= Game1.instance.User.Position.X)
             {
                 if (movement > 0)
                     motion.X = -.5f;
@@ -83,7 +83,7 @@ namespace Beeautiful
         public void Shoot()
         {
             timeSinceLastShot = 0;
-            Game1.instance.Stings.Add(new EnemySting(Game1.instance.stingGreen, position));
+            Game1.instance.Stings.Add(new EnemySting(Game1.instance.SBEAM, position));
         }
     }
 }

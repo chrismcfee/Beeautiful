@@ -371,6 +371,15 @@
       <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\FINALGAMEOVER.xnb</Output>
       <Time>2015-03-13T20:42:17.2953122-04:00</Time>
     </Item>
+    <Item>
+      <Source>Sprites\special_beam_cannon.png</Source>
+      <Name>Sprites\special_beam_cannon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\special_beam_cannon.xnb</Output>
+      <Time>2015-03-13T20:42:17.4303199-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F9AA6AC0-738B-4086-940B-7FA6D1F81EB9}</ContentProjectGUID>
