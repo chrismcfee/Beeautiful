@@ -9,8 +9,8 @@ namespace Beeautiful
         Vector2 position;
         Vector2 motion;
         bool visible = true;
-        float health = 6000;
-        public float baseHealth = 6000;
+        float health = 7000;
+        public float baseHealth = 7000;
         double shotInterval;
         double timeSinceLastShot;
 
@@ -64,7 +64,7 @@ namespace Beeautiful
         internal void Update(GameTime gameTime)
         {
             timeSinceLastShot += gameTime.ElapsedGameTime.Milliseconds;
-            if (timeSinceLastShot >= 5)
+            if (timeSinceLastShot >= shotInterval && position.Y < Game1.instance.User.Position.Y)
                 Shoot();
 
             motion.X = 0;

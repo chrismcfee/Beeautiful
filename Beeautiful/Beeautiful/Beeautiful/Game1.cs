@@ -481,10 +481,10 @@ namespace Beeautiful
                                      //Timer = 500;
                                    bSpawn = true;
                                 }
-                                for (int i=0; i < Timer; i++)
-                                {
-                                    //ayylmao
-                                }
+                                //for (int i=0; i < Timer; i++)
+                               // {
+//
+                               // }
                             }
 
                           
@@ -573,7 +573,7 @@ namespace Beeautiful
                                 //Sting-boss collision
                                 if (stings[i].Visible && boss1[k].Visible && !(stings[i] is EnemySting) && stings[i].Bounds.Intersects(boss1[k].Bounds))
                                 {
-                                    stings[i].Visible = false;
+                                    stings[i].Visible = true;
                                     boss1[k].Damage((int)stings[i].Damage);
                                     Texture2D expTexToUse = player.StingLevel == 0 ? explosionTexture : explosionTextureGreen;
                                     explosions.Add(new Explosion(expTexToUse, stings[i].Position));
@@ -638,6 +638,8 @@ namespace Beeautiful
                                 enemy.Update(gameTime);
                             foreach (Beatle beatle in beatles)
                                 beatle.Update();
+                            //foreach (Boss1 boss1 in boss1)
+                            //    boss1.Update();
                         }
 
                         for (int i = explosions.Count - 1; i > -1; i--)
