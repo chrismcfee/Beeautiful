@@ -264,7 +264,7 @@ namespace Beeautiful
             Timer = 5000;
             //Initialize random beatles
             Random rand = new Random(); 
-            int randomAmt = rand.Next(500,550);
+            int randomAmt = rand.Next(400,400);
             for (int i = 0; i < randomAmt; i++)
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
@@ -272,25 +272,24 @@ namespace Beeautiful
                 beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
             }
 
-            int randomEnemies = rand.Next(140, 140);
+            int randomEnemies = rand.Next(100, 100);
             for (int i = 0; i < randomEnemies; i++)
             {
                 enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
             }
-
-            //int randomBoss1s = rand.Next(1, 1);
-            //for (int i = 0; i < randomBoss1s; i++)
-            //{
-            //    boss1s.Add(new Boss1(enemyBoss1, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
-            //}          
-     
-            //
-            /*for (int i = 0; i < randomEnemies; i++)
-            {
-                boss1s.Add(new Boss1(boss1Texture, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
-            }*/
-
         }
+
+        //int randomBoss1s = rand.Next(1, 1);
+        //for (int i = 0; i < randomBoss1s; i++)
+        //{
+        //    boss1s.Add(new Boss1(enemyBoss1, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+        //}          
+
+        //
+        /*for (int i = 0; i < randomEnemies; i++)
+        {
+            boss1s.Add(new Boss1(boss1Texture, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+        }*/
         /*public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -329,24 +328,35 @@ namespace Beeautiful
             }
             return false;
         }*/
+        //Random rand = new Random();
+        //if (playerScore > 100)
+        //{
 
+        //InitiateBossSequence(playerScore);
+        //DoesSpawnBoss = true;
+        //}
+
+        //if (keyboardState.IsKeyDown(Keys.F))
+        //{
+        //    this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+        //    this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+        //    this.graphics.IsFullScreen = true;
+        //}
+        /*if (playerScore >= 4000 && bSpawn == false)
+                {
+                    Random rand = new Random();
+                    int randomBoss1s = rand.Next(1, 2);
+
+                    for (int i = 0; i < randomBoss1s; i++)
+                    {
+                        boss1.Add(new Boss1(enemyBoss1, new Vector2((screenBounds.Width / 2), ((screenBounds.Height / 2) - 400)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+                        //Timer = 500;
+                        bSpawn = true;
+                    }
+                }*/
 
         protected override void Update(GameTime gameTime)
         {
-            //Random rand = new Random();
-            //if (playerScore > 100)
-            //{
-                 
-                //InitiateBossSequence(playerScore);
-                //DoesSpawnBoss = true;
-            //}
-
-            //if (keyboardState.IsKeyDown(Keys.F))
-            //{
-            //    this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-            //    this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
-            //    this.graphics.IsFullScreen = true;
-            //}
             timeSinceStateChange += gameTime.ElapsedGameTime.Milliseconds;
             //Game level keybindings
             KeyboardState keyboardState = Keyboard.GetState();
@@ -453,18 +463,6 @@ namespace Beeautiful
                             state = gameState.GameOver;
                             return;
                         }
-                         /*if (playerScore >= 4000 && bSpawn == false)
-                        {
-                            Random rand = new Random();
-                            int randomBoss1s = rand.Next(1, 2);
-
-                            for (int i = 0; i < randomBoss1s; i++)
-                            {
-                                boss1.Add(new Boss1(enemyBoss1, new Vector2((screenBounds.Width / 2), ((screenBounds.Height / 2) - 400)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
-                                //Timer = 500;
-                                bSpawn = true;
-                            }
-                        }*/
                       if (Timer > 0 && bSpawn==false)
                             Timer -= gameTime.ElapsedGameTime.Milliseconds;
 
@@ -478,18 +476,15 @@ namespace Beeautiful
 
                                 for (int i = 0; i < randomBoss1s; i++)
                                 {
-                                    boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width/2)-150),(((screenBounds.Height/2)-400))), 1, 2));
+                                    boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width/2)-150),(((screenBounds.Height/2)-400))), 0.1, 0.01));
                                      //Timer = 500;
                                    bSpawn = true;
                                 }
                                 //for (int i=0; i < Timer; i++)
                                // {
-//
+                               //
                                // }
                             }
-
-                          
-
                         }
 
                         //Update background elements
