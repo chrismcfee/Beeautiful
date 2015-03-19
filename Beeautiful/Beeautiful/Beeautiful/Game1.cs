@@ -27,7 +27,7 @@ namespace Beeautiful
         SpriteFont scoreFont;
        float Timer=5000;
         Player player;
-        Boss Satan;
+        //Boss Satan;
         //bool DoesSpawnBoss = false;
 
         //To prevent holding down a button from changing state rapidly
@@ -105,11 +105,11 @@ namespace Beeautiful
         {
             get { return player; }
         }
-        public Boss sboss 
-        {
+        //public Boss sboss 
+        //{
 
-            get { return Satan; }
-        }
+        //    get { return Satan; }
+        //}
 
 
         public List<Explosion> Explosions
@@ -274,7 +274,7 @@ namespace Beeautiful
             int randomEnemies = rand.Next(140, 140);
             for (int i = 0; i < randomEnemies; i++)
             {
-                //enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+                enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
             }
 
             //int randomBoss1s = rand.Next(1, 1);
@@ -703,8 +703,8 @@ namespace Beeautiful
                         foreach (Beatle beatle in beatles)
                             beatle.Draw(spriteBatch);
 
-                       // foreach (Enemy enemy in enemies)
-                         //   enemy.Draw(spriteBatch);
+                        foreach (Enemy enemy in enemies)
+                            enemy.Draw(spriteBatch);
 
                        foreach (Boss1 enemyBoss1 in boss1)
                             enemyBoss1.Draw(spriteBatch);

@@ -127,7 +127,7 @@ namespace Beeautiful
                 shieldPower -= shieldDepleteRate * gameTime.ElapsedGameTime.Milliseconds;
             
 
-            if (Game1.instance.kills > 20 && stingLevel == 0)
+            if (Game1.instance.kills > 10 && stingLevel == 0)
             {
                 stingLevel = 1;
                 Game1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
@@ -137,7 +137,7 @@ namespace Beeautiful
                 stingLevel = 2;
                 Game1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
             }
-            if (Game1.instance.kills > 100 && stingLevel == 2)
+            if (Game1.instance.kills > 150 && stingLevel == 2)
             {
                 stingLevel = 3;
                 Game1.instance.Notifications.Add(new Notification("Stings Improved", 2000, screenBounds));
