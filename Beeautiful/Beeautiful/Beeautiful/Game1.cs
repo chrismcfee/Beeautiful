@@ -226,6 +226,7 @@ namespace Beeautiful
 
         protected override void UnloadContent()
         {
+
         }
 
         //public void InitiateBossSequence(int playerScore)
@@ -573,7 +574,7 @@ namespace Beeautiful
                                 //Sting-boss collision
                                 if (stings[i].Visible && boss1[k].Visible && !(stings[i] is EnemySting) && stings[i].Bounds.Intersects(boss1[k].Bounds))
                                 {
-                                    stings[i].Visible = true;
+                                    stings[i].Visible = false;
                                     boss1[k].Damage((int)stings[i].Damage);
                                     Texture2D expTexToUse = player.StingLevel == 0 ? explosionTexture : explosionTextureGreen;
                                     explosions.Add(new Explosion(expTexToUse, stings[i].Position));
