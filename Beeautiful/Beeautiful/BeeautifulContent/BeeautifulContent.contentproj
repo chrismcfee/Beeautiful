@@ -274,15 +274,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sprites\Satan_bug_big.png">
-      <Name>Satan_bug_big</Name>
+    <Compile Include="Sprites\special_beam_cannon.png">
+      <Name>special_beam_cannon</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sprites\special_beam_cannon.png">
-      <Name>special_beam_cannon</Name>
+    <Compile Include="Sprites\Satan_bug_big.png">
+      <Name>Satan_bug_big</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

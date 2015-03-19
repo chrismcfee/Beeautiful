@@ -9,8 +9,8 @@ namespace Beeautiful
         Vector2 position;
         Vector2 motion;
         bool visible = true;
-        float health = 8000/2;
-        public float baseHealth = 8000/2;
+        float health = 6000;
+        public float baseHealth = 6000;
         double shotInterval;
         double timeSinceLastShot;
 
