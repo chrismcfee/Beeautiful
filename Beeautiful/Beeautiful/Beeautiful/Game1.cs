@@ -275,7 +275,7 @@ namespace Beeautiful
             int randomEnemies = rand.Next(100, 100);
             for (int i = 0; i < randomEnemies; i++)
             {
-                enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+                //enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
             }
         }
 
@@ -630,6 +630,8 @@ namespace Beeautiful
 
                         if (stings.Count == 0)
                         {
+                            foreach (Boss1 boss1s in boss1)
+                                boss1s.Update(gameTime);
                             foreach (Enemy enemy in enemies)
                                 enemy.Update(gameTime);
                             foreach (Beatle beatle in beatles)
