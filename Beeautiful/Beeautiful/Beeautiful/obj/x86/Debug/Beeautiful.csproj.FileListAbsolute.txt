@@ -147,3 +147,4 @@ C:\Users\christopher.mcfee\Documents\GitHub\csc427project1\Beeautiful\Beeautiful
 C:\Users\christopher.mcfee\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\christopher.mcfee\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\obj\x86\Debug\Beeautiful.exe
 C:\Users\christopher.mcfee\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\Beeautiful\obj\x86\Debug\Beeautiful.pdb
+C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Sprites\boss_placeholder.xnb

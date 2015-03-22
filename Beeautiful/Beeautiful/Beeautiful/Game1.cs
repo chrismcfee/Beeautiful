@@ -33,10 +33,11 @@ namespace Beeautiful
         //To prevent holding down a button from changing state rapidly
         double stateChangeDelay = 100;
         double timeSinceStateChange = 0;
-        bool bSpawn=false;
+        int bSpawn=0;
         bool flashing = false;
         
         double timeSinceLastFlash = 0;
+        double timeSinceBoss = 0;
         double flashInterval = 500;
 
         public int kills = 0;
@@ -260,7 +261,7 @@ namespace Beeautiful
             stings.Clear();
             notifications.Clear();
             explosions.Clear();
-            bSpawn = false;
+            bSpawn = 0;
             Timer = 5000;
             //Initialize random beatles
             Random rand = new Random(); 
@@ -272,10 +273,10 @@ namespace Beeautiful
                 beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
             }
 
-            int randomEnemies = rand.Next(100, 100);
+            int randomEnemies = rand.Next(200, 200);
             for (int i = 0; i < randomEnemies; i++)
             {
-                //enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+                enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
             }
         }
 
@@ -457,34 +458,103 @@ namespace Beeautiful
                                 return;
                             }
                         }
+                        timeSinceBoss = (timeSinceBoss) + (gameTime.ElapsedGameTime.Milliseconds);
                         if (player.Lives < 0)
                         {
                             FINALGAMEOVER.Play();
                             state = gameState.GameOver;
                             return;
                         }
-                      if (Timer > 0 && bSpawn==false)
-                            Timer -= gameTime.ElapsedGameTime.Milliseconds;
-
-                        else
+                        //if (Timer > 0 && bSpawn == false)
+                        //Timer -= gameTime.ElapsedGameTime.Milliseconds;
+                        if (player.Lives > 0)
                         {
-
-                            if (bSpawn == false)
+                            if ((timeSinceBoss > 50000) && (bSpawn == 0))
                             {
-                                //Random rand = new Random();
-                                int randomBoss1s = 1;
 
-                                for (int i = 0; i < randomBoss1s; i++)
-                                {
-                                    boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width/2)-150),(((screenBounds.Height/2)-400))), 0.1, 0.01));
-                                     //Timer = 500;
-                                   bSpawn = true;
+                                //bSpawn = 1;
+                                    int randomBoss1s = 1;
+                                    for (int i = 0; i < randomBoss1s; i++)
+                                    {
+                                        boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
+                                        //Timer = 500;
+                                        //bSpawn = false;
+                                    }
+                                    
+                                    //Random rand = new Random();
+                                    //int randomBoss1s = 1;
+                                    //boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 5, 5));
+                                    
+
+                                        //Initialize random beatles
+                                        Random rand2 = new Random();
+                                        int randomAmt2 = rand2.Next(550, 550);
+                                        for (int j = 0; j < randomAmt2; j++)
+                                        {
+                                            bool bigBeatle = (rand2.Next() % 2 == 0) ? true : false;
+                                            float speed = !bigBeatle ? rand2.Next(4, 16) : rand2.Next(4, 16);
+                                            beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand2.Next(0, screenBounds.Width), rand2.Next(-10000, 0))));
+                                        }
+                                        int randomEnemies2 = rand2.Next(275, 275);
+
+                                        for (int j = 0; j < randomEnemies2; j++)
+                                        {
+                                            enemies.Add(new Enemy(enemyShip, new Vector2(rand2.Next(0, screenBounds.Width), rand2.Next(-10000, 0)), rand2.Next(8, 16) * 1000, rand2.Next(2, 20) / 3 * 100));
+                                        }
+
+                               
+                                    bSpawn = 1;
                                 }
-                                //for (int i=0; i < Timer; i++)
-                               // {
-                               //
-                               // }
-                            }
+
+
+
+
+                            //these next two lines crash the entire game
+                            //spriteBatch.DrawString(scoreFont, "PREPARE FOR", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("PREPARE").X / 2, (int)screenBounds.Height / 4), Color.White);
+                            //spriteBatch.DrawString(scoreFont, "LEVEL TWO", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("LEVEL TWO").X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("LEVEL TWO").Y), Color.White);
+                            //if ((bSpawn == false) && (timeSinceBoss >= 200000))
+                            //{
+                            //Random rand = new Random();
+                            //  int randomBoss1s = 1;
+
+                            //for (int k = 0; k < randomBoss1s; k++)
+                            //{
+                            //Initialize random beatles
+                            //  Random rand3 = new Random();
+                            //int randomAmt3 = rand3.Next(700, 700);
+                            //for (int l = 0; l < randomAmt3; l++)
+                            //{
+                            //   bool bigBeatle = (rand3.Next() % 2 == 0) ? true : false;
+                            //  float speed = !bigBeatle ? rand3.Next(4, 16) : rand3.Next(4, 16);
+                            // beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand3.Next(0, screenBounds.Width), rand3.Next(-10000, 0))));
+                            //}
+                            //int randomEnemies3 = rand3.Next(325, 325);
+
+                            //for (int m = 0; m < randomEnemies3; m++)
+                            //{
+                            //   enemies.Add(new Enemy(enemyShip, new Vector2(rand3.Next(0, screenBounds.Width), rand3.Next(-10000, 0)), rand3.Next(8, 16) * 1000, rand3.Next(2, 20) / 3 * 100));
+                            //}
+                            //these next two lines crash the entire game
+                            //spriteBatch.DrawString(scoreFont, "PREPARE FOR", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("PREPARE").X / 2, (int)screenBounds.Height / 4), Color.White);
+                            //spriteBatch.DrawString(scoreFont, "LEVEL TWO", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("LEVEL TWO").X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("LEVEL TWO").Y), Color.White);
+                            //boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 5, 5));
+                            //  bSpawn = false;
+                            //}
+                            //this (if) enables survival
+                            //if ((bSpawn = true) && (Timer > 100)){
+                            //    bSpawn = false;
+                            //}
+                            //if (Timer > 0 && bSpawn == false)
+                            //{
+                            //   bSpawn = true;
+                            //}
+                            // }
+                            //}
+                            //for (int i=0; i < Timer; i++)
+                            // {
+                            //
+                            // }
+
                         }
 
                         //Update background elements
@@ -562,7 +632,7 @@ namespace Beeautiful
                                 if (!enemies[j].Visible)
                                     enemies.RemoveAt(j);
 
-                                
+
                             }
                             for (int k = boss1.Count - 1; k > -1; k--)
                             {
@@ -654,7 +724,6 @@ namespace Beeautiful
                     break;
             }
         }
-
         protected override void Draw(GameTime gameTime)
         {
             //GraphicsDevice.Clear(Color.CornflowerBlue);

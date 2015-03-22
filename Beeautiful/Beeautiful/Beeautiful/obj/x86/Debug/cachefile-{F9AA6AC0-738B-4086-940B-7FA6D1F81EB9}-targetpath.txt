@@ -41,3 +41,4 @@ Content\Audio\Map1.wma
 Content\Audio\explosionshort.xnb
 Content\Audio\blood_splat.xnb
 Content\Audio\FINALGAMEOVER.xnb
+Content\Sprites\boss_placeholder.xnb
