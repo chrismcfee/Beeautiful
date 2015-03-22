@@ -252,7 +252,9 @@ namespace Beeautiful
         private void PrepareLevel()
         {
             player.Reset();
-
+            //Boss1 enemyBoss1 in boss1)
+            //  beatles.Clear();
+            //enemies.Clear();
             kills = 0;
             playerScore = 0;
             boss1.Clear();
@@ -409,6 +411,7 @@ namespace Beeautiful
                     }
                 case gameState.GameOver:
                     {
+                        boss1.Clear();
                         timeSinceLastFlash += gameTime.ElapsedGameTime.Milliseconds;
                         //FINALGAMEOVER.Play();
                         if (timeSinceLastFlash > flashInterval)
@@ -421,6 +424,7 @@ namespace Beeautiful
                         {
                             if (keyboardState.IsKeyDown(Keys.Enter))
                             {
+                                boss1.Clear();
                                 PrepareLevel();
                                 state = gameState.Running;
                             }
@@ -462,6 +466,7 @@ namespace Beeautiful
                         if (player.Lives < 0)
                         {
                             FINALGAMEOVER.Play();
+                            boss1.Clear();
                             state = gameState.GameOver;
                             return;
                         }
@@ -505,9 +510,8 @@ namespace Beeautiful
                                
                                     bSpawn = 1;
                                 }
-
-
-
+                            
+                            
 
                             //these next two lines crash the entire game
                             //spriteBatch.DrawString(scoreFont, "PREPARE FOR", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("PREPARE").X / 2, (int)screenBounds.Height / 4), Color.White);
