@@ -36,9 +36,9 @@ Content\Sprites\stingWeakShot.xnb
 Content\Sprites\attacking_yellow_bee_enemy.xnb
 Content\Sprites\special_beam_cannon.xnb
 Content\Sprites\Satan_bug_big.xnb
+Content\Sprites\boss_placeholder.xnb
 Content\Audio\Map1.xnb
 Content\Audio\Map1.wma
 Content\Audio\explosionshort.xnb
 Content\Audio\blood_splat.xnb
 Content\Audio\FINALGAMEOVER.xnb
-Content\Sprites\boss_placeholder.xnb

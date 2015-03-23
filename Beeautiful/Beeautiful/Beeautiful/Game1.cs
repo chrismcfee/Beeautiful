@@ -412,6 +412,7 @@ namespace Beeautiful
                 case gameState.GameOver:
                     {
                         boss1.Clear();
+                        timeSinceBoss = 0;
                         timeSinceLastFlash += gameTime.ElapsedGameTime.Milliseconds;
                         //FINALGAMEOVER.Play();
                         if (timeSinceLastFlash > flashInterval)
