@@ -7,12 +7,14 @@ namespace Beeautiful
     {
         Texture2D texture;
         Vector2 position;
+        Vector2 direction;
         Vector2 motion;
         bool visible = true;
         float health = 8000;
         public float baseHealth = 8000;
         double shotInterval;
         double timeSinceLastShot;
+        int speed = 5;
 
         public float Health
         {
@@ -66,17 +68,15 @@ namespace Beeautiful
             timeSinceLastShot += gameTime.ElapsedGameTime.Milliseconds;
             if ((timeSinceLastShot >= shotInterval) && (position.Y < Game1.instance.User.Position.Y))
                 Shoot();
-
-            motion.X = 0;
-            motion.Y = 1;
+            motion.X = 1;
+            motion.Y = 0;
             float movement = position.X - Game1.instance.User.Position.X;
-            if (position.X!= Game1.instance.User.Position.X)
-            {
-                if (movement > 0)
+            
+                if (position.X<Game1.instance.User.Position.X)
+                    motion.X = +.5f;
+                if (position.X > Game1.instance.User.Position.X)
                     motion.X = -.5f;
-                else
-                    motion.X = .5f;
-            }
+            
             position += motion * gameTime.ElapsedGameTime.Milliseconds / 10;
         }
 

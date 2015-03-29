@@ -9,7 +9,7 @@ namespace Beeautiful
     {
         #region Variables
 
-        Vector2 position;
+       public  Vector2 position;
         Vector2 motion;
 
         float shipSpeed = 5.0f;
@@ -172,7 +172,7 @@ namespace Beeautiful
                     Shield(false);
             }
 
-            if (keyboardState.IsKeyDown(Keys.Space) && !shielded)
+            if (keyboardState.IsKeyDown(Keys.Space))
                 Shoot(gameTime);
 
             if (keyboardState.IsKeyDown(Keys.Left))
