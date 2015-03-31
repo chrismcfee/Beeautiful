@@ -540,7 +540,14 @@ namespace Beeautiful
 
                             //}
                            //if ((timeSinceBoss > 5000) && (bSpawn == 0))
-                            if ((timeSinceBoss > 50000) && (bSpawn == 0))
+                            if ((timeSinceBoss > 40000) && (bSpawn == 0))
+                            {
+                                MediaPlayer.Stop();
+                                FINALBOSSALERT.Play();
+                                bSpawn = 1;
+
+                            }
+                            if ((timeSinceBoss > 50000) && (bSpawn == 1))
                             {
 
                                 //bSpawn = 1;
@@ -557,9 +564,9 @@ namespace Beeautiful
                                 //Random rand = new Random();
                                 //int randomBoss1s = 1;
                                 //boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 5, 5));
-                                bSpawn = 1;
+                                bSpawn = 2;
                             }
-                            if ((timeSinceBoss > 60000) && (bSpawn == 1) && (boss1s.Count == 0))
+                            if ((timeSinceBoss > 60000) && (bSpawn == 2) && (boss1s.Count == 0))
                             {
                                 MediaPlayer.Stop();
                                 MediaPlayer.Play(backgroundMusic2);
@@ -584,14 +591,15 @@ namespace Beeautiful
                                 {
                                     enemies.Add(new Enemy(enemyShip, new Vector2(rand3.Next(0, screenBounds.Width), rand3.Next(-10000, 0)), rand3.Next(8, 16) * 1000, rand3.Next(2, 20) / 3 * 100));
                                 }
-                                bSpawn = 2;
-                            }
-                            if ((timeSinceBoss > 100000) && (bSpawn == 2))
-                            {
-                                FINALBOSSALERT.Play();
                                 bSpawn = 3;
                             }
-                            if ((timeSinceBoss > 110000) && (bSpawn == 3))
+                            if ((timeSinceBoss > 100000) && (bSpawn == 3))
+                            {
+                                MediaPlayer.Stop();
+                                FINALBOSSALERT.Play();
+                                bSpawn = 4;
+                            }
+                            if ((timeSinceBoss > 110000) && (bSpawn == 4))
                             {
                                 MediaPlayer.Stop();
                                 MediaPlayer.Play(bossMusic2);
@@ -614,10 +622,10 @@ namespace Beeautiful
                                 
 
 
-                                bSpawn = 4;
+                                bSpawn = 5;
                             }
                            
-                            if ((timeSinceBoss > 130000) && (bSpawn == 4) && (boss1s.Count == 0))
+                            if ((timeSinceBoss > 130000) && (bSpawn == 5) && (boss1s.Count == 0))
                             {
                                boss1s.Clear();
                                MediaPlayer.Stop();
