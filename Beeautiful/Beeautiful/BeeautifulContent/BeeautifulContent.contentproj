@@ -185,13 +185,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Audio\Map1.mp3">
-      <Name>Map1</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Jerry_lives_death.png">
       <Name>Jerry_lives_death</Name>
       <Importer>TextureImporter</Importer>
@@ -297,6 +290,20 @@
   <ItemGroup>
     <Compile Include="Audio\UNOWENWASHER.mp3">
       <Name>UNOWENWASHER</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\[02] A Soul as Red as a Ground Cherry.mp3">
+      <Name>[02] A Soul as Red as a Ground Cherry</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\[05] Tomboyish Girl in Love.mp3">
+      <Name>[05] Tomboyish Girl in Love</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>

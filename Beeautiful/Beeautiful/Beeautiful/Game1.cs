@@ -71,6 +71,7 @@ namespace Beeautiful
         Texture2D explosionTextureGreen;
 
         Song backgroundMusic;
+        Song bossMusic;
         
         
         
@@ -81,7 +82,7 @@ namespace Beeautiful
         List<Beatle> beatles;
         List<Notification> notifications;
         List<BackgroundElement> backgroundObjects;
-        List<Boss1> boss1;
+        List<Boss1> boss1s;
         List<Enemy> enemies;
         List<Sting> stings;
 
@@ -160,7 +161,7 @@ namespace Beeautiful
             //graphics = new GraphicsDeviceManager(this);
             //Content.RootDirectory = "Content";
             screenBounds = new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
-            boss1 = new List<Boss1>();
+            boss1s = new List<Boss1>();
            // Satan= new Boss(_"Sprites/Satan_bug_big",)
             beatles = new List<Beatle>();
             explosions = new List<Explosion>();
@@ -168,6 +169,7 @@ namespace Beeautiful
             backgroundElements = new List<Texture2D>();
             backgroundObjects = new List<BackgroundElement>();
             enemies = new List<Enemy>();
+            //boss1s = new List<Boss1>();
             stings = new List<Sting>();
             state = gameState.Loading;
         }
@@ -193,7 +195,8 @@ namespace Beeautiful
             enemyShip = Content.Load<Texture2D>("Sprites/attacking_yellow_bee_enemy");
             enemyBoss1 = Content.Load<Texture2D>("Sprites/Satan_bug_big");
 
-            backgroundMusic = Content.Load<Song>("Audio/UNOWENWASHER");
+            backgroundMusic = Content.Load<Song>("Audio/[05] Tomboyish Girl in Love");
+            bossMusic = Content.Load<Song>("Audio/UNOWENWASHER");
             blood_splat = Content.Load<SoundEffect>("Audio/blood_splat");
             FINALGAMEOVER = Content.Load<SoundEffect>("Audio/FINALGAMEOVER");
 
@@ -260,7 +263,7 @@ namespace Beeautiful
             //enemies.Clear();
             kills = 0;
             playerScore = 0;
-            boss1.Clear();
+            boss1s.Clear();
             beatles.Clear();
             enemies.Clear();
             stings.Clear();
@@ -268,15 +271,19 @@ namespace Beeautiful
             explosions.Clear();
             bSpawn = 0;
             Timer = 5000;
+            MediaPlayer.IsRepeating = true;
+            MediaPlayer.Play(backgroundMusic);
             //Initialize random beatles
-            int randomBoss1s = 1;
-            for (int i = 0; i < randomBoss1s; i++)
-            {
-                boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
+            //int randomBoss1s = 1;
+            Random rand = new Random(); 
+            //for (int i = 0; i < randomBoss1s; i++)
+            //{
+              //  boss1s.Add(new Boss1(enemyBoss1, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
+                //boss1s.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
                 //Timer = 500;
                 //bSpawn = false;
-            }
-            Random rand = new Random(); 
+            //}
+            
             int randomAmt = rand.Next(100,100);
             for (int i = 0; i < randomAmt; i++)
             {
@@ -421,7 +428,7 @@ namespace Beeautiful
                     }
                 case gameState.GameOver:
                     {
-                        boss1.Clear();
+                        boss1s.Clear();
                         timeSinceBoss = 0;
                         timeSinceLastFlash += gameTime.ElapsedGameTime.Milliseconds;
                         //FINALGAMEOVER.Play();
@@ -435,7 +442,7 @@ namespace Beeautiful
                         {
                             if (keyboardState.IsKeyDown(Keys.Enter))
                             {
-                                boss1.Clear();
+                                boss1s.Clear();
                                 PrepareLevel();
                                 state = gameState.Running;
                             }
@@ -477,7 +484,7 @@ namespace Beeautiful
                         if (player.Lives < 0)
                         {
                             FINALGAMEOVER.Play();
-                            boss1.Clear();
+                            boss1s.Clear();
                             state = gameState.GameOver;
                             return;
                         }
@@ -485,14 +492,25 @@ namespace Beeautiful
                         //Timer -= gameTime.ElapsedGameTime.Milliseconds;
                         if (player.Lives > 0)
                         {
-                            if ((timeSinceBoss > 50000) && (bSpawn == 0))
+                            //if (boss1s )
+                            //int z = 0;
+                            //if (z != boss1s.Count)
+                            //{
+                                //MediaPlayer.Stop();
+                              //  MediaPlayer.Play(backgroundMusic);
+                                    
+                                //}
+                                if ((timeSinceBoss > 100000) && (bSpawn == 0))
                             {
 
                                 //bSpawn = 1;
-                                    int randomBoss1s = 1;
+                                MediaPlayer.Stop();
+                                MediaPlayer.Play(bossMusic);
+
+                                int randomBoss1s = 1;
                                     for (int i = 0; i < randomBoss1s; i++)
                                     {
-                                        boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
+                                        boss1s.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
                                         //Timer = 500;
                                         //bSpawn = false;
                                     }
@@ -504,14 +522,14 @@ namespace Beeautiful
 
                                         //Initialize random beatles
                                         Random rand2 = new Random();
-                                        int randomAmt2 = rand2.Next(200, 200);
+                                        int randomAmt2 = rand2.Next(250, 250);
                                         for (int j = 0; j < randomAmt2; j++)
                                         {
                                             bool bigBeatle = (rand2.Next() % 2 == 0) ? true : false;
                                             float speed = !bigBeatle ? rand2.Next(4, 16) : rand2.Next(4, 16);
                                             beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand2.Next(0, screenBounds.Width), rand2.Next(-10000, 0))));
                                         }
-                                        int randomEnemies2 = rand2.Next(200, 200);
+                                        int randomEnemies2 = rand2.Next(250, 250);
 
                                         for (int j = 0; j < randomEnemies2; j++)
                                         {
@@ -521,14 +539,16 @@ namespace Beeautiful
                                
                                     bSpawn = 1;
                                 }
-                            if ((timeSinceBoss > 120000) && (bSpawn == 1))
+                            if ((timeSinceBoss > 200000) && (bSpawn == 1))
                             {
+                                MediaPlayer.Stop();
+                                MediaPlayer.Play(bossMusic);
 
                                 //bSpawn = 2;
                                 int randomBoss1s = 1;
                                 for (int i = 0; i < randomBoss1s; i++)
                                 {
-                                    boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
+                                    boss1s.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
                                     //Timer = 500;
                                     //bSpawn = false;
                                 }
@@ -551,14 +571,15 @@ namespace Beeautiful
 
                                 bSpawn = 2;
                             }
-                            if ((timeSinceBoss > 180000) && (bSpawn == 1))
+                            if ((timeSinceBoss > 380000) && (bSpawn == 1))
                             {
-
+                                MediaPlayer.Stop();
+                                MediaPlayer.Play(bossMusic);
                                 //bSpawn = 3;
                                 int randomBoss1s = 1;
                                 for (int i = 0; i < randomBoss1s; i++)
                                 {
-                                    boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
+                                    boss1s.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
                                     //Timer = 500;
                                     //bSpawn = false;
                                 }
@@ -581,7 +602,7 @@ namespace Beeautiful
 
                                 bSpawn = 3;
                             }
-                            if (timeSinceBoss > 260000)
+                            if (timeSinceBoss > 400000)
                             {
                                 //win game state; if any
                             }
@@ -713,23 +734,23 @@ namespace Beeautiful
 
 
                             }
-                            for (int k = boss1.Count - 1; k > -1; k--)
+                            for (int k = boss1s.Count - 1; k > -1; k--)
                             {
                                 //Sting-boss collision
-                                if (stings[i].Visible && boss1[k].Visible && !(stings[i] is EnemySting) && stings[i].Bounds.Intersects(boss1[k].Bounds))
+                                if (stings[i].Visible && boss1s[k].Visible && !(stings[i] is EnemySting) && stings[i].Bounds.Intersects(boss1s[k].Bounds))
                                 {
                                     stings[i].Visible = false;
-                                    boss1[k].Damage((int)stings[i].Damage);
+                                    boss1s[k].Damage((int)stings[i].Damage);
                                     Texture2D expTexToUse = player.StingLevel == 0 ? explosionTexture : explosionTextureGreen;
                                     explosions.Add(new Explosion(expTexToUse, stings[i].Position));
-                                    timeSinceBoss = 20000;
+                                    //timeSinceBoss = 20000;
                                     
                                 }
 
-                                if (!boss1[k].Visible)
+                                if (!boss1s[k].Visible)
                                 {
-                                    boss1.RemoveAt(k);
-                                    bSpawn = 0;
+                                    boss1s.RemoveAt(k);
+                                    //bSpawn = 0;
                                 }
                             }
                             //Sting-Beatle collisions
@@ -784,8 +805,8 @@ namespace Beeautiful
 
                         if (stings.Count == 0)
                         {
-                            foreach (Boss1 boss1s in boss1)
-                              boss1s.Update(gameTime);
+                            foreach (Boss1 boss1 in boss1s)
+                              boss1.Update(gameTime);
                             foreach (Enemy enemy in enemies)
                                 enemy.Update(gameTime);
                             foreach (Beatle beatle in beatles)
@@ -827,6 +848,7 @@ namespace Beeautiful
                         Color flashColor = flashing ? Color.White : Color.Yellow;
                         spriteBatch.DrawString(scoreFont, "Press Enter to Play Again", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play Again").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
                         spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
+                        MediaPlayer.Stop();
                         break;
                     }
                 case gameState.StartMenu:
@@ -859,7 +881,7 @@ namespace Beeautiful
                         foreach (Enemy enemy in enemies)
                             enemy.Draw(spriteBatch);
 
-                       foreach (Boss1 enemyBoss1 in boss1)
+                       foreach (Boss1 enemyBoss1 in boss1s)
                             enemyBoss1.Draw(spriteBatch);
 
                         foreach (Sting sting in stings)
