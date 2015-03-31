@@ -15,7 +15,7 @@ namespace Beeautiful
         float shipSpeed = 5.0f;
 
         int lives;
-        int maxLives = 5;
+        int maxLives = 55;
 
         bool isInvincible;
         bool isVisible;
