@@ -77,6 +77,10 @@ namespace Beeautiful
                 else
                     motion.X = .5f;
             }
+            else
+            {
+                motion.X += 1.0f;
+            }
             position += motion * gameTime.ElapsedGameTime.Milliseconds / 10;
         }
 

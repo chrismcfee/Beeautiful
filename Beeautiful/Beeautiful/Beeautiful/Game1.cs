@@ -284,7 +284,7 @@ namespace Beeautiful
                 //bSpawn = false;
             //}
             
-            int randomAmt = rand.Next(100,100);
+            int randomAmt = rand.Next(150,150);
             for (int i = 0; i < randomAmt; i++)
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
@@ -292,7 +292,7 @@ namespace Beeautiful
                 beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
             }
 
-            int randomEnemies = rand.Next(100, 100);
+            int randomEnemies = rand.Next(150, 150);
             for (int i = 0; i < randomEnemies; i++)
             {
                 enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
@@ -500,7 +500,7 @@ namespace Beeautiful
                               //  MediaPlayer.Play(backgroundMusic);
                                     
                                 //}
-                                if ((timeSinceBoss > 100000) && (bSpawn == 0))
+                                if ((timeSinceBoss > 80000) && (bSpawn == 0))
                             {
 
                                 //bSpawn = 1;
@@ -510,7 +510,7 @@ namespace Beeautiful
                                 int randomBoss1s = 1;
                                     for (int i = 0; i < randomBoss1s; i++)
                                     {
-                                        boss1s.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
+                                        boss1s.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 5, 5));
                                         //Timer = 500;
                                         //bSpawn = false;
                                     }
@@ -539,7 +539,7 @@ namespace Beeautiful
                                
                                     bSpawn = 1;
                                 }
-                            if ((timeSinceBoss > 200000) && (bSpawn == 1))
+                            if ((timeSinceBoss > 140000) && (bSpawn == 1))
                             {
                                 //MediaPlayer.Stop();
                                 //MediaPlayer.Play(bossMusic);
@@ -571,7 +571,7 @@ namespace Beeautiful
 
                                 bSpawn = 2;
                             }
-                            if ((timeSinceBoss > 380000) && (bSpawn == 1))
+                            if ((timeSinceBoss > 280000) && (bSpawn == 1))
                             {
                                 //MediaPlayer.Stop();
                                 //MediaPlayer.Play(bossMusic);
@@ -585,14 +585,14 @@ namespace Beeautiful
                                 }
                                 //Initialize random beatles
                                 Random rand4 = new Random();
-                                int randomAmt4 = rand4.Next(400, 400);
+                                int randomAmt4 = rand4.Next(350, 350);
                                 for (int j = 0; j < randomAmt4; j++)
                                 {
                                     bool bigBeatle = (rand4.Next() % 2 == 0) ? true : false;
                                     float speed = !bigBeatle ? rand4.Next(4, 16) : rand4.Next(4, 16);
                                     beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand4.Next(0, screenBounds.Width), rand4.Next(-10000, 0))));
                                 }
-                                int randomEnemies2 = rand4.Next(400, 400);
+                                int randomEnemies2 = rand4.Next(350, 350);
 
                                 for (int j = 0; j < randomEnemies2; j++)
                                 {
@@ -739,6 +739,7 @@ namespace Beeautiful
                                 //Sting-boss collision
                                 if (stings[i].Visible && boss1s[k].Visible && !(stings[i] is EnemySting) && stings[i].Bounds.Intersects(boss1s[k].Bounds))
                                 {
+                                    boss1s[k].Update(gameTime);
                                     stings[i].Visible = false;
                                     boss1s[k].Damage((int)stings[i].Damage);
                                     Texture2D expTexToUse = player.StingLevel == 0 ? explosionTexture : explosionTextureGreen;

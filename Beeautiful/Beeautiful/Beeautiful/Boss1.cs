@@ -68,17 +68,32 @@ namespace Beeautiful
                 Shoot();
 
             motion.X = 0;
-            motion.Y = 1;
+            motion.Y = 0;
             float movement = position.X - Game1.instance.User.Position.X;
-            if (position.Y > 0 && position.Y < Game1.instance.User.Position.Y)
+            if (position.X > 0 && position.X < Game1.instance.User.Position.X)
             {
-                if (movement > 0)
-                    motion.X = -.5f;
-                else
-                    motion.X = .5f;
+                //if (movement > 0)
+                    motion.X += .5f;
+                //else
+                 //   motion.X += .5f;
+                
+                    //motion.X -= -1.0f;
             }
-            position += motion * gameTime.ElapsedGameTime.Milliseconds / 10;
+            if (position.X > Game1.instance.User.Position.X)
+            {
+                //if (movement > 0)
+                //    motion.X -= .5f;
+                //else
+                    motion.X -= .5f;
+
+                //motion.X -= -1.0f;
+            }
+                //else {
+                //    motion.X += 1.0f;
+           // }
+            position += motion * gameTime.ElapsedGameTime.Milliseconds / 5;    
         }
+
 
         public void Shoot()
         {
