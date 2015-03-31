@@ -22,11 +22,11 @@ namespace Beeautiful
         bool shielded;
         bool shieldCooldown;
         double timeSinceRespawn;
-        double timeInvincibleAfterRespawn = 3000;
-        double shieldPower = 3000;
-        double maxShieldPower = 3000;
-        double shieldRegenRate = 0.3f;
-        double shieldDepleteRate = 1.0f;
+        double timeInvincibleAfterRespawn = 4000;
+        double shieldPower = 4000;
+        double maxShieldPower = 4000;
+        double shieldRegenRate = 0.0001f;
+        double shieldDepleteRate = 0.9f;
 
         List<Texture2D> textures;
         int currentTexture = 0;

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -150,8 +150,8 @@ namespace Beeautiful
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;  // set this value to the desired width of your window
-            graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;   // set this value to the desired height of your window
+            graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width-35;  // set this value to the desired width of your window
+            graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height-35;   // set this value to the desired height of your window
             graphics.ApplyChanges();
             //this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
             //this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
@@ -193,7 +193,7 @@ namespace Beeautiful
             enemyShip = Content.Load<Texture2D>("Sprites/attacking_yellow_bee_enemy");
             enemyBoss1 = Content.Load<Texture2D>("Sprites/Satan_bug_big");
 
-            backgroundMusic = Content.Load<Song>("Audio/Map1");
+            backgroundMusic = Content.Load<Song>("Audio/UNOWENWASHER");
             blood_splat = Content.Load<SoundEffect>("Audio/blood_splat");
             FINALGAMEOVER = Content.Load<SoundEffect>("Audio/FINALGAMEOVER");
 
@@ -269,6 +269,13 @@ namespace Beeautiful
             bSpawn = 0;
             Timer = 5000;
             //Initialize random beatles
+            int randomBoss1s = 1;
+            for (int i = 0; i < randomBoss1s; i++)
+            {
+                boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
+                //Timer = 500;
+                //bSpawn = false;
+            }
             Random rand = new Random(); 
             int randomAmt = rand.Next(100,100);
             for (int i = 0; i < randomAmt; i++)
@@ -544,9 +551,39 @@ namespace Beeautiful
 
                                 bSpawn = 2;
                             }
-                            if (timeSinceBoss > 200000)
+                            if ((timeSinceBoss > 180000) && (bSpawn == 1))
                             {
-                                //win game state
+
+                                //bSpawn = 3;
+                                int randomBoss1s = 1;
+                                for (int i = 0; i < randomBoss1s; i++)
+                                {
+                                    boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
+                                    //Timer = 500;
+                                    //bSpawn = false;
+                                }
+                                //Initialize random beatles
+                                Random rand4 = new Random();
+                                int randomAmt4 = rand4.Next(400, 400);
+                                for (int j = 0; j < randomAmt4; j++)
+                                {
+                                    bool bigBeatle = (rand4.Next() % 2 == 0) ? true : false;
+                                    float speed = !bigBeatle ? rand4.Next(4, 16) : rand4.Next(4, 16);
+                                    beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand4.Next(0, screenBounds.Width), rand4.Next(-10000, 0))));
+                                }
+                                int randomEnemies2 = rand4.Next(400, 400);
+
+                                for (int j = 0; j < randomEnemies2; j++)
+                                {
+                                    enemies.Add(new Enemy(enemyShip, new Vector2(rand4.Next(0, screenBounds.Width), rand4.Next(-10000, 0)), rand4.Next(8, 16) * 1000, rand4.Next(2, 20) / 3 * 100));
+                                }
+
+
+                                bSpawn = 3;
+                            }
+                            if (timeSinceBoss > 260000)
+                            {
+                                //win game state; if any
                             }
                             
                             
