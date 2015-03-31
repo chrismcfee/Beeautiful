@@ -541,8 +541,8 @@ namespace Beeautiful
                                 }
                             if ((timeSinceBoss > 200000) && (bSpawn == 1))
                             {
-                                MediaPlayer.Stop();
-                                MediaPlayer.Play(bossMusic);
+                                //MediaPlayer.Stop();
+                                //MediaPlayer.Play(bossMusic);
 
                                 //bSpawn = 2;
                                 int randomBoss1s = 1;
@@ -573,8 +573,8 @@ namespace Beeautiful
                             }
                             if ((timeSinceBoss > 380000) && (bSpawn == 1))
                             {
-                                MediaPlayer.Stop();
-                                MediaPlayer.Play(bossMusic);
+                                //MediaPlayer.Stop();
+                                //MediaPlayer.Play(bossMusic);
                                 //bSpawn = 3;
                                 int randomBoss1s = 1;
                                 for (int i = 0; i < randomBoss1s; i++)
