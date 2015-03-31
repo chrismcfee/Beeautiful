@@ -150,8 +150,8 @@ namespace Beeautiful
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferWidth = 1200;  // set this value to the desired width of your window
-            graphics.PreferredBackBufferHeight = 720;   // set this value to the desired height of your window
+            graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;  // set this value to the desired width of your window
+            graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;   // set this value to the desired height of your window
             graphics.ApplyChanges();
             //this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
             //this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
@@ -270,7 +270,7 @@ namespace Beeautiful
             Timer = 5000;
             //Initialize random beatles
             Random rand = new Random(); 
-            int randomAmt = rand.Next(400,400);
+            int randomAmt = rand.Next(100,100);
             for (int i = 0; i < randomAmt; i++)
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
@@ -278,7 +278,7 @@ namespace Beeautiful
                 beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
             }
 
-            int randomEnemies = rand.Next(200, 200);
+            int randomEnemies = rand.Next(100, 100);
             for (int i = 0; i < randomEnemies; i++)
             {
                 enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
@@ -478,7 +478,7 @@ namespace Beeautiful
                         //Timer -= gameTime.ElapsedGameTime.Milliseconds;
                         if (player.Lives > 0)
                         {
-                            if ((timeSinceBoss > 15000) && (bSpawn == 0))
+                            if ((timeSinceBoss > 50000) && (bSpawn == 0))
                             {
 
                                 //bSpawn = 1;
@@ -497,14 +497,14 @@ namespace Beeautiful
 
                                         //Initialize random beatles
                                         Random rand2 = new Random();
-                                        int randomAmt2 = rand2.Next(200, 205);
+                                        int randomAmt2 = rand2.Next(200, 200);
                                         for (int j = 0; j < randomAmt2; j++)
                                         {
                                             bool bigBeatle = (rand2.Next() % 2 == 0) ? true : false;
                                             float speed = !bigBeatle ? rand2.Next(4, 16) : rand2.Next(4, 16);
                                             beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand2.Next(0, screenBounds.Width), rand2.Next(-10000, 0))));
                                         }
-                                        int randomEnemies2 = rand2.Next(175, 275);
+                                        int randomEnemies2 = rand2.Next(200, 200);
 
                                         for (int j = 0; j < randomEnemies2; j++)
                                         {
@@ -514,6 +514,40 @@ namespace Beeautiful
                                
                                     bSpawn = 1;
                                 }
+                            if ((timeSinceBoss > 120000) && (bSpawn == 1))
+                            {
+
+                                //bSpawn = 2;
+                                int randomBoss1s = 1;
+                                for (int i = 0; i < randomBoss1s; i++)
+                                {
+                                    boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
+                                    //Timer = 500;
+                                    //bSpawn = false;
+                                }
+                                //Initialize random beatles
+                                Random rand3 = new Random();
+                                int randomAmt3 = rand3.Next(300, 300);
+                                for (int j = 0; j < randomAmt3; j++)
+                                {
+                                    bool bigBeatle = (rand3.Next() % 2 == 0) ? true : false;
+                                    float speed = !bigBeatle ? rand3.Next(4, 16) : rand3.Next(4, 16);
+                                    beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand3.Next(0, screenBounds.Width), rand3.Next(-10000, 0))));
+                                }
+                                int randomEnemies2 = rand3.Next(300, 300);
+
+                                for (int j = 0; j < randomEnemies2; j++)
+                                {
+                                    enemies.Add(new Enemy(enemyShip, new Vector2(rand3.Next(0, screenBounds.Width), rand3.Next(-10000, 0)), rand3.Next(8, 16) * 1000, rand3.Next(2, 20) / 3 * 100));
+                                }
+
+
+                                bSpawn = 2;
+                            }
+                            if (timeSinceBoss > 200000)
+                            {
+                                //win game state
+                            }
                             
                             
 
@@ -620,10 +654,10 @@ namespace Beeautiful
                                             enemies[j].Damage(50);
                                         else
                                         {
-                                           // player.Lives = player.Lives - 1;
+                                            player.Lives = player.Lives - 1;
                                             blood_splat.Play();
                                             enemies[j].Visible = false;
-                                           // player.Respawn();
+                                            player.Respawn();
                                         }
                                     }
                                 }
@@ -669,10 +703,10 @@ namespace Beeautiful
                                     beatles[q].Update();
                                     if (beatles[q].Visible && beatles[q].Bounds.Intersects(player.Bounds) && !player.Invincible)
                                     {
-                                        //player.Lives = player.Lives - 1;
+                                        player.Lives = player.Lives - 1;
                                         blood_splat.Play();
                                         beatles[q].Visible = false;
-                                        //player.Respawn();
+                                        player.Respawn();
                                     }
 
                                     if (beatles[q].Visible && beatles[q].Bounds.Intersects(player.Bounds) && player.Shielded)
@@ -700,10 +734,10 @@ namespace Beeautiful
                                     stings[i].Visible = false;
                                 else
                                 {
-                                    //player.Lives = player.Lives - 1;
+                                    player.Lives = player.Lives - 1;
                                     blood_splat.Play();
                                     stings[i].Visible = false;
-                                    //player.Respawn();
+                                    player.Respawn();
                                 }
                             }
 

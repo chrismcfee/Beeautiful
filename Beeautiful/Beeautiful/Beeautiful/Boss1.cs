@@ -68,7 +68,7 @@ namespace Beeautiful
             timeSinceLastShot += gameTime.ElapsedGameTime.Milliseconds;
             if ((timeSinceLastShot >= shotInterval) && (position.Y < Game1.instance.User.Position.Y))
                 Shoot();
-            motion.X = 1;
+            motion.X = 0;
             motion.Y = 0;
             float movement = position.X - Game1.instance.User.Position.X;
             
