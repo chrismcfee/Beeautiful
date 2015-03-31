@@ -12,7 +12,7 @@ namespace Beeautiful
     public class Game1 : Microsoft.Xna.Framework.Game
     {
 
-        enum gameState { Loading, StartMenu, Running, Paused, GameOver, Editor };
+        enum gameState { Loading, StartMenu, Running, Paused, GameOver, WinnerIsYou, Editor };
 
         #region Variables
 
@@ -25,7 +25,7 @@ namespace Beeautiful
 
         SpriteBatch spriteBatch;
         SpriteFont scoreFont;
-       float Timer=5000;
+        float Timer=5000;
         Player player;
         //Boss Satan;
         //bool DoesSpawnBoss = false;
@@ -76,12 +76,14 @@ namespace Beeautiful
         Song bossMusic1;
         Song bossMusic2;
         Song bossMusic3;
+        Song victoryMusic;
         
         
         
         #endregion
         SoundEffect blood_splat;
         SoundEffect FINALGAMEOVER;
+        SoundEffect FINALBOSSALERT;
         List<Explosion> explosions;
         List<Beatle> beatles;
         List<Notification> notifications;
@@ -204,9 +206,11 @@ namespace Beeautiful
             //bossMusic1 = Content.Load<Song>("Audio//[03] Apparitions Stalk the Night");
             bossMusic1 = Content.Load<Song>("Audio//[11] Lunar Clock ~ Luna Dial");
             bossMusic2 = Content.Load <Song>("Audio//UNOWENWASHER");
+            victoryMusic = Content.Load<Song>("Audio//sakura");
             
             blood_splat = Content.Load<SoundEffect>("Audio/blood_splat");
             FINALGAMEOVER = Content.Load<SoundEffect>("Audio/FINALGAMEOVER");
+            FINALBOSSALERT = Content.Load<SoundEffect>("Audio/finalbossalert");
 
             //player textures
             List<Texture2D> shipTextures = new List<Texture2D>();
@@ -292,7 +296,7 @@ namespace Beeautiful
                 //bSpawn = false;
             //}
             
-            int randomAmt = rand.Next(150,150);
+            int randomAmt = rand.Next(200,200);
             for (int i = 0; i < randomAmt; i++)
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
@@ -300,7 +304,7 @@ namespace Beeautiful
                 beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
             }
 
-            int randomEnemies = rand.Next(150, 150);
+            int randomEnemies = rand.Next(200, 200);
             for (int i = 0; i < randomEnemies; i++)
             {
                 enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
@@ -461,6 +465,33 @@ namespace Beeautiful
                         }
                         break;
                     }
+                case gameState.WinnerIsYou:
+                    {
+                        boss1s.Clear();
+                        timeSinceBoss = 0;
+                        timeSinceLastFlash += gameTime.ElapsedGameTime.Milliseconds;
+                        //FINALGAMEOVER.Play();
+                        if (timeSinceLastFlash > flashInterval)
+                        {
+                            flashing = !flashing;
+                            timeSinceLastFlash = 0;
+                        }
+
+                        if (CanChangeState)
+                        {
+                            if (keyboardState.IsKeyDown(Keys.Enter))
+                            {
+                                boss1s.Clear();
+                                PrepareLevel();
+                                state = gameState.Running;
+                            }
+                            if (keyboardState.IsKeyDown(Keys.Escape))
+                            {
+                                Exit();
+                            }
+                        }
+                        break;
+                    }
                 case gameState.StartMenu:
                     {
                         timeSinceLastFlash += gameTime.ElapsedGameTime.Milliseconds;
@@ -509,7 +540,7 @@ namespace Beeautiful
 
                             //}
                            //if ((timeSinceBoss > 5000) && (bSpawn == 0))
-                            if ((timeSinceBoss > 60000) && (bSpawn == 0))
+                            if ((timeSinceBoss > 50000) && (bSpawn == 0))
                             {
 
                                 //bSpawn = 1;
@@ -528,7 +559,7 @@ namespace Beeautiful
                                 //boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 5, 5));
                                 bSpawn = 1;
                             }
-                            if ((timeSinceBoss > 120000) && (bSpawn == 1))
+                            if ((timeSinceBoss > 60000) && (bSpawn == 1) && (boss1s.Count == 0))
                             {
                                 MediaPlayer.Stop();
                                 MediaPlayer.Play(backgroundMusic2);
@@ -540,14 +571,14 @@ namespace Beeautiful
                                 explosions.Clear();
                                 //Initialize random beatles
                                 Random rand3 = new Random();
-                                int randomAmt3 = rand3.Next(250, 250);
+                                int randomAmt3 = rand3.Next(300, 300);
                                 for (int j = 0; j < randomAmt3; j++)
                                 {
                                     bool bigBeatle = (rand3.Next() % 2 == 0) ? true : false;
                                     float speed = !bigBeatle ? rand3.Next(4, 16) : rand3.Next(4, 16);
                                     beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand3.Next(0, screenBounds.Width), rand3.Next(-10000, 0))));
                                 }
-                                int randomEnemies2 = rand3.Next(250, 250);
+                                int randomEnemies2 = rand3.Next(300, 300);
 
                                 for (int j = 0; j < randomEnemies2; j++)
                                 {
@@ -555,7 +586,12 @@ namespace Beeautiful
                                 }
                                 bSpawn = 2;
                             }
-                            if ((timeSinceBoss > 180000) && (bSpawn == 2))
+                            if ((timeSinceBoss > 100000) && (bSpawn == 2))
+                            {
+                                FINALBOSSALERT.Play();
+                                bSpawn = 3;
+                            }
+                            if ((timeSinceBoss > 110000) && (bSpawn == 3))
                             {
                                 MediaPlayer.Stop();
                                 MediaPlayer.Play(bossMusic2);
@@ -566,7 +602,7 @@ namespace Beeautiful
                                 notifications.Clear();
                                 explosions.Clear();
                                 //bSpawn = 2;
-
+                                
                                 int randomBoss1s = 1;
                                 for (int i = 0; i < randomBoss1s; i++)
                                 {
@@ -578,11 +614,15 @@ namespace Beeautiful
                                 
 
 
-                                bSpawn = 3;
+                                bSpawn = 4;
                             }
-                                                        if ((timeSinceBoss > 360000) && (bSpawn == 3))
+                           
+                            if ((timeSinceBoss > 130000) && (bSpawn == 4) && (boss1s.Count == 0))
                             {
-                                //win game state; if any
+                               boss1s.Clear();
+                               MediaPlayer.Stop();
+                               MediaPlayer.Play(victoryMusic);
+                               state = gameState.WinnerIsYou;
                             }
 
 
@@ -865,6 +905,16 @@ namespace Beeautiful
                 case gameState.GameOver:
                     {
                         spriteBatch.DrawString(scoreFont, "Game Over", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Game Over").X / 2, (int)screenBounds.Height / 4), Color.White);
+                        spriteBatch.DrawString(scoreFont, "Score: " + playerScore * 100, new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Score: " + playerScore * 100).X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("Score: " + playerScore * 100).Y), Color.White);
+                        Color flashColor = flashing ? Color.White : Color.Yellow;
+                        spriteBatch.DrawString(scoreFont, "Press Enter to Play Again", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play Again").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
+                        spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
+                        MediaPlayer.Stop();
+                        break;
+                    }
+                case gameState.WinnerIsYou:
+                    {
+                        spriteBatch.DrawString(scoreFont, "YOU WIN!", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("YOU WIN!").X / 2, (int)screenBounds.Height / 4), Color.White);
                         spriteBatch.DrawString(scoreFont, "Score: " + playerScore * 100, new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Score: " + playerScore * 100).X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("Score: " + playerScore * 100).Y), Color.White);
                         Color flashColor = flashing ? Color.White : Color.Yellow;
                         spriteBatch.DrawString(scoreFont, "Press Enter to Play Again", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play Again").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);

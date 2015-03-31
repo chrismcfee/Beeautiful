@@ -469,6 +469,25 @@
       <Extra>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\[11] Lunar Clock ~ Luna Dial.wma</Extra>
       <Time>2015-03-31T06:47:46.9971834-04:00</Time>
     </Item>
+    <Item>
+      <Source>Audio\sakura.mp3</Source>
+      <Name>Audio\sakura</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\sakura.xnb</Output>
+      <Extra>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\sakura.wma</Extra>
+      <Time>2015-03-31T13:32:09.1358983-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Audio\finalbossalert.wav</Source>
+      <Name>Audio\finalbossalert</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\home\csc427\csc427project1\Beeautiful\Beeautiful\Beeautiful\bin\x86\Debug\Content\Audio\finalbossalert.xnb</Output>
+      <Time>2015-03-31T13:51:51.22651-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{F9AA6AC0-738B-4086-940B-7FA6D1F81EB9}</ContentProjectGUID>

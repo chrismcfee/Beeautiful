@@ -58,3 +58,6 @@ Content\Audio\[03] Apparitions Stalk the Night.xnb
 Content\Audio\[03] Apparitions Stalk the Night.wma
 Content\Audio\[11] Lunar Clock ~ Luna Dial.xnb
 Content\Audio\[11] Lunar Clock ~ Luna Dial.wma
+Content\Audio\sakura.xnb
+Content\Audio\sakura.wma
+Content\Audio\finalbossalert.xnb
