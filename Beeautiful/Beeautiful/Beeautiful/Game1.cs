@@ -606,8 +606,8 @@ namespace Beeautiful
                                 int randomBoss1s = 1;
                                 for (int i = 0; i < randomBoss1s; i++)
                                 {
-                                    boss1s.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 75), (((screenBounds.Height / 2) - 400))), 10, 333));
-                                    boss1s.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 250), (((screenBounds.Height / 2) - 400))), 10, 333)); ;
+                                    boss1s.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 15), (((screenBounds.Height / 2) - 400))), 10, 333));
+                                    boss1s.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 350), (((screenBounds.Height / 2) - 400))), 10, 333)); ;
                                     //Timer = 500;
                                     //bSpawn = false;
                                 }
@@ -914,7 +914,7 @@ namespace Beeautiful
                     }
                 case gameState.WinnerIsYou:
                     {
-                        spriteBatch.DrawString(scoreFont, "YOU WIN!", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("YOU WIN!").X / 2, (int)screenBounds.Height / 4), Color.White);
+                        spriteBatch.DrawString(scoreFont, "YOU WIN! YOUR HUMANITY HAS BEEN RESTORED! KRAMER HUGS YOU DEARLY!", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("YOU WIN! YOUR HUMANITY HAS BEEN RESTORED! KRAMER HUGS YOU DEARLY!").X / 2, (int)screenBounds.Height / 4), Color.White);
                         spriteBatch.DrawString(scoreFont, "Score: " + playerScore * 100, new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Score: " + playerScore * 100).X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("Score: " + playerScore * 100).Y), Color.White);
                         Color flashColor = flashing ? Color.White : Color.Yellow;
                         spriteBatch.DrawString(scoreFont, "Press Enter to Play Again", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play Again").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
