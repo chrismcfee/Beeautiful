@@ -919,7 +919,7 @@ namespace Beeautiful
                         Color flashColor = flashing ? Color.White : Color.Yellow;
                         spriteBatch.DrawString(scoreFont, "Press Enter to Play Again", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play Again").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
                         spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
-                        MediaPlayer.Stop();
+                        //MediaPlayer.Stop();
                         break;
                     }
                 case gameState.StartMenu:
