@@ -296,7 +296,7 @@ namespace Beeautiful
                 //bSpawn = false;
             //}
             
-            int randomAmt = rand.Next(200,200);
+            int randomAmt = rand.Next(240,280);
             for (int i = 0; i < randomAmt; i++)
             {
                 bool bigBeatle = (rand.Next() % 2 == 0) ? true : false;
@@ -304,7 +304,7 @@ namespace Beeautiful
                 beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0))));
             }
 
-            int randomEnemies = rand.Next(200, 200);
+            int randomEnemies = rand.Next(240, 280);
             for (int i = 0; i < randomEnemies; i++)
             {
                 enemies.Add(new Enemy(enemyShip, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
@@ -578,14 +578,14 @@ namespace Beeautiful
                                 explosions.Clear();
                                 //Initialize random beatles
                                 Random rand3 = new Random();
-                                int randomAmt3 = rand3.Next(300, 300);
+                                int randomAmt3 = rand3.Next(320, 380);
                                 for (int j = 0; j < randomAmt3; j++)
                                 {
                                     bool bigBeatle = (rand3.Next() % 2 == 0) ? true : false;
                                     float speed = !bigBeatle ? rand3.Next(4, 16) : rand3.Next(4, 16);
                                     beatles.Add(new Beatle(bigBeatle, speed, new Vector2(rand3.Next(0, screenBounds.Width), rand3.Next(-10000, 0))));
                                 }
-                                int randomEnemies2 = rand3.Next(300, 300);
+                                int randomEnemies2 = rand3.Next(320, 380);
 
                                 for (int j = 0; j < randomEnemies2; j++)
                                 {
