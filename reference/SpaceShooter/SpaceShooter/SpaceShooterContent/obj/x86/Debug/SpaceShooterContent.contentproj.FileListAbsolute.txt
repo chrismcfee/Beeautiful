@@ -1,2 +1,0 @@
-C:\Users\Dale\Documents\Visual Studio 2010\Projects\SpaceShooter\SpaceShooter\SpaceShooterContent\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Home\Desktop\Sample game\SpaceShooter\SpaceShooterContent\obj\x86\Debug\SpaceShooterContent.contentprojResolveAssemblyReference.cache

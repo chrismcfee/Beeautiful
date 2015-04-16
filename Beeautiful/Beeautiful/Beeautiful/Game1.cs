@@ -489,14 +489,14 @@ namespace Beeautiful
 
                             //}
                            //if ((timeSinceBoss > 5000) && (bSpawn == 0))
-                            if ((timeSinceBoss > 35000) && (bSpawn == 0))
+                            if ((timeSinceBoss > 40000) && (bSpawn == 0))
                             {
                                 MediaPlayer.Stop();
                                 FINALBOSSALERT.Play();
                                 bSpawn = 1;
 
                             }
-                            if ((timeSinceBoss > 5000) && (bSpawn == 1))
+                            if ((timeSinceBoss > 50000) && (bSpawn == 1))
                             {
 
                                 //bSpawn = 1;
@@ -522,7 +522,7 @@ namespace Beeautiful
                                 //boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 5, 5));
                                 bSpawn = 2;
                             }
-                            if ((timeSinceBoss > 6000) && (bSpawn == 2) && (boss1s.Count == 0))
+                            if ((timeSinceBoss > 60000) && (bSpawn == 2) && (boss1s.Count == 0))
                             {
                                 MediaPlayer.Stop();
                                 MediaPlayer.Play(backgroundMusic2);
@@ -550,7 +550,7 @@ namespace Beeautiful
                                 }
                                 bSpawn = 3;
                             }
-                            if ((timeSinceBoss > 12000) && (bSpawn == 3))
+                            if ((timeSinceBoss > 120000) && (bSpawn == 3))
                             {
                                 MediaPlayer.Stop();
                                 FINALBOSSALERT.Play();
@@ -588,7 +588,7 @@ namespace Beeautiful
                                 bSpawn = 5;
                             }
                            
-                            if ((timeSinceBoss > 14000) && (bSpawn == 5) && (boss1s.Count == 0))
+                            if ((timeSinceBoss > 140000) && (bSpawn == 5) && (boss1s.Count == 0))
                             {
                                boss1s.Clear();
                                redbees.Clear();
