@@ -178,24 +178,24 @@ namespace Beeautiful
             if (keyboardState.IsKeyDown(Keys.Left))
             {
                 currentTexture = 1;
-                motion.X = -1;
+                motion.X = -3/2;
             }
             if (keyboardState.IsKeyDown(Keys.Right))
             {
                 currentTexture = 2;
-                motion.X = 1;
+                motion.X = 3/2;
             }
             if (keyboardState.IsKeyDown(Keys.Up))
             {
                 if (keyboardState.IsKeyUp(Keys.Left) && keyboardState.IsKeyUp(Keys.Right))
                     currentTexture = 0;
-                motion.Y = -1;
+                motion.Y = -3/2;
             }
             if (keyboardState.IsKeyDown(Keys.Down))
             {
                 if (keyboardState.IsKeyUp(Keys.Left) && keyboardState.IsKeyUp(Keys.Right))
                     currentTexture = 0;
-                motion.Y = 1;
+                motion.Y = 3/2;
             }
             if (keyboardState.IsKeyUp(Keys.Left) && keyboardState.IsKeyUp(Keys.Right))
                 currentTexture = 0;

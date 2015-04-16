@@ -97,7 +97,7 @@ namespace Beeautiful
 
         public void Shoot()
         {
-            timeSinceLastShot = 0;
+            timeSinceLastShot = 5;
             Game1.instance.Stings.Add(new EnemySting(Game1.instance.SBEAM, position));
         }
     }

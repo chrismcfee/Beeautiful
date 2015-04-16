@@ -58,6 +58,7 @@ namespace Beeautiful
         public Texture2D enemyShip;
         public Texture2D enemyBoss1;
         public Texture2D bosstexture;
+        public Texture2D redBee;
 
         public Texture2D stingRed;
         public Texture2D stingGreen;
@@ -91,7 +92,7 @@ namespace Beeautiful
         List<Boss1> boss1s;
         List<Enemy> enemies;
         List<Sting> stings;
-
+        List<REDBee> redbees;
         #endregion
 
         #region Fields
@@ -140,6 +141,11 @@ namespace Beeautiful
             get { return enemies; }
         }
 
+        public List<REDBee> RedBee
+        {
+            get { return redbees;}
+        }
+
         public List<Sting> Stings
         {
             get { return stings; }
@@ -157,8 +163,8 @@ namespace Beeautiful
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width-35;  // set this value to the desired width of your window
-            graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height-35;   // set this value to the desired height of your window
+            graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width-100;  // set this value to the desired width of your window
+            graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height-100;   // set this value to the desired height of your window
             graphics.ApplyChanges();
             //this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
             //this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
@@ -177,6 +183,7 @@ namespace Beeautiful
             enemies = new List<Enemy>();
             //boss1s = new List<Boss1>();
             stings = new List<Sting>();
+            redbees = new List<REDBee>();
             state = gameState.Loading;
         }
 
@@ -200,6 +207,7 @@ namespace Beeautiful
 
             enemyShip = Content.Load<Texture2D>("Sprites/attacking_yellow_bee_enemy");
             enemyBoss1 = Content.Load<Texture2D>("Sprites/Satan_bug_big");
+            redBee = Content.Load<Texture2D>("Sprites/attacking_red_bee_enemy");
             //backgroundMusic1 = Content.Load<Song>("Audio/cloudcontrol");
             backgroundMusic1 = Content.Load<Song>("Audio/[05] Tomboyish Girl in Love");
             backgroundMusic2 = Content.Load<Song>("Audio/[15] Charming Domination");
@@ -248,23 +256,7 @@ namespace Beeautiful
 
         }
 
-        //public void InitiateBossSequence(int playerScore)
-        //{
-        //    Random rand = new Random(); 
-        //    
-        //    if ((playerScore > 100)) //playerScore must be greater than 40000 in actuality
-        //    {
-        //        spriteBatch.DrawString(scoreFont, "BOSS INCOMING", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("BOSS INCOMING").X / 2, (int)screenBounds.Height / 4), Color.White);
-        //        
-                //spriteBatch.DrawString(scoreFont, "Score: " + playerScore * 100, new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Score: " + playerScore * 100).X / 2, (int)screenBounds.Height / 4 + scoreFont.MeasureString("Score: " + playerScore * 100).Y), Color.White);
-                //Color flashColor = flashing ? Color.White : Color.Yellow;
-                //spriteBatch.DrawString(scoreFont, "Press Enter to Play Again", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Enter to Play Again").X / 2, (int)screenBounds.Height / 3 * 2), flashColor);
-                //spriteBatch.DrawString(scoreFont, "Press Escape to Quit", new Vector2((int)screenBounds.Width / 2 - scoreFont.MeasureString("Press Escape to Quit").X / 2, (int)screenBounds.Height / 4 * 3), Color.White);
-                //break;
-                //spawn boss
-        //    }
-
-        //}
+     
 
 
         private void PrepareLevel()
@@ -288,13 +280,6 @@ namespace Beeautiful
             //Initialize random beatles
             //int randomBoss1s = 1;
             Random rand = new Random(); 
-            //for (int i = 0; i < randomBoss1s; i++)
-            //{
-              //  boss1s.Add(new Boss1(enemyBoss1, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
-                //boss1s.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 0.1, 0.01));
-                //Timer = 500;
-                //bSpawn = false;
-            //}
             
             int randomAmt = rand.Next(240,280);
             for (int i = 0; i < randomAmt; i++)
@@ -322,44 +307,7 @@ namespace Beeautiful
         {
             boss1s.Add(new Boss1(boss1Texture, new Vector2(rand.Next(0, screenBounds.Width), rand.Next(-10000, 0)), rand.Next(8, 16) * 1000, rand.Next(2, 20) / 3 * 100));
         }*/
-        /*public Game1()
-        {
-            graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-            this.graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-            this.graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
-            this.graphics.IsFullScreen = true;
-        }
-        SoundEffect soundEngine;
-        SoundEffectInstance soundEngineInstance;
-        SoundEffect soundHyperspaceActivation;
-        bool checkActivity(KeyboardState keyboardState, GamePadState gamePadState)
-        {
-            // Check to see if the input states are different from last frame
-            GamePadState nonpacketGamePadState = new GamePadState(
-            gamePadState.ThumbSticks, gamePadState.Triggers,
-            gamePadState.Buttons, gamePadState.DPad);
-            bool keybidle = keyboardState.GetPressedKeys().Length == 0;
-            //bool gamepidle = blankGamePadState == nonpacketGamePadState;
-            if (keybidle)
-            {
-                //no activity;
-                return false;
-            }
-            return true;
-        }
-        bool checkExitKey(KeyboardState keyboardState, GamePadState gamePadState)
-        {
-            // Check to see whether ESC was pressed on the keyboard
-            // or BACK was pressed on the controller.
-            if (keyboardState.IsKeyDown(Keys.Escape) ||
-            gamePadState.Buttons.Back == ButtonState.Pressed)
-            {
-                Exit();
-                return true;
-            }
-            return false;
-        }*/
+        
         //Random rand = new Random();
         //if (playerScore > 100)
         //{
@@ -524,6 +472,7 @@ namespace Beeautiful
                         {
                             FINALGAMEOVER.Play();
                             boss1s.Clear();
+                            redbees.Clear();
                             state = gameState.GameOver;
                             return;
                         }
@@ -540,14 +489,14 @@ namespace Beeautiful
 
                             //}
                            //if ((timeSinceBoss > 5000) && (bSpawn == 0))
-                            if ((timeSinceBoss > 40000) && (bSpawn == 0))
+                            if ((timeSinceBoss > 35000) && (bSpawn == 0))
                             {
                                 MediaPlayer.Stop();
                                 FINALBOSSALERT.Play();
                                 bSpawn = 1;
 
                             }
-                            if ((timeSinceBoss > 50000) && (bSpawn == 1))
+                            if ((timeSinceBoss > 5000) && (bSpawn == 1))
                             {
 
                                 //bSpawn = 1;
@@ -561,16 +510,24 @@ namespace Beeautiful
                                     //Timer = 500;
                                     //bSpawn = false;
                                 }
+                                for (int i = 0; i < 50; i++)
+                                {
+                                    redbees.Add(new REDBee(redBee, new Vector2(rand2.Next(0, screenBounds.Width),rand2.Next(-10000, 0))));
+                                   
+                                }
+
+
                                 //Random rand = new Random();
                                 //int randomBoss1s = 1;
                                 //boss1.Add(new Boss1(enemyBoss1, new Vector2(((screenBounds.Width / 2) - 150), (((screenBounds.Height / 2) - 400))), 5, 5));
                                 bSpawn = 2;
                             }
-                            if ((timeSinceBoss > 60000) && (bSpawn == 2) && (boss1s.Count == 0))
+                            if ((timeSinceBoss > 6000) && (bSpawn == 2) && (boss1s.Count == 0))
                             {
                                 MediaPlayer.Stop();
                                 MediaPlayer.Play(backgroundMusic2);
                                 boss1s.Clear();
+                                redbees.Clear();
                                 beatles.Clear();
                                 enemies.Clear();
                                 stings.Clear();
@@ -593,7 +550,7 @@ namespace Beeautiful
                                 }
                                 bSpawn = 3;
                             }
-                            if ((timeSinceBoss > 120000) && (bSpawn == 3))
+                            if ((timeSinceBoss > 12000) && (bSpawn == 3))
                             {
                                 MediaPlayer.Stop();
                                 FINALBOSSALERT.Play();
@@ -619,15 +576,22 @@ namespace Beeautiful
                                     //Timer = 500;
                                     //bSpawn = false;
                                 }
+                                Random rand4 = new Random();
+                                for (int i = 0; i < 50; i++)
+                                {
+                                    redbees.Add(new REDBee(redBee, new Vector2(rand4.Next(0, screenBounds.Width), rand4.Next(-10000, 0))));
+
+                                }
                                 
 
 
                                 bSpawn = 5;
                             }
                            
-                            if ((timeSinceBoss > 140000) && (bSpawn == 5) && (boss1s.Count == 0))
+                            if ((timeSinceBoss > 14000) && (bSpawn == 5) && (boss1s.Count == 0))
                             {
                                boss1s.Clear();
+                               redbees.Clear();
                                MediaPlayer.Stop();
                                MediaPlayer.Play(victoryMusic);
                                state = gameState.WinnerIsYou;
@@ -792,6 +756,42 @@ namespace Beeautiful
 
 
                                 }
+
+                                for (int z = redbees.Count - 1; z > -1; z--)
+                                {
+                                    //Enemy-Player collision
+                                    if (i == 0)
+                                    {
+                                        redbees[z].Update(gameTime);
+                                        if (redbees[z].Visible && redbees[z].Bounds.Intersects(player.Bounds))
+                                        {
+                                            if (player.Shielded)
+                                                redbees[z].Damage(50);
+                                            else
+                                            {
+                                                player.Lives = player.Lives - 1;
+                                                blood_splat.Play();
+                                                redbees[z].Visible = false;
+                                                player.Respawn();
+                                            }
+                                        }
+                                    }
+
+                                    //Sting-enemy collision
+                                    if (stings[i].Visible && redbees[z].Visible && !(stings[i] is EnemySting) && stings[i].Bounds.Intersects(redbees[z].Bounds))
+                                    {
+                                        stings[i].Visible = false;
+                                        redbees[z].Damage((int)stings[i].Damage);
+                                        Texture2D expTexToUse = player.StingLevel == 0 ? explosionTexture : explosionTextureGreen;
+                                        explosions.Add(new Explosion(expTexToUse, stings[i].Position));
+                                    }
+
+                                    if (!redbees[z].Visible)
+                                        redbees.RemoveAt(z);
+                                }
+
+
+                                
                                 //int a = 1;
 
                                 for (int k = boss1s.Count - 1; k > -1; k--)
@@ -878,6 +878,8 @@ namespace Beeautiful
                                 enemy.Update(gameTime);
                             foreach (Beatle beatle in beatles)
                                 beatle.Update();
+                          foreach (REDBee redbee in redbees)
+                             redbee.Update(gameTime);
                             //foreach (Boss1 boss1 in boss1)
                             //    boss1.Update();
                         }
@@ -894,8 +896,7 @@ namespace Beeautiful
                         break;
                     
     
-                default:
-                    break;
+                default: break;
             }
         }
         protected override void Draw(GameTime gameTime)
@@ -956,6 +957,9 @@ namespace Beeautiful
 
                         foreach (Beatle beatle in beatles)
                             beatle.Draw(spriteBatch);
+                        
+                        foreach (REDBee redbee in redbees)
+                            redbee.Draw(spriteBatch);
 
                         foreach (Enemy enemy in enemies)
                             enemy.Draw(spriteBatch);
