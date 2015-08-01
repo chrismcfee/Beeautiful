@@ -1,4 +1,0 @@
-c:\users\methos\documents\visual studio 2013\Projects\Beeautiful\Beeautiful\BeeautifulContent\obj\x86\Debug\BeeautifulContent.contentprojResolveAssemblyReference.cache
-C:\home\csc427\csc427project1\Beeautiful\Beeautiful\BeeautifulContent\obj\x86\Debug\BeeautifulContent.contentprojResolveAssemblyReference.cache
-C:\Users\Home\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\BeeautifulContent\obj\x86\Debug\BeeautifulContent.contentprojResolveAssemblyReference.cache
-C:\Users\christopher.mcfee\Documents\GitHub\csc427project1\Beeautiful\Beeautiful\BeeautifulContent\obj\x86\Debug\BeeautifulContent.contentprojResolveAssemblyReference.cache
